@@ -27,7 +27,7 @@ Teams bring me in when they need an external verdict to stop endless investigati
 
 My work is grounded in six boundaries (in the same order used in the “Why BTP Projects Fail” framework):
 
-1. **Runtime / Execution Boundary** — what runs where, and what runtime rules actually govern behavior  
+1. **Runtime Boundary** — what runs where, and what runtime rules actually govern behavior  
 2. **Identity Boundary** — identity propagation, trust, and authorization context across layers  
 3. **Tenant Boundary** — tenant routing, isolation expectations, and multitenancy truth vs assumptions  
 4. **Data Boundary** — ownership, integrity rules, replication, and cross-domain data contracts  
