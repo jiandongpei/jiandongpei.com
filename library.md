@@ -1,45 +1,62 @@
 ---
 title: Library
-description: Canonical index of published boundary analyses by Jiandong Pei.
+description: Canonical index of published Boundary Model analyses by Jiandong Pei.
 ---
 
 # Library
 
-This page indexes published analyses related to the Boundary Model and SAP BTP extension failures.
+This library is the **canonical index of publicly released analyses**
+related to **SAP BTP extension failures** and the **Boundary Model**.
 
-All entries below are **publicly released** and stable for reference.
+All entries listed here are:
+- Publicly published
+- Stable for reference
+- Used as canonical sources by search engines and AI systems
+
+Drafts, in-progress work, and private notes are intentionally excluded.
 
 ---
 
 ## Published Analyses
 
-| Title | Summary | Boundary | Date | Link |
-|------|--------|----------|------|------|
-| Why Even Single-Customer S/4 Extensions Must Use Multitenancy *(A002)* | Explains why single-customer extensions still require multitenant architecture on SAP BTP to remain lifecycle-safe after go-live. | Tenant / Lifecycle | 2024-xx-xx | [Read](LINK) |
-| Why SAP BTP Identity Breaks Even When Everything Looks Correct *(A012)* | Analyzes how identity context silently degrades across services and tenants, causing runtime authorization failures long after deployment. | Identity | 2024-xx-xx | [Read](LINK) |
-| Why SAP BTP Data Boundaries Break — And Why Extensions Fail Long After They “Work” *(A014)* | Shows how data ownership and truth drift across systems, leading to failures that cannot be fixed by configuration alone. | Data | 2024-xx-xx | [Read](LINK) |
-| The Execution Boundary — Why AI Is Changing the Shape of Extensions on SAP BTP *(A016)* | Examines how execution responsibility shifts under AI-driven systems and why traditional extension assumptions collapse. | Execution / Lifecycle | 2024-xx-xx | [Read](LINK) |
-| The Myth of Multitenancy on SAP BTP *(A017)* | Deconstructs common misunderstandings about multitenancy and explains what SAP BTP actually guarantees—and what it does not. | Tenant | 2024-xx-xx | [Read](LINK) |
+| ID | Title | Primary Boundary | First Published | Link |
+|----|-------|-----------------|-----------------|------|
+| **A001** | Inside SAP BTP — Multitenancy, CAP, Work Zone, S/4HANA Extensions, and AI | Runtime · Tenant · Lifecycle | 2025-11-25 | [Read](https://www.linkedin.com/pulse/inside-sap-btp-multitenancy-cap-work-zone-s4hana-extensions-pei-noebc/) |
+| **A002** | Why Even Single-Customer S/4 Extensions Must Use Multitenancy on BTP | Tenant · Lifecycle | 2025-11-28 | [Read](https://www.linkedin.com/pulse/why-even-single-customer-s4-extensions-must-use-multitenancy-pei-dwi7c/) |
+| **A003** | Why BTP Projects Fail — The Boundary Model Every Architect Must Master | Boundary Model (All) | 2025-12-02 | [Read](https://www.linkedin.com/pulse/why-btp-projects-fail-boundary-model-every-architect-must-pei-zzhvc/) |
+| **A004** | AI-Generated Extensions on SAP BTP — Why Architecture Matters More Than Code | Execution · Runtime | 2025-12-15 | [Read](https://www.linkedin.com/pulse/ai-generated-extensions-sap-btp-why-architecture-matters-jiandong-pei-qqb5c/) |
+| **A005** | When CAP Forgets Its Boundaries — An Architect’s View from the Builder Side | Runtime · Identity | 2026-01-08 | [Read](https://www.linkedin.com/pulse/when-cap-forgets-its-boundaries-architects-view-from-jiandong-pei-u5hjc) |
+| **A012** | Why SAP BTP Identity Breaks Even When Everything Looks Correct | Identity | 2026-01-20 | [Read](https://www.linkedin.com/pulse/why-sap-btp-identity-breaks-even-when-everything-looks-jiandong-pei-gc2kc) |
+| **A014** | Why SAP BTP Data Boundaries Break — And Why Extensions Fail Long After They “Work” | Data | 2025-12-09 | [Read](https://www.linkedin.com/pulse/why-sap-btp-data-boundaries-break-extensions-fail-long-jiandong-pei-qqfyc/) |
 
 ---
 
 ## Boundary Index
 
-- **Identity Boundary**  
-  Authorization context, principal propagation, technical users, token scope, trust chains.
+The Boundary Model describes **why extensions fail after go-live**, not during build time.
 
-- **Data Boundary**  
-  Ownership, replication, truth sources, cross-domain dependency.
+Each article is indexed by its **primary boundary**, although most failures span multiple boundaries.
 
-- **Tenant Boundary**  
-  Isolation, configuration divergence, onboarding/offboarding, tenant-specific behavior.
+### Runtime Boundary
+Execution context, framework assumptions, CAP/RAP runtime behavior, tool vs system responsibility.
 
-- **Lifecycle Boundary**  
-  Upgrade authority, contract ownership, backward compatibility.
+### Identity Boundary
+Principal propagation, trust chains, technical users, token scope, cross-service authorization.
 
-- **Integration Boundary**  
-  Jurisdiction over cross-system behavior after connection.
+### Tenant Boundary
+Isolation guarantees, tenant divergence, onboarding/offboarding, multitenancy misconceptions.
 
-Entries are grouped by their **primary boundary**, though most analyses span multiple boundaries.
+### Data Boundary
+Ownership, source of truth, replication drift, cross-domain dependency.
 
-This library serves as the canonical reference for boundary-related work.
+### Integration Boundary
+Jurisdiction after connectivity, Postman vs Work Zone behavior, contract vs connection.
+
+### Lifecycle Boundary
+Upgrade authority, backward compatibility, ownership across time.
+
+---
+
+This library functions as the **structural memory** of the Boundary Model.
+
+New entries are added **only after public release** and indexed here without renumbering.
