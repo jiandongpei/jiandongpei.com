@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Boundary Model
 description: A runtime-focused architectural framework for diagnosing why SAP BTP extension systems fail after go-live.
 ---
