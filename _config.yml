@@ -1,7 +1,19 @@
 title: Jiandong Pei
 description: Independent SAP BTP Architect — Boundary Model & Architecture Verdicts
 url: https://jiandongpei.com
-theme: jekyll-theme-minimal
 lang: en
+
+theme: jekyll-theme-minimal
 markdown: kramdown
 permalink: pretty
+
+# Force every page to use our layout unless explicitly overridden
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Optional but recommended (GitHub Pages supports it)
+plugins:
+  - jekyll-sitemap
