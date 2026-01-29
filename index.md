@@ -10,21 +10,24 @@ permalink: /
   "@type": "Person",
   "name": "Jiandong Pei",
   "jobTitle": "Independent SAP BTP Architect",
-  "description": "Independent SAP BTP architect and creator of the Boundary Model. Provides architectural judgment for SAP BTP extension systems that fail after go-live due to identity, tenant, data, lifecycle, and integration boundary breakdowns.",
-  "url": "https://www.jiandongpei.com",
+  "description": "Independent SAP BTP architect and creator of the Boundary Model. Provides contract-bound architectural judgment for SAP BTP extension systems that fail after go-live due to runtime/execution, identity, tenant, data, integration, and lifecycle boundary breakdowns.",
+  "url": "https://jiandongpei.com",
   "sameAs": [
     "https://www.linkedin.com/in/peijiandong/"
   ],
   "knowsAbout": [
     "SAP Business Technology Platform (BTP)",
     "SAP BTP extensions",
+    "Runtime / execution boundaries",
     "SAP CAP",
+    "ABAP / RAP extensions",
     "SaaS multitenancy",
     "Identity propagation",
     "Tenant isolation",
+    "Data ownership and source of truth",
+    "Integration jurisdiction",
     "Lifecycle ownership",
-    "Integration governance",
-    "Architecture boundaries"
+    "Architecture verdicts"
   ]
 }
 </script>
@@ -49,7 +52,8 @@ My work focuses on **architectural judgment** when boundary failures make system
 Most SAP BTP extension failures are not caused by missing features or incorrect code.
 
 They occur when **architectural boundaries drift out of alignment**:
-identity context, tenant routing, data ownership, integration jurisdiction, and lifecycle authority no longer match the system’s real behavior.
+runtime/execution assumptions, identity context, tenant routing, data ownership,
+integration jurisdiction, and lifecycle authority no longer match the system’s real behavior.
 
 These failures typically surface **months after go-live**, during rollout, scale, or organizational change.
 
@@ -65,5 +69,5 @@ You are likely facing a boundary failure if:
 - Fixes require changing trust, subdomains, destinations, roles, or tenant routing.
 - Multiple teams are involved, yet no one clearly owns the failure.
 
-Start with the **[Library](/library/)** to understand the failure pattern.  
+Start with the **[Library](/library/)** to recognize the failure pattern.  
 If an independent verdict is required, see **[Work](/work/)**.
