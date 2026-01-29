@@ -24,7 +24,7 @@ My work focuses on **architectural judgment** when boundary failures make system
 Most SAP BTP extension failures are not caused by missing features or incorrect code.
 
 They occur when **architectural boundaries drift out of alignment**:
-**runtime/execution context**, identity propagation, tenant routing, data ownership, integration jurisdiction, and lifecycle authority
+runtime/execution context**, identity propagation, tenant routing, data ownership, integration jurisdiction, and lifecycle authority
 no longer match the system’s real behavior.
 
 These failures typically surface **months after go-live**, during rollout, scale, or organizational change.
