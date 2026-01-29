@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jiandongpei.com/sitemap.xml
+Sitemap: https://jiandongpei.com/sitemap.xml
