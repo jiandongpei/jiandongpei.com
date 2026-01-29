@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Library
 description: An indexed archive of my public writing on SAP BTP architecture and the Boundary Model.
 ---
