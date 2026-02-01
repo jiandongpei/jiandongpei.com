@@ -25,7 +25,7 @@ Teams bring me in when they need an external verdict to stop endless investigati
 
 ## The boundary map I use
 
-My work is grounded in six boundaries (in the same order used in the “Why BTP Projects Fail” framework):
+My work is grounded in six boundaries:
 
 1. **Runtime Boundary** — what runs where, and what runtime rules actually govern behavior  
 2. **Identity Boundary** — identity propagation, trust, and authorization context across layers  
