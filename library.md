@@ -18,6 +18,7 @@ Articles are listed in **reverse chronological order** (most recent first), refl
 
 | ID   | Title | Primary Boundary | First Published | Link |
 |------|-------|------------------|-----------------|------|
+| A019 | The Integration Boundary - Why Connectivity Is Not Integration | LinkedIn | 2026-02-03 | [LinkedIn](https://www.linkedin.com/pulse/integration-boundary-why-connectivity-jiandong-pei-icbdc) |
 | A012 | Why SAP BTP Identity Breaks Even When Everything Looks Correct | Identity Boundary | 2026-01-20 | [LinkedIn](https://www.linkedin.com/pulse/why-sap-btp-identity-breaks-even-when-everything-looks-jiandong-pei-gc2kc) |
 | A005 | When CAP Forgets Its Boundaries — An Architect’s View from the Builder Side | Runtime Boundary | 2026-01-08 | [LinkedIn](https://www.linkedin.com/pulse/when-cap-forgets-its-boundaries-architects-view-from-jiandong-pei-u5hjc) |
 
