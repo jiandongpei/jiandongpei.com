@@ -10,3 +10,4 @@
 | A005 | When CAP Forgets Its Boundaries - An Architect’s View from the Builder Side | LinkedIn | https://www.linkedin.com/pulse/when-cap-forgets-its-boundaries-architects-view-from-jiandong-pei-u5hjc | 2026-01-08 | |
 | A012 | Why SAP BTP Identity Breaks Even When Everything Looks Correct | LinkedIn | https://www.linkedin.com/pulse/why-sap-btp-identity-breaks-even-when-everything-looks-jiandong-pei-gc2kc | 2026-01-20 | |
 | A019 | The Integration Boundary - Why Connectivity Is Not Integration | LinkedIn | https://www.linkedin.com/pulse/integration-boundary-why-connectivity-jiandong-pei-icbdc | 2026-02-03 | |
+| A006 | The Stability Window of BTP Extensions - Why Lifecycle Architecture Determines Long-Term Success | LinkedIn | https://www.linkedin.com/pulse/stability-window-btp-extensions-why-lifecycle-architecture-pei-x44vc | 2026-03-03 | |
