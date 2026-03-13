@@ -10,19 +10,22 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Hero -->
   <section class="stack">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder‑side perspective on SAP BTP. Creator of the Boundary Model. I issue contract‑bound architectural verdicts when extensions fail after go‑live. Not implementation.</p>
+    <p class="lede">Builder‑side authority on SAP BTP. Creator of the Boundary Model. I provide contract‑bound architectural verdicts when extensions fail after go‑live—for example when tenants diverge, identity context drifts, or lifecycle rules shift. I do not offer implementation services; my role is architectural judgment.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/start-here/" variant="primary">Start here</Button>
       <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
     </div>
   </section>
 
+  <p class="muted measure">Former SAP platform work across multitenancy, identity propagation, integration boundaries, and lifecycle orchestration. Assessed at runtime boundaries, not in diagrams.</p>
+
   <Divider />
 
   <!-- Who this is for -->
   <section class="stack">
     <h2>Who this is for</h2>
-    <p class="measure">Leaders and architects facing post‑go‑live failures in SAP BTP extensions: symptoms differ by tenant or surface, documentation appears correct, ownership is unclear, and runtime behavior does not match design intent.</p>
+    <p class="measure">For leaders and architects whose SAP BTP extensions pass design reviews yet fail in production: behaviors differ by tenant or surface, documentation appears correct, ownership is contested, and runtime does not match intent.</p>
+    <p class="measure">Common pattern: it works in isolated tests but fails behind platform surfaces. Tenant behavior diverges. Identity appears correct yet does not hold end‑to‑end. Remediation implies changes to trust, routing, destinations, or roles.</p>
   </section>
 
   <!-- What I actually do / do not do -->
@@ -38,7 +41,7 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
       <ul>
         <li>No delivery or implementation staffing.</li>
         <li>No ticket execution or staff augmentation.</li>
-        <li>No generic consulting or sales funnels.</li>
+        <li>No generic consulting.</li>
       </ul>
     </Card>
   </section>
@@ -49,11 +52,11 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <section class="stack">
     <h2>You may need a verdict when…</h2>
     <ul>
-      <li>Works in one tenant and fails in another.</li>
-      <li>Works in Postman but fails behind AppRouter or Work Zone.</li>
-      <li>Degrades months after go‑live during rollout or organizational change.</li>
-      <li>Remediation implies changing trust, subdomains, destinations, roles, or tenant routing.</li>
-      <li>Multiple teams are involved; no one clearly owns the failure.</li>
+      <li>Behavior differs by tenant or subaccount.</li>
+      <li>Requests succeed in Postman but fail behind AppRouter or Work Zone.</li>
+      <li>Incidents appear months after go‑live during rollout or organizational change.</li>
+      <li>Remediation would change trust, subdomains, destinations, roles, or tenant routing.</li>
+      <li>Ownership is split across teams and no one can issue a decision.</li>
     </ul>
   </section>
 
@@ -95,7 +98,7 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Closing CTA -->
   <section class="stack">
     <h2>When to call me</h2>
-    <p class="measure">If an independent decision is required, send a one‑page summary. No sales motions.</p>
+    <p class="measure">If an independent architectural decision is required, send a one‑page summary. The next step is a short, structured assessment and a written scope.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/when-to-call-me/" variant="ghost">Signals and next steps</Button>
       <Button href="/contact/" variant="primary">Send a 1‑page summary</Button>
