@@ -5,44 +5,23 @@ const title = 'Start Here';
 const description = 'Orientation for new visitors. Choose the right entry point by situation, boundary, or role.';
 ---
 <BaseLayout {title} {description}>
-  <h1>Start here</h1>
-  <p class="measure">This site is the canonical reference for the Boundary Model and a selected set of essays. Choose the right entry point and keep the path minimal.</p>
+  <!-- Primary entry -->
+  <section class="stack hero compact tight">
+    <h1>Start here</h1>
+    <p class="lede">Read the Boundary Model first. It defines the six runtime‑visible boundaries and how architectural verdicts are issued.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/boundary-model/" variant="primary">Read the Boundary Model</Button>
+      <Button href="/insights/" variant="ghost">Browse insights</Button>
+    </div>
+  </section>
 
-  <h2>Start based on your situation</h2>
-  <ul>
-    <li><strong>Post–go‑live failures:</strong> see <a href="/when-to-call-me/">When to Call Me</a>, then <a href="/work/">Work With Me</a>.</li>
-    <li><strong>Conflicting narratives:</strong> read the <a href="/boundary-model/">Boundary Model</a>, then the relevant essays in <a href="/insights/">Insights</a>.</li>
-    <li><strong>New to this work:</strong> start with A003 in <a href="/insights/">Insights</a>, then A012, A014, A019.</li>
-  </ul>
-
-  <h2>Read by boundary</h2>
-  <ul>
-    <li><strong>Runtime</strong> — where behavior actually executes</li>
-    <li><strong>Identity</strong> — propagation and authorization context</li>
-    <li><strong>Tenant</strong> — routing and isolation truth</li>
-    <li><strong>Data</strong> — ownership and integrity at runtime</li>
-    <li><strong>Integration</strong> — cross‑system jurisdiction</li>
-    <li><strong>Lifecycle</strong> — upgrades and the stability window</li>
-  </ul>
-
-  <h2>Read by role</h2>
-  <ul>
-    <li><strong>CIO/CTO:</strong> Boundary Model; Rapid Boundary Triage; Boundary Verdict.</li>
-    <li><strong>Lead architect:</strong> identity, data, tenant, and lifecycle essays.</li>
-    <li><strong>Program leadership:</strong> Boundary Audit and ownership maps.</li>
-  </ul>
-
-  <h2>Key core essays</h2>
-  <ul>
-    <li><a href="/insights/a003-why-btp-projects-fail/">A003 — Why BTP Projects Fail</a></li>
-    <li><a href="/insights/a012-why-identity-breaks/">A012 — Why SAP BTP Identity Breaks</a></li>
-    <li><a href="/insights/a014-why-data-boundaries-break/">A014 — Why SAP BTP Data Boundaries Break</a></li>
-    <li><a href="/insights/a019-integration-boundary/">A019 — The Integration Boundary</a></li>
-    <li><a href="/insights/a006-stability-window/">A006 — The Stability Window of BTP Extensions</a></li>
-  </ul>
-
-  <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-    <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
-    <Button href="/insights/" variant="primary">Browse Insights</Button>
-  </div>
+  <!-- Secondary guidance -->
+  <section class="stack">
+    <h2>Explore next</h2>
+    <ul>
+      <li><strong>Need a decision:</strong> see <a href="/work/">Work With Me</a> or <a href="/when-to-call-me/">When to Call Me</a>.</li>
+      <li><strong>Read by boundary:</strong> Runtime · Identity · Tenant · Data · Integration · Lifecycle.</li>
+      <li><strong>Core essays:</strong> A003 · A012 · A014 · A019 · A006.</li>
+    </ul>
+  </section>
 </BaseLayout>

@@ -44,18 +44,16 @@ const related = all.filter(e => e.slug !== entry.slug && (
 
   
 
-  <section class="stack">
-    <h2>Related reading</h2>
-    {related.length === 0 ? (
-      <p class="muted">Related items will appear here.</p>
-    ) : (
+  {related.length > 0 && (
+    <section class="stack">
+      <h2>Related reading</h2>
       <ul>
         {related.map(r => (
           <li><a href={`/insights/${r.slug}/`}>{r.data.title}</a></li>
         ))}
       </ul>
-    )}
-  </section>
+    </section>
+  )}
 
   
 
