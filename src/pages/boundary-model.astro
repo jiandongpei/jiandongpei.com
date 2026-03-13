@@ -1,34 +1,53 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
 const title = 'Boundary Model';
 const description = 'Canonical definition of the Boundary Model: six runtime-visible boundaries and when they matter.';
 ---
 <BaseLayout {title} {description}>
-  <h1>Boundary Model</h1>
-  <p class="measure">An architectural framework for diagnosing why SAP BTP extensions fail after go‑live. The model evaluates runtime‑visible boundaries where systems actually break, not where documentation suggests they should.</p>
+  <section class="stack hero">
+    <div class="eyebrow">Foundation</div>
+    <h1>Boundary Model</h1>
+    <p class="lede">An architectural framework for diagnosing why SAP BTP extensions fail after go‑live. The model evaluates runtime‑visible boundaries where systems actually break, not where documentation suggests they should.</p>
+  </section>
 
-  <h2>What the Boundary Model is</h2>
-  <p class="measure">A runtime‑focused theory of jurisdiction, ownership, and lifecycle across SAP BTP extensions. It is used to produce verdicts on what must change vs what must not change.</p>
+  <section class="stack">
+    <h2>What the Boundary Model is</h2>
+    <p class="measure">A runtime‑focused theory of jurisdiction, ownership, and lifecycle across SAP BTP extensions. It is used to produce verdicts on what must change vs what must not change.</p>
+  </section>
 
-  <h2>Six boundaries</h2>
-  <ul>
-    <li><strong>Runtime</strong> — where behavior executes; where assumptions fail first.</li>
-    <li><strong>Identity</strong> — propagation of identity and authorization context across layers.</li>
-    <li><strong>Tenant</strong> — routing and isolation expectations versus runtime truth.</li>
-    <li><strong>Data</strong> — ownership, integrity, and truth enforced during execution.</li>
-    <li><strong>Integration</strong> — cross‑system jurisdiction after connectivity is established.</li>
-    <li><strong>Lifecycle</strong> — upgrades, rollout rules, and the stability window over time.</li>
-  </ul>
+  <section class="stack">
+    <h2>Six boundaries</h2>
+    <ul class="measure">
+      <li><strong>Runtime</strong> — where behavior executes; where assumptions fail first.</li>
+      <li><strong>Identity</strong> — propagation of identity and authorization context across layers.</li>
+      <li><strong>Tenant</strong> — routing and isolation expectations versus runtime truth.</li>
+      <li><strong>Data</strong> — ownership, integrity, and truth enforced during execution.</li>
+      <li><strong>Integration</strong> — cross‑system jurisdiction after connectivity is established.</li>
+      <li><strong>Lifecycle</strong> — upgrades, rollout rules, and the stability window over time.</li>
+    </ul>
+  </section>
 
-  <h2>Why traditional reviews miss these failures</h2>
-  <p class="measure">Traditional design reviews stabilize diagrams, not runtime boundaries. Failures surface months later when tenants diverge, trust or routing shifts, or lifecycle controls change ownership. Post‑go‑live reality exposes boundary drift, not feature gaps.</p>
+  <section class="stack">
+    <h2>Why traditional reviews miss these failures</h2>
+    <p class="measure">Traditional design reviews stabilize diagrams, not runtime boundaries. Failures surface months later when tenants diverge, trust or routing shifts, or lifecycle controls change ownership. Post‑go‑live reality exposes boundary drift, not feature gaps.</p>
+  </section>
 
-  <h2>When this model matters</h2>
-  <ul>
-    <li>Symptoms vary by tenant or surface (Postman vs AppRouter vs Work Zone).</li>
-    <li>Ownership is fragmented and no single team can issue a decision.</li>
-    <li>Fixes imply changing trust, subdomains, destinations, roles, or routing.</li>
-  </ul>
+  <section class="stack">
+    <h2>When this model matters</h2>
+    <ul class="measure">
+      <li>Symptoms vary by tenant or surface (Postman vs AppRouter vs Work Zone).</li>
+      <li>Ownership is fragmented and no single team can issue a decision.</li>
+      <li>Fixes imply changing trust, subdomains, destinations, roles, or routing.</li>
+    </ul>
+  </section>
 
-  <p>For engagement formats, see <a href="/work/">Work With Me</a>. For decision triggers, see <a href="/when-to-call-me/">When to Call Me</a>.</p>
+  <section class="stack cta">
+    <h2>Next</h2>
+    <p class="measure">For engagement formats, see Work With Me. For decision triggers, see When to Call Me.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/work/" variant="primary">Work with me</Button>
+      <Button href="/when-to-call-me/" variant="ghost">When to call me</Button>
+    </div>
+  </section>
 </BaseLayout>
