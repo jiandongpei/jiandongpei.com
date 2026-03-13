@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+const title = 'When to Call Me';
+const description = 'Decision triggers and expectations for external architectural judgment.';
+---
+<BaseLayout {title} {description}>
+  <h1>When to call me</h1>
+  <p class="measure">Use this page to decide whether an external verdict is warranted and what to send to start. Keep it formal and minimal.</p>
+
+  <h2>Signals you may need external judgment</h2>
+  <ul>
+    <li>Works in one tenant and fails in another.</li>
+    <li>Works in Postman; fails behind AppRouter or Work Zone.</li>
+    <li>Degrades months after go‑live; failures appear during rollout or scale.</li>
+    <li>Fixes require changing trust, subdomains, destinations, roles, or tenant routing.</li>
+    <li>Multiple teams involved; no single owner of the failure.</li>
+  </ul>
+
+  <h2>What you probably do not need me for</h2>
+  <ul>
+    <li>Staffing on implementation or delivery tickets.</li>
+    <li>Low‑level troubleshooting with clear ownership already established.</li>
+    <li>Generic advisory without a concrete architectural decision to make.</li>
+  </ul>
+
+  <h2>What to send me</h2>
+  <p>One page, plain text is sufficient:</p>
+  <ol>
+    <li>Landscape: S/4 + BTP runtime(s) + identity surfaces.</li>
+    <li>Symptoms: what works where; what fails where.</li>
+    <li>Timeline: go‑live; rollout; recent changes.</li>
+    <li>Stakeholders: who owns what today.</li>
+    <li>Decision: the call you cannot converge on.</li>
+  </ol>
+  <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Email the 1‑pager</Button>
+    <Button href="/work/" variant="ghost">See engagement formats</Button>
+  </div>
+
+  <h2>What happens next</h2>
+  <p>I respond with whether the situation matches a boundary failure pattern. If appropriate, we proceed to a fixed‑scope triage or audit. No sales motions or discovery calls.</p>
+
+  <p>For the model behind this assessment, see the <a href="/boundary-model/">Boundary Model</a>. For essays, see <a href="/insights/">Insights</a>.</p>
+</BaseLayout>

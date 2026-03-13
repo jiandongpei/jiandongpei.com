@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+const title = 'Work With Me';
+const description = 'Contract-bound architectural judgment for SAP BTP boundary failures — not implementation services.';
+---
+<BaseLayout {title} {description}>
+  <h1>Contract‑bound architectural judgment</h1>
+  <p class="measure">I provide independent architectural verdicts for SAP BTP boundary failures. This is not implementation or staff augmentation. The output is a decision that will withstand post‑go‑live reality.</p>
+
+  <h2>Engagement formats</h2>
+  <section class="feature">
+    <Card eyebrow="Rapid" title="Rapid Boundary Triage">
+      <ul>
+        <li><strong>Best for:</strong> high‑signal incidents with one or two competing narratives.</li>
+        <li><strong>Typical trigger:</strong> works in Postman, fails behind AppRouter/Work Zone; tenant variance.</li>
+        <li><strong>Output:</strong> boundary map (all six), top decision points, written verdict memo.</li>
+      </ul>
+      <Button href="/contact/" variant="primary">Start triage</Button>
+    </Card>
+    <Card eyebrow="Audit" title="Boundary Audit">
+      <ul>
+        <li><strong>Best for:</strong> fragmented ownership across teams/vendors; recurring incidents.</li>
+        <li><strong>Typical trigger:</strong> identity/tenant/data disagreements; rollout failures months after go‑live.</li>
+        <li><strong>Output:</strong> triage outputs plus interview‑based ownership map and remediation by jurisdiction rules.</li>
+      </ul>
+      <Button href="/contact/" variant="ghost">Request scope</Button>
+    </Card>
+    <Card eyebrow="Verdict" title="Boundary Verdict">
+      <ul>
+        <li><strong>Best for:</strong> executive convergence when “everyone has a piece of the truth”.</li>
+        <li><strong>Typical trigger:</strong> decision impasse around trust, routing, or lifecycle control.</li>
+        <li><strong>Output:</strong> written verdict, what must change vs what must not change; jurisdiction and stability window.</li>
+      </ul>
+      <Button href="/contact/" variant="ghost">Discuss applicability</Button>
+    </Card>
+  </section>
+
+  <h2>What I do not sell</h2>
+  <ul>
+    <li>No delivery or coding services.</li>
+    <li>No staff augmentation or ticket execution.</li>
+    <li>No generic discovery calls or funnels.</li>
+  </ul>
+
+  <h2>How to start</h2>
+  <p>Send a single message with: landscape (S/4 + BTP runtimes + identity), symptoms by surface/tenant, timeline of change, stakeholder ownership, and the decision you cannot converge on.</p>
+  <p><strong>Contact:</strong> <a href="mailto:pei_jiandong@hotmail.com">pei_jiandong@hotmail.com</a> or <a href="https://www.linkedin.com/in/jiandong-pei/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+</BaseLayout>
