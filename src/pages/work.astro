@@ -6,10 +6,14 @@ const title = 'Work With Me';
 const description = 'Contract‑bound architectural judgment for SAP BTP boundary failures — fixed‑scope verdicts, not implementation.';
 ---
 <BaseLayout {title} {description}>
-  <h1>Contract‑bound architectural judgment</h1>
-  <p class="measure">I provide independent verdicts for SAP BTP boundary failures. Not implementation. The output is a written decision that survives post‑go‑live reality.</p>
+  <!-- 1) Authority statement -->
+  <section class="stack tight">
+    <h1>Independent architectural verdicts.</h1>
+    <p class="measure">I issue independent architectural verdicts on SAP BTP boundary failures.<br /><br />This is not implementation.<br />The output is a written decision that survives post–go‑live reality.</p>
+  </section>
 
-  <h2>Engagement formats</h2>
+  <!-- 2) Engagement spectrum (light → heavy) -->
+  <h2>Engagement spectrum</h2>
   <section class="feature">
     <Card eyebrow="Rapid" title="Rapid Boundary Triage">
       <ul>
@@ -17,26 +21,31 @@ const description = 'Contract‑bound architectural judgment for SAP BTP boundar
         <li><strong>Typical trigger:</strong> works in Postman, fails behind AppRouter/Work Zone; tenant variance.</li>
         <li><strong>Output:</strong> boundary map (all six), top decision points, written verdict memo.</li>
       </ul>
-      <Button href="/contact/" variant="primary">Begin triage</Button>
+      <Button href="/contact/" variant="primary">Request triage</Button>
     </Card>
     <Card eyebrow="Audit" title="Boundary Audit">
       <ul>
         <li><strong>Best for:</strong> fragmented ownership across teams/vendors; recurring incidents.</li>
         <li><strong>Typical trigger:</strong> identity/tenant/data disagreements; rollout failures months after go‑live.</li>
-        <li><strong>Output:</strong> triage outputs plus interview‑based ownership map and remediation by jurisdiction rules.</li>
+        <li><strong>Output:</strong> triage outputs plus jurisdiction‑based ownership mapping and structural remediation rules.</li>
       </ul>
       <Button href="/contact/" variant="ghost">Request scope</Button>
     </Card>
-    <Card eyebrow="Verdict" title="Boundary Verdict">
+  </section>
+
+  <!-- 3) Decision‑level verdict -->
+  <section class="stack">
+    <Card eyebrow="Verdict" title="Boundary Verdict" class="emphasis">
       <ul>
-        <li><strong>Best for:</strong> executive convergence when “everyone has a piece of the truth”.</li>
-        <li><strong>Typical trigger:</strong> decision impasse around trust, routing, or lifecycle control.</li>
-        <li><strong>Output:</strong> written verdict: what must change vs what must not change; jurisdiction and stability window.</li>
+        <li><strong>Best for:</strong> executive‑level convergence when competing architectural truths cannot reconcile.</li>
+        <li><strong>Typical trigger:</strong> decision impasse around trust, routing, identity, or lifecycle control.</li>
+        <li><strong>Output:</strong> a <strong>formal</strong> architectural verdict defining what must change and what must remain.</li>
       </ul>
       <Button href="/contact/" variant="ghost">Assess applicability</Button>
     </Card>
   </section>
 
+  <!-- 4) What I do not sell -->
   <h2>What I do not sell</h2>
   <ul>
     <li>No delivery or coding services.</li>
@@ -44,7 +53,15 @@ const description = 'Contract‑bound architectural judgment for SAP BTP boundar
     <li>No generic discovery calls or funnels.</li>
   </ul>
 
-  <h2>How to start</h2>
-  <p class="measure">Send a single message with: landscape (S/4 + BTP runtimes + identity), symptoms by surface/tenant, timeline of change, stakeholder ownership, and the decision you cannot converge on.</p>
+  <!-- 5) Initiation protocol -->
+  <h2>Initiation protocol</h2>
+  <p class="measure">To initiate a review, send a single structured message including:</p>
+  <ul>
+    <li>Landscape (S/4 + BTP runtimes + identity)</li>
+    <li>Observable symptoms (by tenant or surface)</li>
+    <li>Timeline of change</li>
+    <li>Stakeholder ownership</li>
+    <li>The decision that cannot converge</li>
+  </ul>
   <p><strong>Contact:</strong> <a href="mailto:pei_jiandong@hotmail.com">pei_jiandong@hotmail.com</a> or <a href="https://www.linkedin.com/in/jiandong-pei/" target="_blank" rel="noopener">LinkedIn</a>.</p>
 </BaseLayout>
