@@ -5,16 +5,19 @@ const title = 'When to Call Me';
 const description = 'Decision triggers and expectations for external architectural judgment.';
 ---
 <BaseLayout {title} {description}>
-  <h1>When to call me</h1>
-  <p class="measure">Use these criteria to decide whether to request an external verdict and what to send. Formal, minimal, and outcome‑oriented.</p>
+  <section class="stack tight">
+    <h1>When to call me</h1>
+    <p class="measure">Decision triggers and protocol for requesting external architectural judgment. Formal, minimal, and outcome‑oriented.</p>
+  </section>
 
-  <h2>Signals you may need external judgment</h2>
+  <h2>Decision triggers</h2>
   <ul>
-    <li>Works in one tenant and fails in another.</li>
-    <li>Works in Postman; fails behind AppRouter or Work Zone.</li>
-    <li>Degrades months after go‑live; failures appear during rollout or scale.</li>
-    <li>Fixes require changing trust, subdomains, destinations, roles, or tenant routing.</li>
-    <li>Multiple teams involved; no single owner of the failure.</li>
+    <li>Surface‑level success but runtime‑layer inconsistency (Postman vs AppRouter/Work Zone; tenant variance).</li>
+    <li>Tenant variance emerging during rollout; behavior diverges across customers.</li>
+    <li>Stability degrades 12–18 months after go‑live.</li>
+    <li>Decision impasse around trust, routing, identity, or lifecycle control.</li>
+    <li>Remediation implies changes to subdomains, destinations, roles, or tenant routing.</li>
+    <li>Ownership drift across domains; no single team can issue a decision.</li>
   </ul>
 
   <h2>What you probably do not need me for</h2>
@@ -25,21 +28,21 @@ const description = 'Decision triggers and expectations for external architectur
   </ul>
 
   <h2>What to send</h2>
-  <p>One page, plain text is sufficient:</p>
+  <p class="measure">Send a structured summary including:</p>
   <ol>
-    <li>Landscape: S/4 + BTP runtime(s) + identity surfaces.</li>
-    <li>Symptoms: what works where; what fails where.</li>
-    <li>Timeline: go‑live; rollout; recent changes.</li>
-    <li>Stakeholders: who owns what today.</li>
-    <li>Decision: the call you cannot converge on.</li>
+    <li>Landscape — S/4 + BTP runtime(s) + identity surfaces</li>
+    <li>Observable runtime divergence — what works where; what fails where</li>
+    <li>Timeline — go‑live, rollout, and recent changes</li>
+    <li>Stakeholder ownership — who holds what today</li>
+    <li>The decision that cannot converge</li>
   </ol>
   <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Email the 1‑pager</Button>
+    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Send structured summary</Button>
     <Button href="/work/" variant="ghost">See engagement formats</Button>
   </div>
 
   <h2>What happens next</h2>
-  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope triage or audit defined in writing. No sales motions.</p>
+  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope triage or audit defined in writing — no sales motions. Where executive‑level convergence is required, the Executive Boundary Verdict defines final jurisdiction.</p>
 
   <p>For the model behind this assessment, see the <a href="/boundary-model/">Boundary Model</a>. For essays, see <a href="/insights/">Insights</a>.</p>
 </BaseLayout>
