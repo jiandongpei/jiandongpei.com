@@ -1,70 +1,84 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
 import { getCollection } from 'astro:content';
 const title = 'Insights';
-const description = 'Boundary Model essays and SAP BTP architectural analyses.';
+const description = 'Canonical essays and references on SAP BTP architecture and the Boundary Model.';
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
 const archive = records
+  .filter(r => !r.featured && r.slug !== 'placeholder')
   .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1));
-const boundaries = Array.from(new Set(records.map(r => r.boundary).filter(Boolean)));
-const audiences = Array.from(new Set(records.map(r => r.audience).filter(Boolean)));
-const symptoms = Array.from(new Set(records.map(r => r.symptom).filter(Boolean)));
+// Fixed boundary ordering aligned with the model
+const boundaryOrder = ['Runtime','Identity','Tenant','Data','Integration','Lifecycle'];
+const boundariesSet = new Set(records.map(r => r.boundary).filter(b => b && b !== 'Boundary Model'));
+const boundaries = boundaryOrder.filter(b => boundariesSet.has(b));
+// Roles – curated paths
+const rolePaths = [
+  { role: 'CIO / CTO', path: 'Boundary Model · Rapid Triage · Verdict' },
+  { role: 'Lead Architect', path: 'Identity · Data · Tenant · Lifecycle' },
+  { role: 'Program Leadership', path: 'Boundary Audit · Ownership maps' },
+  { role: 'Security Architect', path: 'Identity propagation · Trust boundaries' },
+  { role: 'Integration Lead', path: 'Jurisdiction · Cross-system contracts' },
+];
 ---
 <BaseLayout {title} {description}>
   <h1>Insights</h1>
-  <p class="measure">Selected essays on SAP BTP architecture and the Boundary Model. Canonical versions and stable metadata are hosted here; distribution remains on LinkedIn.</p>
+  <p class="measure">Canonical essays on SAP BTP architecture and the Boundary Model.
+  <br /><br />This site hosts stable references. Distribution channels vary; definitions remain here.</p>
 
   {featured.length > 0 && (
-    <>
-      <h2>Featured essays</h2>
-      <ul>
+    <section class="stack">
+      <h2>Core essays</h2>
+      <div class="stack">
         {featured.map((e) => (
-          <li>
-            <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
-            {e.published && (<span class="muted"> — {e.published}</span>)}
-          </li>
+          <Card title={e.title}>
+            {e.summary && (<p class="measure">{e.summary}</p>)}
+            <a href={`/insights/${e.slug}/`}>Read →</a>
+          </Card>
         ))}
-      </ul>
-    </>
+      </div>
+    </section>
   )}
 
   {boundaries.length > 0 && (
-    <>
-      <h2>Browse by boundary</h2>
+    <section class="stack">
+      <h2>Explore by boundary</h2>
       <ul>
         {boundaries.map((b) => (<li>{b}</li>))}
       </ul>
-    </>
+    </section>
   )}
 
-  {symptoms.length > 0 && (
-    <>
-      <h2>Browse by symptom</h2>
-      <ul>
-        {symptoms.map((s) => (<li>{s}</li>))}
-      </ul>
-    </>
-  )}
+  <section class="stack">
+    <h2>Explore by real‑world symptom</h2>
+    <ul>
+      <li>Works in Postman, fails behind AppRouter / Work Zone</li>
+      <li>Tenant variance after rollout</li>
+      <li>Stability degrades 12–18 months later</li>
+      <li>Ownership drift across domains</li>
+      <li>Runtime surface behaves inconsistently</li>
+    </ul>
+  </section>
 
-  {audiences.length > 0 && (
-    <>
-      <h2>Browse by audience / role</h2>
-      <ul>
-        {audiences.map((a) => (<li>{a}</li>))}
-      </ul>
-    </>
-  )}
+  <section class="stack">
+    <h2>Read by role</h2>
+    <ul>
+      {rolePaths.map(r => (<li><strong>{r.role}</strong> → {r.path}</li>))}
+    </ul>
+  </section>
 
-  <h2>Archive</h2>
-  <ul>
-    {archive.map((e) => (
-      <li>
-        <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
-        {e.published && (<span class="muted"> — {e.published}</span>)}
-      </li>
-    ))}
-  </ul>
+  <section class="stack">
+    <h2>Full archive</h2>
+    <ul>
+      {archive.map((e) => (
+        <li>
+          <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
+          {e.published && (<span class="muted"> — {e.published}</span>)}
+        </li>
+      ))}
+    </ul>
+  </section>
 </BaseLayout>
