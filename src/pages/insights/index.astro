@@ -2,7 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from 'astro:content';
 const title = 'Insights';
-const description = 'Editorial index of Boundary Model essays and SAP BTP architectural analyses.';
+const description = 'Boundary Model essays and SAP BTP architectural analyses.';
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
@@ -15,41 +15,47 @@ const symptoms = Array.from(new Set(records.map(r => r.symptom).filter(Boolean))
 ---
 <BaseLayout {title} {description}>
   <h1>Insights</h1>
-  <p class="measure">Selected essays on SAP BTP architecture and the Boundary Model. This site hosts canonical versions and stable metadata. Distribution remains on LinkedIn.</p>
+  <p class="measure">Selected essays on SAP BTP architecture and the Boundary Model. Canonical versions and stable metadata are hosted here; distribution remains on LinkedIn.</p>
 
-  <h2>Featured essays</h2>
-  {featured.length === 0 ? (
-    <p class="muted">Featured essays will appear here.</p>
-  ) : (
-    <ul>
-      {featured.map((e) => (
-        <li>
-          <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
-          {e.published && (<span class="muted"> — {e.published}</span>)}
-        </li>
-      ))}
-    </ul>
+  {featured.length > 0 && (
+    <>
+      <h2>Featured essays</h2>
+      <ul>
+        {featured.map((e) => (
+          <li>
+            <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
+            {e.published && (<span class="muted"> — {e.published}</span>)}
+          </li>
+        ))}
+      </ul>
+    </>
   )}
 
-  <h2>Browse by boundary</h2>
-  {boundaries.length === 0 ? (<p class="muted">Add boundary tags to essays to enable this section.</p>) : (
-    <ul>
-      {boundaries.map((b) => (<li>{b}</li>))}
-    </ul>
+  {boundaries.length > 0 && (
+    <>
+      <h2>Browse by boundary</h2>
+      <ul>
+        {boundaries.map((b) => (<li>{b}</li>))}
+      </ul>
+    </>
   )}
 
-  <h2>Browse by symptom</h2>
-  {symptoms.length === 0 ? (<p class="muted">Add symptom tags to essays to enable this section.</p>) : (
-    <ul>
-      {symptoms.map((s) => (<li>{s}</li>))}
-    </ul>
+  {symptoms.length > 0 && (
+    <>
+      <h2>Browse by symptom</h2>
+      <ul>
+        {symptoms.map((s) => (<li>{s}</li>))}
+      </ul>
+    </>
   )}
 
-  <h2>Browse by audience / role</h2>
-  {audiences.length === 0 ? (<p class="muted">Add audience tags to essays to enable this section.</p>) : (
-    <ul>
-      {audiences.map((a) => (<li>{a}</li>))}
-    </ul>
+  {audiences.length > 0 && (
+    <>
+      <h2>Browse by audience / role</h2>
+      <ul>
+        {audiences.map((a) => (<li>{a}</li>))}
+      </ul>
+    </>
   )}
 
   <h2>Archive</h2>

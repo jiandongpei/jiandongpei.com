@@ -4,16 +4,16 @@ import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
 import Divider from "@components/Divider.astro";
 const title = 'Independent SAP BTP Architect — Boundary Model';
-const description = 'Quiet, formal authority on SAP BTP architecture. Boundary Model, structural diagnosis, and contract-bound verdicts. Not implementation services.';
+const description = 'Builder-side authority on SAP BTP architecture. Boundary Model, structural diagnosis, and contract-bound verdicts. Not implementation services.';
 ---
 <BaseLayout {title} {description}>
   <!-- Hero -->
   <section class="stack">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Creator of the Boundary Model — structural failure diagnosis and architecture verdicts for SAP BTP. Not implementation services.</p>
+    <p class="lede">Builder‑side perspective on SAP BTP. Creator of the Boundary Model. I issue contract‑bound architectural verdicts when extensions fail after go‑live. Not implementation.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-      <Button href="/start-here/" variant="primary">Start Here</Button>
-      <Button href="/boundary-model/" variant="ghost">Boundary Model</Button>
+      <Button href="/start-here/" variant="primary">Start here</Button>
+      <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
     </div>
   </section>
 
@@ -22,7 +22,7 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
   <!-- Who this is for -->
   <section class="stack">
     <h2>Who this is for</h2>
-    <p>Leaders and architects dealing with post–go-live failures in SAP BTP extensions where ownership is disputed, symptoms vary by tenant or surface, and documentation appears correct yet runtime behavior disagrees.</p>
+    <p class="measure">Leaders and architects facing post‑go‑live failures in SAP BTP extensions: symptoms differ by tenant or surface, documentation appears correct, ownership is unclear, and runtime behavior does not match design intent.</p>
   </section>
 
   <!-- What I actually do / do not do -->
@@ -31,7 +31,7 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
       <ul>
         <li>Diagnose <strong>boundary failures</strong> across runtime, identity, tenant, data, integration, lifecycle.</li>
         <li>Issue a <strong>written verdict</strong>: what must change vs what must not change.</li>
-        <li>Re-establish <strong>jurisdiction</strong>: who owns what, and where.</li>
+        <li>Re‑establish <strong>jurisdiction</strong>: who owns what, and where.</li>
       </ul>
     </Card>
     <Card eyebrow="Not offered" title="What I do not do">
@@ -51,7 +51,7 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
     <ul>
       <li>Works in one tenant and fails in another.</li>
       <li>Works in Postman but fails behind AppRouter or Work Zone.</li>
-      <li>Degrades months after go-live during rollout or organizational change.</li>
+      <li>Degrades months after go‑live during rollout or organizational change.</li>
       <li>Remediation implies changing trust, subdomains, destinations, roles, or tenant routing.</li>
       <li>Multiple teams are involved; no one clearly owns the failure.</li>
     </ul>
@@ -63,15 +63,15 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
   <section class="feature">
     <div>
       <h2>Start here</h2>
-      <p class="measure">Lower the cognitive load and enter the system at the right depth. If you need the canonical reference, read the Boundary Model. If you need to orient quickly, start with the index of essays.</p>
+      <p class="measure">Enter at the right depth. For the canonical reference, read the Boundary Model. For patterns and cases, browse Insights.</p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-        <Button href="/start-here/" variant="primary">Start Here</Button>
+        <Button href="/start-here/" variant="primary">Start here</Button>
         <Button href="/insights/" variant="ghost">Insights</Button>
       </div>
     </div>
     <div class="stack">
       <Card eyebrow="Foundation" title="Boundary Model">
-        <p class="measure">Canonical definition of the six boundaries and why traditional reviews miss these failures.</p>
+        <p class="measure">Canonical definition of six boundaries and why traditional reviews miss these failures.</p>
         <a href="/boundary-model/">Read the model →</a>
       </Card>
       <Card eyebrow="Knowledge" title="Insights">
@@ -86,7 +86,7 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
   <!-- Work with me -->
   <section class="stack">
     <h2>Work with me</h2>
-    <p class="measure">Contract-bound architectural judgment. Fixed-scope verdicts, not implementation. See formats and expectations.</p>
+    <p class="measure">Contract‑bound architectural judgment. Fixed‑scope verdicts, not implementation. See formats and expectations.</p>
     <Button href="/work/" variant="primary">Engagement formats</Button>
   </section>
 
@@ -95,9 +95,9 @@ const description = 'Quiet, formal authority on SAP BTP architecture. Boundary M
   <!-- Closing CTA -->
   <section class="stack">
     <h2>When to call me</h2>
-    <p class="measure">If you need an independent decision that survives post–go-live reality, send a one‑page summary. No sales motions.</p>
+    <p class="measure">If an independent decision is required, send a one‑page summary. No sales motions.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-      <Button href="/when-to-call-me/" variant="ghost">Signals & next steps</Button>
+      <Button href="/when-to-call-me/" variant="ghost">Signals and next steps</Button>
       <Button href="/contact/" variant="primary">Send a 1‑page summary</Button>
     </div>
   </section>
