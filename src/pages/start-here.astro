@@ -2,43 +2,43 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 const title = 'Start Here';
-const description = 'Orientation for new visitors. Read by situation, boundary, or role with minimal cognitive load.';
+const description = 'Orientation for new visitors. Choose the right entry point by situation, boundary, or role.';
 ---
 <BaseLayout {title} {description}>
   <h1>Start here</h1>
-  <p class="measure">Use this page to find the minimum next step. This site is an authority layer — not a funnel, not a blog. The goal is clarity and judgment.</p>
+  <p class="measure">This site is the canonical reference for the Boundary Model and a selected set of essays. Choose the right entry point and keep the path minimal.</p>
 
   <h2>Start based on your situation</h2>
   <ul>
-    <li><strong>Post–go‑live failures:</strong> read <a href="/when-to-call-me/">When to Call Me</a> and then <a href="/work/">Work With Me</a>.</li>
-    <li><strong>Conflicting narratives:</strong> skim <a href="/boundary-model/">Boundary Model</a> and then the relevant essays in <a href="/insights/">Insights</a>.</li>
-    <li><strong>New to this work:</strong> read A003 in <a href="/insights/">Insights</a> and then A012/A014/A019.</li>
+    <li><strong>Post–go‑live failures:</strong> see <a href="/when-to-call-me/">When to Call Me</a>, then <a href="/work/">Work With Me</a>.</li>
+    <li><strong>Conflicting narratives:</strong> read the <a href="/boundary-model/">Boundary Model</a>, then the relevant essays in <a href="/insights/">Insights</a>.</li>
+    <li><strong>New to this work:</strong> start with A003 in <a href="/insights/">Insights</a>, then A012, A014, A019.</li>
   </ul>
 
   <h2>Read by boundary</h2>
   <ul>
-    <li>Runtime → where behavior actually executes</li>
-    <li>Identity → propagation and authorization context</li>
-    <li>Tenant → routing and isolation truth</li>
-    <li>Data → ownership and integrity at runtime</li>
-    <li>Integration → cross‑system jurisdiction</li>
-    <li>Lifecycle → upgrades and stability window</li>
+    <li><strong>Runtime</strong> — where behavior actually executes</li>
+    <li><strong>Identity</strong> — propagation and authorization context</li>
+    <li><strong>Tenant</strong> — routing and isolation truth</li>
+    <li><strong>Data</strong> — ownership and integrity at runtime</li>
+    <li><strong>Integration</strong> — cross‑system jurisdiction</li>
+    <li><strong>Lifecycle</strong> — upgrades and the stability window</li>
   </ul>
 
   <h2>Read by role</h2>
   <ul>
-    <li><strong>CIO/CTO:</strong> Boundary Model overview; Rapid Boundary Triage; Boundary Verdict.</li>
-    <li><strong>Lead architect:</strong> essays on identity, data, tenant, and lifecycle boundaries.</li>
+    <li><strong>CIO/CTO:</strong> Boundary Model; Rapid Boundary Triage; Boundary Verdict.</li>
+    <li><strong>Lead architect:</strong> identity, data, tenant, and lifecycle essays.</li>
     <li><strong>Program leadership:</strong> Boundary Audit and ownership maps.</li>
   </ul>
 
   <h2>Key core essays</h2>
   <ul>
-    <li>A003 — Why BTP Projects Fail</li>
-    <li>A012 — Why SAP BTP Identity Breaks</li>
-    <li>A014 — Why SAP BTP Data Boundaries Break</li>
-    <li>A019 — The Integration Boundary</li>
-    <li>A006 — The Stability Window of BTP Extensions</li>
+    <li><a href="/insights/a003-why-btp-projects-fail/">A003 — Why BTP Projects Fail</a></li>
+    <li><a href="/insights/a012-why-identity-breaks/">A012 — Why SAP BTP Identity Breaks</a></li>
+    <li><a href="/insights/a014-why-data-boundaries-break/">A014 — Why SAP BTP Data Boundaries Break</a></li>
+    <li><a href="/insights/a019-integration-boundary/">A019 — The Integration Boundary</a></li>
+    <li><a href="/insights/a006-stability-window/">A006 — The Stability Window of BTP Extensions</a></li>
   </ul>
 
   <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
