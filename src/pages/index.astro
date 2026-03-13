@@ -10,29 +10,34 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Hero -->
   <section class="stack">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder‑side authority on SAP BTP. Creator of the Boundary Model. I provide contract‑bound architectural verdicts when extensions fail after go‑live—for example when tenants diverge, identity context drifts, or lifecycle rules shift. I do not offer implementation services; my role is architectural judgment.</p>
+    <p class="lede">Builder‑side architect on SAP BTP. Creator of the Boundary Model. I provide contract‑bound architectural verdicts when SAP BTP extensions fail after go‑live — for example when tenants diverge, identity context drifts, or lifecycle rules shift. I do not offer implementation services; my role is architectural judgment.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/start-here/" variant="primary">Start here</Button>
       <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
     </div>
   </section>
 
-  <p class="muted measure">Former SAP platform work across multitenancy, identity propagation, integration boundaries, and lifecycle orchestration. Assessed at runtime boundaries, not in diagrams.</p>
+  <p class="muted measure"><strong>Perspective.</strong> Former SAP platform engineer; multitenancy, identity propagation, integration boundaries, lifecycle orchestration. Boundary Model derived from repeated post–go‑live failures at the platform layer.</p>
 
   <Divider />
 
   <!-- Who this is for -->
   <section class="stack">
     <h2>Who this is for</h2>
-    <p class="measure">For leaders and architects whose SAP BTP extensions pass design reviews yet fail in production: behaviors differ by tenant or surface, documentation appears correct, ownership is contested, and runtime does not match intent.</p>
-    <p class="measure">Common pattern: it works in isolated tests but fails behind platform surfaces. Tenant behavior diverges. Identity appears correct yet does not hold end‑to‑end. Remediation implies changes to trust, routing, destinations, or roles.</p>
+    <p class="measure">This site is for architects, technical leads, and decision‑makers facing post–go‑live instability in SAP BTP extensions.</p>
+    <p class="measure"><strong>Typical pattern:</strong><br />
+      Documentation appears correct.<br />
+      Ownership is unclear.<br />
+      Behavior differs by tenant, entry path, or identity context.<br />
+      The system is “technically correct” — yet fails in practice.
+    </p>
   </section>
 
   <!-- What I actually do / do not do -->
   <section class="feature">
     <Card eyebrow="Scope" title="What I actually do">
       <ul>
-        <li>Diagnose <strong>boundary failures</strong> across runtime, identity, tenant, data, integration, lifecycle.</li>
+        <li>Diagnose <strong>boundary failures</strong> across runtime, identity propagation, tenant isolation, data ownership, integration jurisdiction, and lifecycle authority.</li>
         <li>Issue a <strong>written verdict</strong>: what must change vs what must not change.</li>
         <li>Re‑establish <strong>jurisdiction</strong>: who owns what, and where.</li>
       </ul>
@@ -53,10 +58,10 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
     <h2>You may need a verdict when…</h2>
     <ul>
       <li>Behavior differs by tenant or subaccount.</li>
-      <li>Requests succeed in Postman but fail behind AppRouter or Work Zone.</li>
-      <li>Incidents appear months after go‑live during rollout or organizational change.</li>
-      <li>Remediation would change trust, subdomains, destinations, roles, or tenant routing.</li>
-      <li>Ownership is split across teams and no one can issue a decision.</li>
+      <li>It works in Postman but fails behind AppRouter or Work Zone.</li>
+      <li>It degrades months after go‑live during rollout or organizational change.</li>
+      <li>Remediation requires changing trust models, subdomains, destinations, roles, or tenant routing.</li>
+      <li>Multiple teams are involved and no one clearly owns the boundary.</li>
     </ul>
   </section>
 
@@ -98,7 +103,7 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Closing CTA -->
   <section class="stack">
     <h2>When to call me</h2>
-    <p class="measure">If an independent architectural decision is required, send a one‑page summary. The next step is a short, structured assessment and a written scope.</p>
+    <p class="measure">If an independent architectural decision is required, send a concise one‑page summary. You will receive a structured assessment — not a sales process.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/when-to-call-me/" variant="ghost">Signals and next steps</Button>
       <Button href="/contact/" variant="primary">Send a 1‑page summary</Button>
