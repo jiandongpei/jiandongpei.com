@@ -44,6 +44,8 @@ a:hover { text-decoration: underline; }
 
 .container { max-width: var(--container); padding: var(--space-6) var(--space-4); margin: 0 auto; }
 .stack { display: grid; gap: calc(var(--space-6) * 1.15); }
+.stack.tight { gap: var(--space-4); }
+.stack h1, .stack h2, .stack h3, .stack p { margin: 0; }
 .wide { max-width: var(--container); }
 .measure { max-width: var(--measure); }
 .muted { color: var(--muted); }
@@ -98,6 +100,7 @@ main .container > .article + section { margin-top: var(--space-8); }
 .hero h1 { font-size: clamp(2.6rem, 6.8vw, 3.4rem); }
 .hero .lede { max-width: 62ch; }
 .hero.compact { margin-bottom: calc(var(--space-6) * 1.25); }
+.hero.tight { row-gap: var(--space-4); }
 
 /* Generic eyebrow label */
 .eyebrow { color: var(--muted); text-transform: uppercase; font-size: .74rem; letter-spacing: .4px; opacity: .9; }
@@ -114,3 +117,5 @@ main .container > .article + section { margin-top: var(--space-8); }
 .stack.compact { gap: var(--space-5); }
 main .container > section.compact + section.compact { margin-top: var(--space-6); }
 main .container > section.hero + section.compact { margin-top: calc(var(--space-6) * 1.25); }
+/* Ensure hero+tight can be denser than compact */
+.stack.hero.tight { gap: var(--space-4); }
