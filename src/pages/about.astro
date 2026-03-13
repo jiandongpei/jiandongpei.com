@@ -1,0 +1,22 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+const title = 'About';
+const description = 'Builder-side perspective and architectural judgment behind the Boundary Model.';
+---
+<BaseLayout {title} {description}>
+  <h1>Why my perspective is different</h1>
+  <p class="measure">I built and unblocked SAP BTP internals and cross‑product integrations — the work that fails when everything looks correct on paper. That builder‑side exposure shaped the Boundary Model: not a theory of tools, but a theory of jurisdiction, ownership, and lifecycle in real programs.</p>
+
+  <h2>What this site is</h2>
+  <p>This is a stable authority layer: the canonical definition of the Boundary Model, selected essays, and a clear way to request a verdict. It is not a marketing site and not a blog‑first publication.</p>
+
+  <h2>What I believe</h2>
+  <ul>
+    <li>Most extension failures are not technical mistakes. They are boundary errors that surface after go‑live.</li>
+    <li>Architecture must be judged at runtime boundaries: runtime, identity, tenant, data, integration, lifecycle.</li>
+    <li>Decisions must state what must change and what must not change to preserve long‑term survivability.</li>
+  </ul>
+
+  <h2>CTA</h2>
+  <p>Read the <a href="/boundary-model/">Boundary Model</a>, browse <a href="/insights/">Insights</a>, or see <a href="/work/">Work With Me</a>. If you need an external decision, send a one‑page summary via <a href="/contact/">Contact</a>.</p>
+</BaseLayout>

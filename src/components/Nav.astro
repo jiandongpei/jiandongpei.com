@@ -1,0 +1,17 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/start-here/', label: 'Start Here' },
+  { href: '/boundary-model/', label: 'Boundary Model' },
+  { href: '/insights/', label: 'Insights' },
+  { href: '/work/', label: 'Work With Me' },
+  { href: '/about/', label: 'About' },
+  { href: '/when-to-call-me/', label: 'When to Call Me' },
+];
+---
+<nav class="nav">
+  {links.map(({ href, label }) => (
+    <a href={href}>{label}</a>
+  ))}
+  <!-- restrained navigation -->
+</nav>

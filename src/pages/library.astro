@@ -1,0 +1,16 @@
+---
+// Simple redirect for legacy /library/ link → /insights/
+const target = '/insights/';
+---
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Library → Insights</title>
+  </head>
+  <body>
+    <p>Moved to <a href={target}>Insights</a>.</p>
+  </body>
+  
+</html>
+

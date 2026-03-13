@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+const title = 'Start Here';
+const description = 'Orientation for new visitors. Read by situation, boundary, or role with minimal cognitive load.';
+---
+<BaseLayout {title} {description}>
+  <h1>Start here</h1>
+  <p class="measure">Use this page to find the minimum next step. This site is an authority layer — not a funnel, not a blog. The goal is clarity and judgment.</p>
+
+  <h2>Start based on your situation</h2>
+  <ul>
+    <li><strong>Post–go‑live failures:</strong> read <a href="/when-to-call-me/">When to Call Me</a> and then <a href="/work/">Work With Me</a>.</li>
+    <li><strong>Conflicting narratives:</strong> skim <a href="/boundary-model/">Boundary Model</a> and then the relevant essays in <a href="/insights/">Insights</a>.</li>
+    <li><strong>New to this work:</strong> read A003 in <a href="/insights/">Insights</a> and then A012/A014/A019.</li>
+  </ul>
+
+  <h2>Read by boundary</h2>
+  <ul>
+    <li>Runtime → where behavior actually executes</li>
+    <li>Identity → propagation and authorization context</li>
+    <li>Tenant → routing and isolation truth</li>
+    <li>Data → ownership and integrity at runtime</li>
+    <li>Integration → cross‑system jurisdiction</li>
+    <li>Lifecycle → upgrades and stability window</li>
+  </ul>
+
+  <h2>Read by role</h2>
+  <ul>
+    <li><strong>CIO/CTO:</strong> Boundary Model overview; Rapid Boundary Triage; Boundary Verdict.</li>
+    <li><strong>Lead architect:</strong> essays on identity, data, tenant, and lifecycle boundaries.</li>
+    <li><strong>Program leadership:</strong> Boundary Audit and ownership maps.</li>
+  </ul>
+
+  <h2>Key core essays</h2>
+  <ul>
+    <li>A003 — Why BTP Projects Fail</li>
+    <li>A012 — Why SAP BTP Identity Breaks</li>
+    <li>A014 — Why SAP BTP Data Boundaries Break</li>
+    <li>A019 — The Integration Boundary</li>
+    <li>A006 — The Stability Window of BTP Extensions</li>
+  </ul>
+
+  <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+    <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
+    <Button href="/insights/" variant="primary">Browse Insights</Button>
+  </div>
+</BaseLayout>
