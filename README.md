@@ -1,49 +1,57 @@
-# jiandongpei.com — Canonical Boundary Index
+# jiandongpei.com — Astro site
 
-This repository hosts the **canonical site** for Jiandong Pei’s work on
-SAP BTP extension failures and the Boundary Model.
+Canonical website for Jiandong Pei’s Boundary Model and architectural verdicts. Built with Astro 4.
 
-The site serves three purposes:
+Goals:
 
-1. Canonical definition of the **Boundary Model**
-2. Stable index of **published architectural analyses**
-3. Reference point for **independent architecture verdict engagements**
+1. Canonical definition of the Boundary Model
+2. Stable library of essays (on‑site full text)
+3. Clear path to independent architectural verdicts
 
-This is not a blog mirror or marketing site.
-LinkedIn remains the primary distribution channel; this site provides
-**canonical attribution and long-term recall**.
+This is not a marketing site and not a blog‑first publication.
 
 ---
 
-## Content structure
+## Project structure (Astro)
 
-- `index.md`  
-  Canonical identity and judgment scope
-
-- `boundary-model.md`  
-  Formal definition of the Boundary Model
-
-- `library.md`  
-  Index of published analyses (public only)
-
-- `work.md`  
-  Engagement model for architecture verdicts
-
-- `about.md`  
-  Builder-side perspective behind the model
+- `src/pages/` — route pages (Astro)
+  - `index.astro` homepage
+  - `boundary-model.astro` canonical model
+  - `insights/` essays index and article routes
+  - `work.astro`, `about.astro`, `when-to-call-me.astro`, `contact.astro`
+- `src/content/insights/` — Markdown articles with frontmatter
+- `src/components/` — UI components (Card, Button, Nav, Footer…)
+- `src/styles/global.css` — global styles and tokens
+- `public/` — static assets (robots, sitemap, icons)
 
 ---
 
-## Update flow
+## Add or update essays
 
-- Add new publications to `library.md`
-- Keep `_PUBLISH_INDEX.md` as the optional source-of-truth table
-- Do **not** publish drafts or in-progress material
+Essays live under `src/content/insights`. Use frontmatter fields defined in `src/content/config.ts`:
+
+```
+articleId, title, subtitle?, published?, boundary?, audience?, symptom?,
+featured?, source?, canonicalUrl?, summary?, tags?
+```
+
+Imported full texts from `/Users/peijiandong/btp-verdict/10_ARTICLES` are already merged for A001/A003/A006/A012/A014/A019. To import more, add a new Markdown file with the correct frontmatter and paste the original content.
+
+---
+
+## Development
+
+```
+npm install
+npm run dev      # local dev server
+npm run build    # static build to dist/
+npm run preview  # preview build on localhost
+```
 
 ---
 
 ## Deployment
 
-- GitHub Pages → Deploy from `main` branch (root)
-- Custom domain: `www.jiandongpei.com`
-- HTTPS enforced via GitHub Pages
+- Output: static site in `dist/`
+- `CNAME`, `robots.txt`, and `sitemap.xml` are published with the build
+- Suitable for GitHub Pages or any static hosting
