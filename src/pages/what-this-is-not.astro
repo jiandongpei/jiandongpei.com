@@ -1,0 +1,40 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+const title = 'What This Is Not';
+const description = 'A forwardable clarification: not implementation rescue, not staff augmentation, not generic consulting, not a blame exercise.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>What this is not</h1>
+    <p class="lede">This is not implementation rescue, staff augmentation, generic consulting, or a blame exercise.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What it is</h2>
+    <ul>
+      <li>A bounded architectural judgment action</li>
+      <li>A decision clarification across boundaries</li>
+      <li>A fixed‑scope escalation format</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What it is not</h2>
+    <ul>
+      <li>Not ticket execution</li>
+      <li>Not coding support</li>
+      <li>Not vendor replacement by default</li>
+      <li>Not indefinite advisory</li>
+      <li>Not political theater</li>
+    </ul>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/what-an-independent-verdict-does/" variant="ghost">What an independent verdict does</Button>
+      <Button href="/work/" variant="primary">See engagement formats</Button>
+    </div>
+  </section>
+</BaseLayout>
+

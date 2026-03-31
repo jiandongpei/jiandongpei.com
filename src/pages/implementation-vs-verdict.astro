@@ -8,7 +8,7 @@ const description = 'How to recognize the transition from implementation trouble
 <BaseLayout {title} {description}>
   <section class="stack hero tight">
     <h1>When an SAP BTP issue is no longer an implementation issue</h1>
-    <p class="lede">Some SAP BTP extension problems continue to be “worked on” long after they have stopped being decidable internally. At this point, more implementation activity increases motion but not legitimacy of the next architectural change.</p>
+    <p class="lede">Some SAP BTP extension problems keep being worked on long after they stop being decidable internally. Past this point, more implementation increases motion — not the legitimacy of the next architectural change.</p>
   </section>
 
   <section class="stack">
@@ -24,24 +24,24 @@ const description = 'How to recognize the transition from implementation trouble
 
   <section class="stack">
     <h2>Why the old path is not necessarily lower‑risk</h2>
-    <p class="measure">Continuing with familiar delivery motions can feel safer because friction is low and resourcing is known. But when the failure is structural — boundary validity, trust, tenant model, or lifecycle authority — the risk is not in velocity but in <em>jurisdiction</em>. Repeating the same motions postpones the architectural decision while entrenching the wrong contract.</p>
+    <p class="measure">Familiar delivery motions feel safer: low friction, known teams, visible progress. When the failure is structural — boundary validity, trust, tenant model, lifecycle authority — risk sits in <em>jurisdiction</em>, not effort. Continuing the motion postpones the decision and entrenches the wrong contract.</p>
   </section>
 
   <section class="stack">
     <h2>What changes at this point</h2>
-    <p class="measure">The center of gravity shifts from implementation, troubleshooting, and local fixes to legitimacy: which boundaries are valid, which assumptions hold across tenants and entry paths, and who has authority to approve the change.</p>
+    <p class="measure">The center of gravity shifts from fixes to legitimacy: which boundaries are valid, which assumptions hold across tenants and entry paths, and who has authority to approve the change.</p>
     <div class="feature">
-      <Card eyebrow="From" title="Implementation & troubleshooting">
+      <Card eyebrow="From" title="Implementation and troubleshooting">
         <ul>
           <li>Fixing incidents along the path</li>
           <li>Optimizing surface behavior</li>
           <li>Team‑local success criteria</li>
         </ul>
       </Card>
-      <Card eyebrow="To" title="Jurisdiction & decision legitimacy">
+      <Card eyebrow="To" title="Jurisdiction and decision legitimacy">
         <ul>
           <li>Boundary validity across identity, tenant, data, integration, lifecycle</li>
-          <li>Which contracts must change vs. remain</li>
+          <li>Which contracts must change vs remain</li>
           <li>Who holds final architectural jurisdiction</li>
         </ul>
       </Card>
@@ -50,11 +50,10 @@ const description = 'How to recognize the transition from implementation trouble
 
   <section class="stack cta">
     <h2>Next steps</h2>
-    <p class="measure">If you are here, treat the problem as a bounded architectural decision. Define what must change, what must remain, and who holds jurisdiction — then resume implementation on stable ground.</p>
+    <p class="measure">Define the decision, stabilize the architecture, then continue implementation. Fixed‑scope formats make this legible and fast.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/work/" variant="primary">See engagement formats</Button>
       <Button href="/contact/" variant="ghost">Send a 1‑page summary</Button>
     </div>
   </section>
 </BaseLayout>
-
