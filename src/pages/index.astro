@@ -9,7 +9,7 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Hero -->
   <section class="stack hero">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder‑side authority for post‑go‑live SAP BTP extensions when work continues but the decision no longer does. Some issues keep being worked on long after they stop being decidable internally. I issue contract‑bound architectural verdicts — what must change, what must remain, and who holds jurisdiction.</p>
+    <p class="lede">Builder‑side authority for post‑go‑live SAP BTP extensions. When work continues but the decision doesn’t, an independent verdict restores jurisdiction — what must change, what must remain, and who owns it.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem;">
       <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
       <Button href="/work/" variant="primary">Engagement formats</Button>
@@ -29,10 +29,10 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
     <h2>Who this is for</h2>
     <p class="measure">For architects, technical leads, and decision‑makers facing post–go‑live instability in SAP BTP extensions.</p>
     <p class="measure"><strong>Typical pattern:</strong><br />
-      Documentation appears aligned.<br />
-      Runtime behavior diverges by path, tenant, or identity.<br />
-      Ownership is fragmented.<br />
-      The system is functional; the architecture is not governable.
+      Docs look aligned.<br />
+      Runtime behavior varies by path, tenant, or identity.<br />
+      Ownership fragments across teams.<br />
+      The system runs; the architecture can’t be governed.
     </p>
   </section>
 
@@ -61,17 +61,17 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
     <h2>You may need an independent verdict when…</h2>
     <ul>
       <li>The system runs, but no team can legitimately approve the next change.</li>
-      <li>Teams can explain the problem, but no team can end the decision.</li>
-      <li>Rollout, onboarding, or hardening reveals an ungovernable architecture.</li>
+      <li>Teams are locally correct; the decision still does not converge.</li>
+      <li>Rollout, onboarding, or hardening exposes an ungovernable architecture.</li>
       <li>Works in Postman; fails behind App Router or Work Zone.</li>
-      <li>Local fixes continue; ambiguity does not decrease.</li>
+      <li>Local fixes increase motion; ambiguity does not decrease.</li>
     </ul>
   </section>
 
   <!-- Distinction section -->
   <section class="stack">
     <h2>When this is no longer an implementation problem</h2>
-    <p class="measure">Troubleshooting improves a step; it does not grant legitimacy. When teams are locally correct and the system is still globally unstable, you have a jurisdiction problem — not a work problem.</p>
+    <p class="measure">Troubleshooting improves a step; it does not grant legitimacy. When teams are locally correct and the system remains globally unstable, the failure is jurisdiction — not effort.</p>
     <p class="measure">Define the decision across boundaries — identity, tenant, data ownership, integration contracts, lifecycle gates — then continue implementation on stable ground.</p>
     <p><a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/internal-alignment-failed/">When internal alignment has failed →</a></p>
   </section>
@@ -110,7 +110,7 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Work with me -->
   <section class="stack cta">
     <h2>Work with me</h2>
-    <p class="measure">Fixed‑scope architectural judgment — not implementation. See formats, inputs, and outputs.</p>
+    <p class="measure">Fixed‑scope architectural judgment — clear inputs in, a written decision out. Not a funnel.</p>
     <Button href="/work/" variant="primary">Engagement formats</Button>
   </section>
 
@@ -119,10 +119,11 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Closing CTA -->
   <section class="stack">
     <h2>When to call me</h2>
-    <p class="measure">If the decision no longer converges internally, move to a fixed‑scope review. Clear inputs in, a written decision out.</p>
+    <p class="measure">If the decision no longer converges internally, move to a fixed‑scope review. The next move is small and tangible.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/when-to-call-me/" variant="ghost">Signals and next steps</Button>
       <Button href="/contact/" variant="primary">Send a 1‑page summary</Button>
     </div>
+    <p class="measure" style="margin-top:.5rem;">Start with one structured page: landscape, divergence, ownership, decision. <a href="/what-this-is-not/">Short version → What This Is Not</a></p>
   </section>
 </BaseLayout>
