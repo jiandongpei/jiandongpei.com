@@ -1,10 +1,9 @@
 ---
-interface Props { eyebrow?: string; title?: string; }
-const { eyebrow, title } = Astro.props as Props;
+interface Props { eyebrow?: string; title?: string; class?: string }
+const { eyebrow, title, class: cls } = Astro.props as Props;
 ---
-<section class="card">
+<section class={`card${cls ? ` ${cls}` : ''}`}>
   {eyebrow && (<div class="eyebrow">{eyebrow}</div>)}
   {title && (<h3 style="margin-top:.25rem;">{title}</h3>)}
   <div class="stack"><slot /></div>
 </section>
-

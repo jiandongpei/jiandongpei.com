@@ -42,6 +42,18 @@ const related = all.filter(e => e.slug !== entry.slug && (
     </section>
   </article>
 
+  {data.source && (
+    <section class="stack">
+      <h2>Source</h2>
+      <p class="measure">
+        {data.source}
+        {data.sourceUrl && (<>
+          : <a href={data.sourceUrl} target="_blank" rel="noopener">{data.sourceUrl}</a>
+        </>)}
+      </p>
+    </section>
+  )}
+
   
 
   {related.length > 0 && (

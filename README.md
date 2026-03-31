@@ -39,6 +39,18 @@ Imported full texts from `/Users/peijiandong/btp-verdict/10_ARTICLES` are alread
 
 ---
 
+### Minimal steps to add a new essay
+
+1. Copy an existing file in `src/content/insights/` as a template.
+2. Update frontmatter fields (at minimum): `articleId`, `title`, `published`, `summary`, `source`, `sourceUrl`.
+3. Paste the full text below the frontmatter. Keep on‑site canonical content; external links go into `sourceUrl`.
+4. Run locally: `npm run dev`, then open `/insights/` and the new route to verify.
+5. Optional: set `boundary`, `audience`, `tags`, and `featured` for better grouping.
+
+Astro will statically generate the detail page and include it in the sitemap.
+
+---
+
 ## Development
 
 ```

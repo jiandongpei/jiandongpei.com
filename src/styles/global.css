@@ -41,6 +41,7 @@ p { max-width: var(--measure); }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
 .container { max-width: var(--container); padding: var(--space-6) var(--space-4); margin: 0 auto; }
 .stack { display: grid; gap: calc(var(--space-6) * 1.15); }
@@ -70,8 +71,10 @@ hr { border: none; border-top: 1px solid var(--border); margin: var(--space-6) 0
 .button { display: inline-flex; gap: .5rem; align-items: center; border-radius: var(--radius); padding: .65rem 1rem; font-weight: 650; letter-spacing: .2px; border: 1px solid transparent; transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .2s ease; }
 .button.primary { background: var(--accent-ink); color: #fff; }
 .button.primary:hover { background: #0b2346; box-shadow: 0 2px 8px rgba(14, 42, 82, 0.15); }
+.button.primary:focus-visible { box-shadow: 0 0 0 3px rgba(22,59,114,.25); }
 .button.ghost { background: transparent; border-color: var(--border); color: var(--ink); }
 .button.ghost:hover { border-color: var(--accent); color: var(--accent); background: rgba(22, 59, 114, 0.04); }
+.button.ghost:focus-visible { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(22,59,114,.15); }
 
 .card { border: 1px solid var(--border); border-radius: var(--radius); background: #fff; padding: var(--space-6); border-color: #eef2f6; }
 .card .eyebrow { color: var(--muted); text-transform: uppercase; font-size: .72rem; letter-spacing: .4px; opacity: .85; }

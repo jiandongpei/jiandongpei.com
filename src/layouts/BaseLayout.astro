@@ -23,16 +23,21 @@ const { title = 'Jiandong Pei', description = 'Independent SAP BTP Architect —
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://jiandongpei.com${Astro.url.pathname}`} />
+    <meta property="og:image" content={`https://jiandongpei.com/og-default.svg`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon='{"token": "62cb45547d1d4cc8855ea2a9b5ee5845"}'></script>
   </head>
   <body>
+    <a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
     <header class="site">
       <div class="container">
         <div class="bar">
@@ -42,13 +47,13 @@ const { title = 'Jiandong Pei', description = 'Independent SAP BTP Architect —
             </h1>
             <p class="tagline">Independent SAP BTP Architect — Boundary Model</p>
           </div>
-          <nav class="nav">
+          <nav class="nav" aria-label="Primary">
             <Nav />
           </nav>
         </div>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div class="container">
         <slot />
       </div>

@@ -7,14 +7,18 @@ const description = 'Canonical essays and references on SAP BTP architecture and
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
-const archive = records
-  .filter(r => !r.featured && r.slug !== 'placeholder')
+const visibleRecords = records.filter(r => r.slug !== 'placeholder');
+const archive = visibleRecords
+  .filter(r => !r.featured)
   .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1));
 // Fixed boundary ordering aligned with the model
 const boundaryOrder = ['Runtime','Identity','Tenant','Data','Integration','Lifecycle'];
-const boundariesSet = new Set(records.map(r => r.boundary).filter(b => b && b !== 'Boundary Model'));
+const boundariesSet = new Set(visibleRecords.map(r => r.boundary).filter(b => b && b !== 'Boundary Model'));
 const boundaries = boundaryOrder.filter(b => boundariesSet.has(b));
+const byBoundary = Object.fromEntries(boundaries.map(b => [b, visibleRecords.filter(r => r.boundary === b)
+  .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
+  .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1))]));
 // Roles – curated paths
 const rolePaths = [
   { role: 'CIO / CTO', path: 'Boundary Model · Rapid Triage · Verdict' },
@@ -48,9 +52,20 @@ const rolePaths = [
   {boundaries.length > 0 && (
     <section class="stack">
       <h2>Explore by boundary</h2>
-      <ul>
-        {boundaries.map((b) => (<li>{b}</li>))}
-      </ul>
+      {boundaries.map((b) => (
+        <div class="card">
+          <div class="eyebrow">Boundary</div>
+          <h3>{b}</h3>
+          <ul>
+            {byBoundary[b].slice(0, 4).map((e) => (
+              <li>
+                <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
+                {e.summary && (<span class="muted"> — {e.summary}</span>)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   )}
 
@@ -79,6 +94,8 @@ const rolePaths = [
         <li>
           <a href={`/insights/${e.slug}/`}><strong>{e.title}</strong></a>
           {e.published && (<span class="muted"> — {e.published}</span>)}
+          {e.subtitle && (<div class="muted">{e.subtitle}</div>)}
+          {!e.subtitle && e.summary && (<div class="muted">{e.summary}</div>)}
         </li>
       ))}
     </ul>
