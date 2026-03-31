@@ -9,10 +9,10 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <!-- Hero -->
   <section class="stack hero">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder-side SAP BTP architect and creator of the Boundary Model.<br /><br />I provide contract-bound architectural verdicts when SAP BTP extensions fail after go-live — particularly when documentation appears aligned, yet runtime behavior diverges from design intent.<br /><br />This is architectural judgment — not implementation.</p>
+    <p class="lede">Builder‑side authority on post‑go‑live SAP BTP extensions when architecture is still being worked on but no longer being decided. I issue contract‑bound architectural verdicts — what must change, what must remain, and who holds jurisdiction. Some SAP BTP issues continue to be worked on long after they have stopped being decidable internally.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem;">
-      <Button href="/start-here/" variant="primary">Start here</Button>
       <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
+      <Button href="/work/" variant="primary">Engagement formats</Button>
     </div>
   </section>
 
@@ -56,28 +56,37 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
 
   
 
-  <!-- You may need a verdict when... -->
+  <!-- Decision signals -->
   <section class="stack">
     <h2>You may need an independent verdict when…</h2>
     <ul>
-      <li>It works in one tenant and fails in another.</li>
-      <li>It works in Postman but fails behind AppRouter or Work Zone.</li>
-      <li>It degrades months after go‑live during rollout or organizational change.</li>
-      <li>Remediation requires changing trust models, subdomains, destinations, roles, or tenant routing.</li>
-      <li>Multiple teams are involved and no one clearly owns the boundary.</li>
+      <li>The system runs, but no team can legitimately approve the next change.</li>
+      <li>Different teams can explain the problem, but no team can end the decision.</li>
+      <li>Rollout, tenant onboarding, or security hardening reveals that the original architecture was never governable.</li>
+      <li>It works in Postman but fails behind App Router or Work Zone.</li>
+      <li>Local fixes continue, but ambiguity does not decrease.</li>
     </ul>
+  </section>
+
+  <!-- Distinction section -->
+  <section class="stack">
+    <h2>When this is no longer an implementation problem</h2>
+    <p class="measure">Troubleshooting improves parts of a path. Architectural verdicts restore legitimacy across boundaries. If multiple teams are locally correct but the architecture remains globally unstable, the problem has crossed from implementation into decision failure.</p>
+    <p class="measure">At this point the question is jurisdiction — identity, tenant, data ownership, integration contracts, lifecycle gates — not more effort. The decision must define what changes and who can approve it.</p>
+    <p><a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/internal-alignment-failed/">When internal alignment has failed →</a></p>
   </section>
 
   
 
-  <!-- Start paths -->
+  <!-- Entry paths -->
   <section class="feature">
     <div>
-      <h2>Start here</h2>
-      <p class="measure">Enter at the right depth. For the canonical reference, read the Boundary Model. For patterns and cases, browse Insights.</p>
+      <h2>Choose your path</h2>
+      <p class="measure">Three fast ways to make this legible and bounded.</p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-        <Button href="/start-here/" variant="primary">Start here</Button>
-        <Button href="/insights/" variant="ghost">Insights</Button>
+        <Button href="/boundary-model/" variant="ghost">Understand the model</Button>
+        <Button href="/failure-patterns/" variant="ghost">Recognize the pattern</Button>
+        <Button href="/what-an-independent-verdict-does/" variant="primary">Understand the decision action</Button>
       </div>
     </div>
     <div class="stack">
@@ -85,9 +94,13 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
         <p class="measure">Canonical definition of six boundaries and why traditional reviews miss these failures.</p>
         <a href="/boundary-model/">Read the model →</a>
       </Card>
-      <Card eyebrow="Knowledge" title="Insights">
-        <p class="measure">Selected essays on identity, data, integration, and lifecycle failures in SAP BTP.</p>
-        <a href="/insights/">Browse essays →</a>
+      <Card eyebrow="Patterns" title="Failure Patterns">
+        <p class="measure">Recurring symptoms of boundary and jurisdiction failure in SAP BTP extensions.</p>
+        <a href="/failure-patterns/">See patterns →</a>
+      </Card>
+      <Card eyebrow="Decision" title="What an independent verdict does">
+        <p class="measure">Inputs, assessment, outputs, and boundaries — without implementation takeover.</p>
+        <a href="/what-an-independent-verdict-does/">Make it legible →</a>
       </Card>
     </div>
   </section>

@@ -125,3 +125,6 @@ main .container > section.compact + section.compact { margin-top: var(--space-6)
 main .container > section.hero + section.compact { margin-top: calc(var(--space-6) * 1.25); }
 /* Ensure hero+tight can be denser than compact */
 .stack.hero.tight { gap: var(--space-4); }
+
+/* Lightweight utilities for new pages */
+.cards-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }

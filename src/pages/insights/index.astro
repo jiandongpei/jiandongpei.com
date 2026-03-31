@@ -3,7 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import { getCollection } from 'astro:content';
 const title = 'Insights';
-const description = 'Canonical essays and references on SAP BTP architecture and the Boundary Model.';
+const description = 'Essays for post‑go‑live SAP BTP extension problems where architecture — not just implementation — is under question.';
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
@@ -31,8 +31,7 @@ const rolePaths = [
 <BaseLayout {title} {description}>
   <section class="stack tight">
     <h1>Insights</h1>
-    <p class="measure">Canonical essays on SAP BTP architecture and the Boundary Model.
-    <br /><br />This site hosts stable references. Distribution channels vary; definitions remain here.</p>
+    <p class="measure">Essays for post‑go‑live SAP BTP extension problems where architecture, not just implementation, is under question. These references favor structural clarity over news or tutorials.</p>
   </section>
 
   {featured.length > 0 && (
@@ -72,12 +71,18 @@ const rolePaths = [
   <section class="stack">
     <h2>Explore by real‑world symptom</h2>
     <ul>
-      <li>Entry‑surface success but runtime path fails</li>
-      <li>Tenant variance after rollout</li>
-      <li>Stability degrades 12–18 months later</li>
-      <li>Ownership drift across domains</li>
-      <li>Runtime surface behaves inconsistently</li>
+      <li>Works in Postman; fails behind App Router/Work Zone</li>
+      <li>One tenant works; the next exposes the wrong architecture</li>
+      <li>The demo passed; the rollout model never existed</li>
+      <li>Security hardening reveals an ungovernable architecture</li>
+      <li>Every team is locally correct; the system is globally wrong</li>
     </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Not every failure pattern is a bug</h2>
+    <p class="measure">Many recurring SAP BTP extension failures are boundary and jurisdiction failures. Recognize them early and treat them as architectural decisions, not more implementation work.</p>
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/implementation-vs-verdict/">Implementation vs verdict →</a></p>
   </section>
 
   <section class="stack">

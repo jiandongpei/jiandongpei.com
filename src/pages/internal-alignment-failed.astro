@@ -1,0 +1,41 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+const title = 'When Internal Alignment Has Already Failed';
+const description = 'Meeting‑room reality for post‑go‑live SAP BTP extension issues: when every team is locally correct yet no one can end the architectural debate.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>When internal alignment has already failed</h1>
+    <p class="lede">Architecture problems often become visible only after every team can explain its own layer — yet no team can end the debate. The issue is no longer implementation speed; it is the lack of final jurisdiction across boundaries.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What this sounds like inside the organization</h2>
+    <ul>
+      <li>The vendor says the design is correct.</li>
+      <li>The platform team says the trust is configured correctly.</li>
+      <li>The application team says the API works in testing.</li>
+      <li>Security says the path is not acceptable.</li>
+      <li>No team owns the final architectural decision.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What this usually means</h2>
+    <p class="measure">This is not just technical disagreement. The boundaries that carry authority — identity, tenant, data ownership, integration contracts, lifecycle — were never settled with final jurisdiction. Local truths exist; global legitimacy does not.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an external verdict is for</h2>
+    <p class="measure">An external verdict does not replace implementation teams. It defines the decision: what must change, what must remain, and where jurisdiction actually sits. Afterward, teams can implement with authority restored.</p>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/work/" variant="primary">See engagement formats</Button>
+      <Button href="/when-to-call-me/" variant="ghost">When to call me</Button>
+    </div>
+  </section>
+</BaseLayout>
+

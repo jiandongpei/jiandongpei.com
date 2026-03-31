@@ -1,0 +1,60 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
+const title = 'When an SAP BTP Issue Is No Longer an Implementation Issue';
+const description = 'How to recognize the transition from implementation troubleshooting to an independent architectural verdict in post‑go‑live SAP BTP extensions.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>When an SAP BTP issue is no longer an implementation issue</h1>
+    <p class="lede">Some SAP BTP extension problems continue to be “worked on” long after they have stopped being decidable internally. At this point, more implementation activity increases motion but not legitimacy of the next architectural change.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What this usually looks like</h2>
+    <ul>
+      <li>More implementation effort is not reducing ambiguity.</li>
+      <li>Different teams are locally correct but cannot converge.</li>
+      <li>The system runs, but no one can legitimately approve the next change.</li>
+      <li>The path works in one surface or tenant but not in another.</li>
+      <li>Security or rollout hardening exposes architectural assumptions too late.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why the old path is not necessarily lower‑risk</h2>
+    <p class="measure">Continuing with familiar delivery motions can feel safer because friction is low and resourcing is known. But when the failure is structural — boundary validity, trust, tenant model, or lifecycle authority — the risk is not in velocity but in <em>jurisdiction</em>. Repeating the same motions postpones the architectural decision while entrenching the wrong contract.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What changes at this point</h2>
+    <p class="measure">The center of gravity shifts from implementation, troubleshooting, and local fixes to legitimacy: which boundaries are valid, which assumptions hold across tenants and entry paths, and who has authority to approve the change.</p>
+    <div class="feature">
+      <Card eyebrow="From" title="Implementation & troubleshooting">
+        <ul>
+          <li>Fixing incidents along the path</li>
+          <li>Optimizing surface behavior</li>
+          <li>Team‑local success criteria</li>
+        </ul>
+      </Card>
+      <Card eyebrow="To" title="Jurisdiction & decision legitimacy">
+        <ul>
+          <li>Boundary validity across identity, tenant, data, integration, lifecycle</li>
+          <li>Which contracts must change vs. remain</li>
+          <li>Who holds final architectural jurisdiction</li>
+        </ul>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack cta">
+    <h2>Next steps</h2>
+    <p class="measure">If you are here, treat the problem as a bounded architectural decision. Define what must change, what must remain, and who holds jurisdiction — then resume implementation on stable ground.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/work/" variant="primary">See engagement formats</Button>
+      <Button href="/contact/" variant="ghost">Send a 1‑page summary</Button>
+    </div>
+  </section>
+</BaseLayout>
+

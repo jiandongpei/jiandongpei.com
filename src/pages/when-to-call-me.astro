@@ -2,7 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 const title = 'When to Call Me';
-const description = 'Decision triggers and expectations for external architectural judgment.';
+const description = 'Concrete decision triggers and a bounded next step for requesting an independent architectural verdict on SAP BTP.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack tight">
@@ -12,13 +12,16 @@ const description = 'Decision triggers and expectations for external architectur
 
   <h2>Decision triggers</h2>
   <ul>
-    <li>Surface‑level success but runtime‑layer inconsistency across entry paths.</li>
-    <li>Tenant variance emerging during rollout; behavior diverges across customers.</li>
-    <li>Stability degrades 12–18 months after go‑live.</li>
-    <li>Decision impasse around trust, routing, identity, or lifecycle control.</li>
-    <li>Remediation implies changes to subdomains, destinations, roles, or tenant routing.</li>
-    <li>Ownership drift across domains; no single team can issue a decision.</li>
+    <li>No team can legitimately approve the required change end‑to‑end.</li>
+    <li>The issue is still being worked on, but the decision no longer converges.</li>
+    <li>Multiple teams are locally correct, but the architecture remains globally unstable.</li>
+    <li>Rollout or security hardening is exposing assumptions that should have been settled before.</li>
+    <li>Surface‑level success but runtime inconsistency across entry paths (e.g., App Router, Work Zone).</li>
+    <li>Tenant variance appearing during onboarding or expansion.</li>
   </ul>
+
+  <h2>Why continuing internally may feel safer — and still increase risk</h2>
+  <p class="measure">Continuing with familiar delivery motions lowers friction but not risk. When the problem is jurisdiction across boundaries, more implementation activity delays the decision while deepening the wrong contract.</p>
 
   <h2>What you probably do not need me for</h2>
   <ul>
@@ -42,7 +45,7 @@ const description = 'Decision triggers and expectations for external architectur
   </div>
 
   <h2>What happens next</h2>
-  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope triage or audit defined in writing — no sales motions. Where executive‑level convergence is required, the Executive Boundary Verdict defines final jurisdiction.</p>
+  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope triage, audit, or verdict — defined in writing, time‑bounded, and outcome‑specific. Where executive‑level convergence is required, the Executive Boundary Verdict defines final jurisdiction.</p>
 
   <p>For the model behind this assessment, see the <a href="/boundary-model/">Boundary Model</a>. For essays, see <a href="/insights/">Insights</a>.</p>
 </BaseLayout>

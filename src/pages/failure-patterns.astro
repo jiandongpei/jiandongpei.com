@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+const title = 'Typical SAP BTP Extension Failure Patterns';
+const description = 'Recurring structural failure patterns in post‑go‑live SAP BTP extensions — signals for when to seek an independent architectural verdict.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>Typical SAP BTP extension failure patterns</h1>
+    <p class="lede">These are recurring structural patterns — boundary and jurisdiction failures — not random bugs. If these sound familiar, the issue is likely no longer an implementation problem.</p>
+  </section>
+
+  <section class="stack">
+    <div class="cards-grid">
+      <Card title="Works in Postman, fails in the real entry path">
+        <p>Requests succeed in direct testing but fail behind App Router, Work Zone, or other governed entry paths. The runtime boundary, identity propagation, or routing assumptions do not match the architecture.</p>
+      </Card>
+      <Card title="One tenant works, the next exposes the wrong architecture">
+        <p>A customer‑specific rollout reveals that the tenant model or ownership truth was never stable. Per‑tenant variations expose missing contracts at the boundary.</p>
+      </Card>
+      <Card title="The demo passed, but the rollout model never existed">
+        <p>A proof‑of‑concept behaved correctly, yet the operational model, trust, and lifecycle gates for rollout were never designed as a system. Implementation succeeded; governance did not.</p>
+      </Card>
+      <Card title="Data was copied successfully, but ownership truth was not">
+        <p>Migrations or integrations move data but not the authority to change it. Conflicting writes, approvals, or audit responsibilities indicate an unresolved data boundary.</p>
+      </Card>
+      <Card title="The system is live, but no team can govern change anymore">
+        <p>Production runs, incidents are handled, but architectural changes cannot be legitimately approved. Local correctness exists; global decision authority does not.</p>
+      </Card>
+      <Card title="Security hardening reveals the architecture was never governable">
+        <p>As security posture matures, the assumed path violates trust or isolation requirements. Hardening uncovers invalid boundaries rather than defects in code.</p>
+      </Card>
+      <Card title="Every team is locally correct, but the architecture is globally wrong">
+        <p>Platform, application, security, and vendor narratives all make sense within their lanes. The cross‑boundary contract is the defect.</p>
+      </Card>
+      <Card title="Implementation succeeded, lifecycle model did not">
+        <p>Day‑2 change, tenant onboarding, or deprovisioning breaks. The lifecycle boundary was never defined with jurisdiction and exposure in mind.</p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <p class="measure"><strong>These are not implementation categories. They are verdict triggers.</strong></p>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/implementation-vs-verdict/" variant="ghost">Implementation vs Verdict</Button>
+      <Button href="/work/" variant="primary">Engagement formats</Button>
+    </div>
+  </section>
+</BaseLayout>
+
