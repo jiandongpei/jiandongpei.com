@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+const title = 'Representative Cases';
+const description = 'Anonymous post-go-live SAP BTP cases that show how structural failure appears after the system is already live.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>Representative Cases</h1>
+    <p class="lede">Anonymous post‑go‑live SAP BTP cases that show how structural failure appears after the system is already live.</p>
+  </section>
+
+  <section class="stack">
+    <p class="measure">These cases are anonymized and reduced to architectural essentials. They are not testimonials. They depict situations where implementation kept moving while architectural decision no longer converged.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why these cases are here</h2>
+    <p class="measure">Architecture failure is often discussed as theory. Organizations encounter it as live systems that keep absorbing local fixes without restoring confidence.</p>
+    <p class="measure">These cases bridge the model and recognizable situations. They show where a system has become undecidable inside the current structure.</p>
+  </section>
+
+  <section class="stack">
+    <h2>How to read these cases</h2>
+    <ul>
+      <li><strong>Situation</strong> — the operating landscape</li>
+      <li><strong>Surface symptom</strong> — how the issue first appeared</li>
+      <li><strong>Why internal handling did not converge</strong> — why more effort did not reduce ambiguity</li>
+      <li><strong>What a verdict would clarify</strong> — what must be decided before implementation can continue safely</li>
+    </ul>
+  </section>
+
+  <section class="feature">
+    <Card title="The system was live, but no team could approve the next change">
+      <p class="measure">A post‑go‑live case of runtime success, fragmented ownership, and missing final jurisdiction.</p>
+      <a href="/cases/system-live-no-team-could-approve/">Read the case →</a>
+    </Card>
+    <Card title="One tenant worked. The next exposed the wrong architecture">
+      <p class="measure">A post‑go‑live case where apparent success concealed invalid rollout assumptions.</p>
+      <a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">Read the case →</a>
+    </Card>
+  </section>
+
+  <section class="stack">
+    <h2>These are not implementation stories</h2>
+    <p class="measure">They are not heroics or delivery rescues. They focus on the point where a live system becomes architecturally undecidable inside the current structure.</p>
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/what-an-independent-verdict-does/">What an independent verdict does →</a></p>
+  </section>
+</BaseLayout>
+

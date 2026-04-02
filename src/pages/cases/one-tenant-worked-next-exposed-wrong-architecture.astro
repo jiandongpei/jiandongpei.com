@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+const title = 'One tenant worked. The next exposed the wrong architecture';
+const description = 'A representative post-go-live SAP BTP case where first-tenant success concealed invalid rollout assumptions across tenant, identity, routing, or lifecycle boundaries.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>One tenant worked. The next exposed the wrong architecture</h1>
+    <p class="lede">First‑tenant success looked like proof. The next tenant showed the design was only locally successful. What looked like tenant variance was structural invalidity at rollout scale.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension went live in limited form: one tenant, one entry surface, one set of identity and routing assumptions. Dashboards were green and the first context created confidence to proceed. What remained unproven was tenant truth at rollout scale — not code execution in the initial context.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">The next tenant exposed divergence. Subdomain‑based routing and destination resolution shifted; identity propagation differed across contexts; isolation and role assumptions no longer held; operating controls required different paths. One tenant had been proven; the architecture had not.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">Teams treated it as tenant‑specific drift. Near‑term motion copied roles, tweaked destinations, added path‑based rules, and created exceptions until the new tenant “matched” the first. This felt reasonable and sometimes worked — until a third context surfaced similar divergence. The second tenant had not introduced a new defect; it revealed that the original contract had never been valid beyond the first case. Local fixes restored motion, not architectural truth.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">This was not mere tenant variance. It was a boundary failure across tenant model assumptions, identity/routing behavior, and lifecycle validity. The first tenant served as accidental proof in a favorable context; the architecture had not been validated for the operating model now required. In Boundary Model terms, the system passed a local runtime check and failed tenant and lifecycle truth.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <p class="measure">Do not start by patching the second tenant. First decide whether the original architecture was ever legitimately fit for rollout.</p>
+    <ul>
+      <li>Whether the original tenant model was structurally valid or merely locally successful</li>
+      <li>Which routing, identity, or isolation assumptions must be revised</li>
+      <li>What must change before further onboarding continues</li>
+      <li>Whether rollout should pause until the architecture becomes governable</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">Some of the most expensive SAP BTP failures appear only after the first tenant. The second tenant proves the first never validated the architecture. Early success must not be mistaken for structural validity; pausing to decide this prevents expensive rollout rework.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/work/">Work with me →</a></p>
+  </section>
+</BaseLayout>

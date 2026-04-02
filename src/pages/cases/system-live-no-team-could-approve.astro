@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+const title = 'The system was live, but no team could approve the next change';
+const description = 'A representative post-go-live SAP BTP case where implementation succeeded narrowly, but no team could legitimately approve the next architectural change.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>The system was live, but no team could approve the next change</h1>
+    <p class="lede">Implementation had succeeded narrowly. The next required change exposed missing decision legitimacy across boundaries. The issue was no longer execution, but architectural jurisdiction.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension had crossed go‑live. Operations had accepted the handover; monitoring was green; incidents were handled within support. What had not yet been tested was the next meaningful structural change — one that required a legitimate end‑to‑end approval across trust, routing, and identity.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">There was no outage. Pressure came from a required change that forced multiple assumptions onto the same path — for example, moving access behind App Router with tightened scopes and role collections while adding a governed entry surface. Each team could explain its layer; no one could approve the full change end‑to‑end.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">In review meetings, each view was defensible and partial. Application defended CAP/service contracts and surface behavior. Platform defended IAS/XSUAA trust, destination modes, and subaccount routing. Security defended segregation of duties, least privilege, and approved access paths. Operations/integration defended supportability and downstream impact. Local correctness survived; end‑to‑end legitimacy did not. More meetings produced more exceptions and parallel proofs‑of‑concept — motion increased, ambiguity did not decrease.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">This was not a defect to fix in one place. Implementation could still move; decision authority could not. Runtime truth, identity propagation, routing and ownership assumptions, and lifecycle gates were no longer aligned under one legitimate contract. In Boundary Model terms, the issue spanned runtime, identity, integration, and lifecycle expectations.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <p class="measure">The action is not delivery rescue. It restores decision legitimacy by defining the cross‑boundary contract for this change and similar ones.</p>
+    <ul>
+      <li>What must change</li>
+      <li>What must remain stable</li>
+      <li>Where final jurisdiction actually sits</li>
+      <li>What internal escalation can proceed once the decision is clarified</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">This is among the most expensive post‑go‑live failure forms — not because the system is down, but because the organization keeps working without a legitimate way to decide. Time and senior attention are consumed while decisions stall. Restoring governability re‑establishes a legitimate path to change and rebuilds confidence.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/what-an-independent-verdict-does/">What an independent verdict does →</a></p>
+  </section>
+</BaseLayout>
