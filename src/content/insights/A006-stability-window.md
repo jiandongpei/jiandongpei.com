@@ -1,6 +1,7 @@
 ---
 articleId: A006
-title: The Stability Window of BTP Extensions — Why Lifecycle Architecture Determines Long‑Term Success
+title: The Stability Window of BTP Extensions
+subtitle: Why Lifecycle Architecture Determines Long‑Term Success
 published: "2026-03-03"
 boundary: Lifecycle
 audience: Program Leadership
@@ -10,13 +11,6 @@ source: LinkedIn
 canonicalUrl: https://www.linkedin.com/pulse/stability-window-btp-extensions-why-lifecycle-architecture-pei-x44vc
 summary: Long‑term survivability depends on lifecycle boundary design, not just initial correctness.
 ---
-
-# The Stability Window of BTP Extensions
-
-## Why Lifecycle Architecture Determines Long-Term Success
-
-**By Jiandong Pei** — Independent SAP BTP Architect · Founder of the Boundary Model ·
-Ex-SAP Build Code (Joule) Core Initiator
 
 ---
 

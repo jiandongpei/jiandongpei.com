@@ -1,6 +1,7 @@
 ---
 articleId: A019
-title: The Integration Boundary — Why Connectivity Is Not Integration
+title: The Integration Boundary
+subtitle: Why Connectivity Is Not Integration
 published: "2026-02-03"
 boundary: Integration
 audience: Integration Lead
@@ -11,15 +12,7 @@ canonicalUrl: https://www.linkedin.com/pulse/integration-boundary-why-connectivi
 summary: Integration jurisdiction at runtime differs from connectivity success; why governance must cross system edges.
 ---
 
-# A019 — The Integration Boundary
-
-## Why Connectivity Is Not Integration
-
 ### An Architect’s View from the Builder Side
-
-**By Jiandong Pei** — Independent SAP BTP Architect · Builder-Side Veteran
-Former SAP Build Code / LCAP Engineering
-
 ---
 
 ## Preface — Integration Is a Governance Problem

@@ -9,7 +9,6 @@ const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
 const visibleRecords = records.filter(r => r.slug !== 'placeholder');
 const archive = visibleRecords
-  .filter(r => !r.featured)
   .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1));
 // Fixed boundary ordering aligned with the model

@@ -12,8 +12,7 @@ canonicalUrl: https://www.linkedin.com/pulse/inside-sap-btp-multitenancy-cap-wor
 summary: Builder-side analysis of multitenancy truth in BTP and why extensions must treat tenant boundaries as first-class architecture.
 ---
 
-# Inside SAP BTP: Multitenancy, CAP, Work Zone, S/4HANA Extensions, and AI  
-## An Architect’s View from the Builder Side
+<!-- Removed duplicate H2; subtitle is rendered by the template -->
 
 ---
 

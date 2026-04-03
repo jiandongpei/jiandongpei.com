@@ -83,3 +83,9 @@ const related = all.filter(e => e.slug !== entry.slug && (
     </ul>
   </section>
 </BaseLayout>
+
+<style>
+  /* Hide the first H1 inside article content to avoid duplicate titles
+     (the page already renders the title in the header above). */
+  .article .content > h1:first-of-type { display: none; }
+</style>
