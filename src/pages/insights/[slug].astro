@@ -42,17 +42,23 @@ const related = all.filter(e => e.slug !== entry.slug && (
     </section>
   </article>
 
-  {data.source && (
-    <section class="stack">
-      <h2>Source</h2>
-      <p class="measure">
-        {data.source}
-        {data.sourceUrl && (<>
-          : <a href={data.sourceUrl} target="_blank" rel="noopener">{data.sourceUrl}</a>
-        </>)}
-      </p>
-    </section>
-  )}
+  {(() => {
+    const sourceHref = data.sourceUrl ?? data.canonicalUrl ?? data.canonical;
+    const inferredLabel = sourceHref && sourceHref.includes('linkedin.com') ? 'LinkedIn' : undefined;
+    const sourceLabel = data.source ?? inferredLabel;
+    if (!sourceLabel && !sourceHref) return null;
+    return (
+      <section class="stack">
+        <h2>Source</h2>
+        <p class="measure">
+          {sourceLabel}
+          {sourceHref && (<>
+            : <a href={sourceHref} target="_blank" rel="noopener">{sourceHref}</a>
+          </>)}
+        </p>
+      </section>
+    );
+  })()}
 
   
 
