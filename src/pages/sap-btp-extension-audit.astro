@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+
+const title = 'SAP BTP Extension Audit';
+const description = 'Boundary-based SAP BTP extension audit for identity, tenant, data, integration, runtime, and lifecycle risks in S/4HANA extension landscapes.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>SAP BTP Extension Audit</h1>
+    <p class="lede">A boundary-based audit for SAP BTP extensions that must remain safe across tenant onboarding, schema evolution, identity hardening, integration change, rollout, and S/4HANA lifecycle events.</p>
+  </section>
+
+  <section class="stack">
+    <h2>When an audit is the right move</h2>
+    <ul>
+      <li>Multiple incidents recur across different layers.</li>
+      <li>First tenant or pilot worked, but rollout exposes divergence.</li>
+      <li>Data replication, destination configuration, or identity propagation has become hard to govern.</li>
+      <li>Teams can fix incidents locally, but cannot prove the extension remains structurally safe.</li>
+      <li>The architecture must survive more than the current production state.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Audit scope</h2>
+    <div class="cards-grid">
+      <Card title="Runtime Boundary"><p>Entry paths, AppRouter, Work Zone, CAP, CF/Kyma assumptions.</p></Card>
+      <Card title="Identity Boundary"><p>IAS, XSUAA, JWT, scopes, role collections, S/4 trust.</p></Card>
+      <Card title="Tenant Boundary"><p>Subaccount/subdomain, tenant isolation, routing, subscription assumptions.</p></Card>
+      <Card title="Data Boundary"><p>S/4 truth, HDI extension data, replicated, derived, or shadow truth.</p></Card>
+      <Card title="Integration Boundary"><p>Destinations, principal propagation, released APIs, and system contracts.</p></Card>
+      <Card title="Lifecycle Boundary"><p>Onboarding, migration, rollback, environment parity, and security hardening.</p></Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Output</h2>
+    <ul>
+      <li>Boundary risk matrix.</li>
+      <li>P1 structural risks.</li>
+      <li>Failure-mode analysis.</li>
+      <li>Explicit architectural conclusion.</li>
+      <li>Remediation direction without implementation takeover.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Audit vs troubleshooting</h2>
+    <p class="measure">Troubleshooting fixes a failing step. An audit determines whether the extension is still structurally safe to evolve.</p>
+    <p><a href="/work/">Services →</a> · <a href="/boundary-model/">Boundary Model →</a> · <a href="/insights/">Insights →</a> · <a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">Related case →</a></p>
+  </section>
+
+  <section class="stack">
+    <h2>What to send</h2>
+    <p class="measure">A one-page summary is sufficient to assess audit applicability. Use the <a href="/intake-template/">intake template</a> if that is faster than explaining the situation from scratch.</p>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Request audit applicability</Button>
+      <Button href="/failure-patterns/" variant="ghost">Recognize failure patterns</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    </div>
+  </section>
+</BaseLayout>

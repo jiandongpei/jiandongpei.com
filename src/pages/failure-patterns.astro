@@ -22,24 +22,30 @@ const description = 'Recurring structural failure patterns in post‑go‑live S
     <div class="cards-grid">
       <Card title="Works in Postman, fails in the real entry path">
         <p>Requests succeed in direct testing but fail behind App Router, Work Zone, or other governed paths. Runtime, identity propagation, or routing assumptions do not match the architecture.</p>
+        <a href="/cases/postman-worked-work-zone-failed/">Related case →</a>
       </Card>
       <Card title="One tenant works, the next exposes the wrong architecture">
         <p>Rollout reveals the tenant model or ownership truth was never stable. Per‑tenant variation exposes a missing contract at the boundary.</p>
+        <a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">Related case →</a>
       </Card>
       <Card title="The demo passed, but the rollout model never existed">
         <p>A proof‑of‑concept behaved correctly, but trust and lifecycle gates for rollout were never designed as a system. Implementation succeeded; governance did not.</p>
       </Card>
       <Card title="Data was copied successfully, but ownership truth was not">
         <p>Migrations move data but not the authority to change it. Conflicting writes or approvals indicate an unresolved data boundary.</p>
+        <a href="/cases/data-copy-worked-shadow-truth-froze-lifecycle/">Related case →</a>
       </Card>
       <Card title="The system is live, but no team can govern change anymore">
         <p>Production runs and incidents are handled, but architectural changes cannot be legitimately approved. Local correctness exists; global authority does not.</p>
+        <a href="/cases/system-live-no-team-could-approve/">Related case →</a>
       </Card>
       <Card title="Security hardening reveals the architecture was never governable">
         <p>Maturing security posture exposes trust or isolation violations. Hardening uncovers invalid boundaries rather than code defects.</p>
+        <a href="/cases/security-hardening-broke-extension/">Related case →</a>
       </Card>
       <Card title="Every team is locally correct, but the architecture is globally wrong">
         <p>Platform, application, security, and vendor narratives each make sense. The cross‑boundary contract is the defect.</p>
+        <a href="/cases/vendors-disagreed-no-one-owned-chain/">Related case →</a>
       </Card>
       <Card title="Implementation succeeded, lifecycle model did not">
         <p>Day‑2 change, onboarding, or deprovisioning breaks. The lifecycle boundary was never defined with jurisdiction and exposure in mind.</p>
@@ -53,6 +59,12 @@ const description = 'Recurring structural failure patterns in post‑go‑live S
   <section class="stack">
     <p class="measure"><strong>These are not implementation categories. They are verdict triggers.</strong> Stabilize the architecture; then continue implementation.</p>
     <p class="measure">If several patterns coexist, the issue is likely no longer local.</p>
+  </section>
+
+  <section class="stack">
+    <h2>If this is already happening</h2>
+    <p class="measure">If several of these patterns coexist, the question is usually no longer whether a capable team can make the system work. The question is whether the current architecture deserves to continue as designed.</p>
+    <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
   </section>
 
   <section class="stack cta">

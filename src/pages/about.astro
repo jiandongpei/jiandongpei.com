@@ -1,38 +1,61 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-const title = 'About';
-const description = 'Builder‑side authority and architectural judgment behind the Boundary Model.';
+import Button from "@components/Button.astro";
+const title = 'About Jiandong Pei';
+const description = 'Independent SAP BTP Architect, former SAP builder-side engineer, creator of the Boundary Model, focused on architectural verdicts for post-go-live SAP BTP extension failures.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack">
     <h1>Why my perspective is different</h1>
-    <p class="measure">I worked inside SAP BTP platform engineering and cross‑product integrations, unblocking runtime failures across multitenancy, identity propagation, and lifecycle orchestration.<br /><br />The Boundary Model emerged from repeated post–go‑live failures observed from within the platform layer.</p>
+    <p class="measure">The Boundary Model emerged from builder-side exposure to the way SAP BTP extensions fail after go-live: not only as local defects, but as broken contracts across identity, tenant, runtime, integration, data, and lifecycle boundaries.</p>
   </section>
 
   <section class="stack">
-    <h2>Builder‑side background</h2>
+    <h2>Builder-side SAP BTP background</h2>
     <ul>
-      <li>Former SAP platform engineering (BTP internals, identity, multitenancy)</li>
-      <li>Cross‑product integration and lifecycle stabilization work</li>
-      <li>Experience spanning runtime diagnosis and architectural convergence</li>
+      <li>Former SAP engineer with builder-side exposure to SAP BTP platform and extension architecture.</li>
+      <li>Worked across CAP, XSUAA, AppRouter, Work Zone, multitenancy, integration, and lifecycle-related failure modes.</li>
+      <li>Involved in SAP Build Code / Joule-era platform work and AI-assisted extension generation context.</li>
+      <li>Experience diagnosing cross-product failures where local correctness did not produce global architectural validity.</li>
     </ul>
   </section>
 
   <section class="stack">
-    <h2>What this site is</h2>
-    <p class="measure">This site is a stable authority layer.<br /><br />It defines the Boundary Model canonically,<br />hosts selected essays,<br />and provides a direct path to architectural verdicts.<br /><br />It is not a marketing site.<br />It is not a blog‑first publication.</p>
+    <h2>Why this matters</h2>
+    <p class="measure">Most external reviews see SAP BTP from the outside: projects, components, configuration, and delivery milestones. My perspective was shaped from the builder side: how identity, tenancy, runtime, integration, data, and lifecycle boundaries actually fail after systems go live.</p>
   </section>
 
   <section class="stack">
-    <h2>Architectural principles</h2>
-    <p class="measure">Most extension failures are boundary errors, not feature defects.</p>
-    <p class="measure">Architecture must be judged at runtime boundaries: runtime, identity, tenant, data, integration, lifecycle.</p>
-    <p class="measure">A decision must define: what changes, what remains, and who holds jurisdiction.</p>
-    <p class="measure">Architecture does not stabilize by consensus. It stabilizes by clear jurisdiction.</p>
+    <h2>What I claim</h2>
+    <ul>
+      <li>I provide independent architecture judgment.</li>
+      <li>I classify boundary and jurisdiction failures.</li>
+      <li>I issue fixed-scope written verdicts.</li>
+      <li>I do not replace delivery teams.</li>
+    </ul>
   </section>
 
   <section class="stack">
-    <h2>Next</h2>
-    <p class="measure">Read the <a href="/boundary-model/">Boundary Model</a>, browse <a href="/insights/">Insights</a>, or see <a href="/work/">Work With Me</a>.<br /><br />If architectural convergence cannot be reached internally, an external verdict may be required.</p>
+    <h2>What I do not claim</h2>
+    <ul>
+      <li>I am not SAP official support.</li>
+      <li>I do not speak for SAP.</li>
+      <li>I do not sell implementation staffing.</li>
+      <li>I do not claim every BTP issue is architectural.</li>
+      <li>I do not replace customer or vendor execution responsibility.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>The Boundary Model</h2>
+    <p class="measure">The Boundary Model is the public articulation of this perspective: six runtime-visible boundaries used to classify whether an SAP BTP extension is still structurally safe to evolve, and what must be decided before more delivery continues.</p>
+    <p><a href="/boundary-model/">Read the Boundary Model →</a></p>
+  </section>
+
+  <section class="stack">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/work/" variant="primary">See verdict services</Button>
+      <Button href="/contact/" variant="ghost">Send a 1-page summary</Button>
+    </div>
   </section>
 </BaseLayout>

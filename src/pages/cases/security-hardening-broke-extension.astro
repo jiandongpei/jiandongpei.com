@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = 'Security hardening broke a previously working extension';
+const description = 'A representative SAP BTP case where stricter scopes, trust, or identity posture exposed architecture that was never governable.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>Security hardening broke a previously working extension</h1>
+    <p class="lede">The extension did not become wrong when security tightened. Hardening exposed that the architecture had only been stable under weakened identity assumptions.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension was live and operating acceptably under an earlier access posture. Over time, the program tightened scopes, trust relationships, role collections, and separation-of-duty expectations to match production governance requirements. The same flows that once looked stable began to fail.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">Authorizations broke along user journeys that had previously worked. Technical-user shortcuts or broad privileges no longer covered weak assumptions. Teams described the change as regression introduced by security hardening, because the failing path had once been green.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">Security could show that the tighter posture was required. Application teams could show that the old path used to work. Platform teams could point to updated scopes, claims, destinations, or trust settings. The debate stalled because each team looked at change history rather than architectural legitimacy. The old path had not proven validity. It had depended on looseness.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">This was an identity and integration boundary failure. The extension had become operationally dependent on an access posture that governance could not preserve. Hardening did not create the problem; it removed the protection that had been hiding it.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <ul>
+      <li>Whether the former access path was ever legitimate for the target operating model.</li>
+      <li>Which trust or scope assumptions must change versus remain non-negotiable.</li>
+      <li>Whether the current design can survive least-privilege enforcement without architectural revision.</li>
+      <li>What must be decided before more exceptions normalize the wrong identity contract.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">Post-go-live extensions often look stable until the organization begins acting like production governance actually matters. If hardening breaks the system, the issue is rarely just permissions. It is that the architecture was never governable under the intended identity posture.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/work/">Services →</a></p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+
+const title = 'SAP BTP Post-Go-Live Failure Assessment';
+const description = 'Independent assessment for SAP BTP extensions that still run after go-live but no longer evolve safely across identity, tenant, integration, data, or lifecycle boundaries.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>SAP BTP Post-Go-Live Failure Assessment</h1>
+    <p class="lede">Most SAP BTP extension failures do not begin as outages. They appear after go-live, when rollout, onboarding, hardening, migration, or ownership change forces the architecture to prove its boundaries.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Common post-go-live signals</h2>
+    <ul>
+      <li>Works in Postman, fails behind AppRouter or Work Zone.</li>
+      <li>The first tenant works, the next exposes architecture drift.</li>
+      <li>Security hardening breaks flows that previously looked stable.</li>
+      <li>Technical-user shortcuts preserve function but weaken identity validity.</li>
+      <li>Data copies work, but ownership truth becomes unclear.</li>
+      <li>Vendor or internal teams disagree and no one owns the chain.</li>
+      <li>Strongest people keep being pulled back to preserve old stability.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this is not always a delivery issue</h2>
+    <p class="measure">Go-live proves current behavior, not future survivability. Protected paths can hide boundary violations, and local fixes can preserve motion while increasing structural risk. The architecture can remain busy and still become less governable with every patch.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Assessment questions</h2>
+    <ul>
+      <li>Is the failure local or structural?</li>
+      <li>Is the system working only along a protected path?</li>
+      <li>Can a new tenant reach correct state without manual repair?</li>
+      <li>Can version N move to N+1 across tenants without divergence?</li>
+      <li>Are identity, tenant, data, integration, and lifecycle boundaries still aligned?</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What comes out</h2>
+    <ul>
+      <li>Classification of the failure.</li>
+      <li>Boundary diagnosis.</li>
+      <li>Go / No-Go / Re-Architect decision framing.</li>
+      <li>What must be decided before more implementation continues.</li>
+    </ul>
+    <p><a href="/when-to-call-me/">When to request a review →</a> · <a href="/implementation-vs-verdict/">Implementation vs Verdict →</a> · <a href="/what-an-independent-verdict-does/">What an independent verdict does →</a> · <a href="/work/">Services →</a></p>
+  </section>
+
+  <section class="stack">
+    <h2>What to send</h2>
+    <p class="measure">A one-page summary is enough to classify whether the issue fits a failure assessment or should move directly into a fuller audit. Use the <a href="/intake-template/">intake template</a> if the team needs a neutral structure.</p>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send a 1-page summary</Button>
+      <Button href="/representative-cases/" variant="ghost">See representative cases</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    </div>
+  </section>
+</BaseLayout>

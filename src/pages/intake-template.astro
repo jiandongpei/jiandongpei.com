@@ -1,0 +1,94 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+
+const title = 'SAP BTP Architecture Review Intake Template';
+const description = 'One-page intake template for requesting an independent SAP BTP architecture review, extension audit, or boundary verdict.';
+const template = `Landscape:
+- S/4 system(s):
+- BTP runtime(s):
+- Entry surfaces:
+- Identity chain:
+- Tenant model:
+
+Observed divergence:
+- What works:
+- What fails:
+- Where it fails:
+- Which tenant/path/user group:
+
+Timeline:
+- Go-live date:
+- Recent changes:
+- When the divergence appeared:
+
+Ownership:
+- Application owner:
+- Platform/BTP owner:
+- Security/identity owner:
+- Integration owner:
+- Vendor/SI owner:
+
+Decision that cannot converge:
+- The decision:
+- Competing interpretations:
+- Business consequence if delayed:`;
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>SAP BTP Architecture Review Intake Template</h1>
+    <p class="lede">Use this page to prepare the one-page summary for an independent SAP BTP architecture review, extension audit, or boundary verdict.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Use this template</h2>
+    <p class="measure">Keep it factual and compressed. The goal is not to prove your team is right. The goal is to make the architecture legible enough to assess whether a fixed-scope verdict format applies.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Landscape</h2>
+    <p class="measure">List the relevant S/4 systems, BTP runtimes, entry surfaces, identity chain, and tenant model. Only include what materially shapes runtime truth.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Observed divergence</h2>
+    <p class="measure">State what works, what fails, where it fails, and which tenant, path, or user group exposes the difference.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Timeline</h2>
+    <p class="measure">Include go-live date, relevant rollout or hardening milestones, and the moment the divergence became visible.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Ownership map</h2>
+    <p class="measure">Name the current owners for application, BTP/platform, security or identity, integration, and any vendor or SI layer.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Decision that cannot converge</h2>
+    <p class="measure">Describe the decision itself, the competing interpretations, and the business consequence of delay. This is usually more important than the incident chronology.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Known constraints</h2>
+    <p class="measure">Add only the constraints that materially bound the verdict: release windows, compliance posture, clean core restrictions, contractual boundaries, or pre-committed rollout obligations.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What not to include</h2>
+    <p class="measure">Do not attach every log, ticket, or meeting note. Do not turn the intake into a defense brief. The first pass is for classification, not exhaustive evidence handling.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Copyable template</h2>
+    <pre>{template}</pre>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send structured summary</Button>
+      <Button href="/work/" variant="ghost">See verdict services</Button>
+    </div>
+  </section>
+</BaseLayout>

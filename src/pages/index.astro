@@ -3,15 +3,16 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
 const title = 'Independent SAP BTP Architect — Boundary Model';
-const description = 'Builder-side authority on SAP BTP architecture. Boundary Model, structural diagnosis, and contract-bound verdicts. Not implementation services.';
+const description = 'Independent SAP BTP architecture review, extension audit, and boundary verdict services for post-go-live failures, tenant rollout issues, identity/integration divergence, and lifecycle risk.';
 ---
 <BaseLayout {title} {description}>
   <!-- Hero -->
   <section class="stack hero">
     <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder‑side authority for post‑go‑live SAP BTP extensions. When work continues but the decision doesn’t, an independent verdict restores jurisdiction — what must change, what must remain, and who owns it.</p>
+    <p class="lede">Builder‑side authority for post‑go‑live SAP BTP extensions. I provide independent SAP BTP architecture reviews, extension audits, and boundary verdicts when work continues but the decision no longer converges — what must change, what must remain, and who owns it.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem;">
       <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
+      <Button href="/sap-btp-architecture-review/" variant="ghost">SAP BTP Architecture Review</Button>
       <Button href="/work/" variant="primary">Engagement formats</Button>
     </div>
   </section>
@@ -34,6 +35,12 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
       Ownership fragments across teams.<br />
       The system runs; the architecture can’t be governed.
     </p>
+  </section>
+
+  <section class="stack">
+    <h2>Search terms are not the problem. Classification is.</h2>
+    <p class="measure">Teams rarely start by asking for a Boundary Model verdict. They search for architecture review, extension audit, post‑go‑live failure assessment, identity propagation problems, AppRouter / Work Zone failures, tenant onboarding drift, or vendor disagreement. These are often the same situation: the project is no longer asking only “can we make it work?” but “are we proving the right architecture at all?”</p>
+    <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
   </section>
 
   <!-- What I actually do / do not do -->
@@ -82,10 +89,11 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
   <section class="feature">
     <div>
       <h2>Choose your path</h2>
-      <p class="measure">Three direct entry points to make the situation legible and bounded.</p>
+      <p class="measure">Four direct entry points to make the situation legible and bounded.</p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
         <Button href="/boundary-model/" variant="ghost">Understand the model</Button>
         <Button href="/failure-patterns/" variant="ghost">Recognize the pattern</Button>
+        <Button href="/sap-btp-architecture-review/" variant="ghost">Need a review?</Button>
         <Button href="/what-an-independent-verdict-does/" variant="primary">Understand the decision action</Button>
       </div>
     </div>
@@ -101,6 +109,10 @@ const description = 'Builder-side authority on SAP BTP architecture. Boundary Mo
       <Card eyebrow="Decision" title="What an independent verdict does">
         <p class="measure">Inputs, assessment, outputs, and boundaries — without implementation takeover.</p>
         <a href="/what-an-independent-verdict-does/">Make it legible →</a>
+      </Card>
+      <Card eyebrow="Intake" title="Need a review?">
+        <p class="measure">Direct entry point for SAP BTP architecture review when internal teams can no longer approve the architecture end‑to‑end.</p>
+        <a href="/sap-btp-architecture-review/">Request a review path →</a>
       </Card>
     </div>
   </section>

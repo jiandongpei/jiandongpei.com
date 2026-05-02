@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = 'Postman worked. Work Zone failed.';
+const description = 'A representative SAP BTP case where direct API success concealed invalid identity, routing, or AppRouter boundary assumptions.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>Postman worked. Work Zone failed.</h1>
+    <p class="lede">Direct API success looked like proof. The governed entry path exposed that runtime reachability and production boundary validity were never the same thing.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension exposed services that behaved correctly in direct tests. Requests succeeded in Postman, payloads looked right, and the application team could demonstrate that the backend logic was sound. The production path, however, was meant to run through AppRouter and Work Zone with governed identity propagation, scope checks, routing, and user context.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">Users entering through Work Zone saw authorization gaps, redirect loops, missing claims, or inconsistent behavior between shells and direct endpoints. The direct test remained green, which kept confidence in the implementation path longer than it should have.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">Application teams pointed to the successful API call. Platform teams checked routes and destinations. Security teams focused on scopes, trust, and role collections. Each observation was locally correct. The debate did not converge because the direct path had become the wrong proof. It confirmed endpoint reachability, not governed entry-path validity.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">The real failure sat at the identity and runtime boundary between direct testing and the production entry path. AppRouter, Work Zone, token propagation, route handling, and claims semantics belonged to the architecture being judged. The system had a protected success path and an invalid governed path.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <ul>
+      <li>Whether the production entry path or the direct test should define architectural truth.</li>
+      <li>Which identity and routing assumptions are invalid under real user entry conditions.</li>
+      <li>Whether technical-user shortcuts are preserving motion while weakening boundary validity.</li>
+      <li>What must change before the governed path can be considered legitimate.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">This pattern appears often because direct testing is easy to demonstrate and easy to over-trust. For SAP BTP extensions, entry-path truth is part of the architecture. When Work Zone and AppRouter invalidate the path, the issue is not just a failing request. It is a wrong proof standard.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">Post-go-live failure assessment →</a> · <a href="/work/">Services →</a></p>
+  </section>
+</BaseLayout>

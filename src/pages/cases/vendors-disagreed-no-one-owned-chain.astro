@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = 'Every vendor was locally correct. No one owned the chain.';
+const description = 'A representative SAP BTP case where platform, application, security, and integration teams each had a defensible view, but no one owned the cross-boundary contract.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>Every vendor was locally correct. No one owned the chain.</h1>
+    <p class="lede">The problem was not that one party was obviously wrong. The problem was that no one held jurisdiction for the contract spanning the full path.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension depended on multiple parties: application delivery, platform administration, security, integration, and one or more vendors or SIs. The system was live, but any meaningful change crossed several teams and contractual boundaries.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">A change or recurring failure triggered cross-team reviews in which every party could defend its own layer. API contracts looked valid. Platform settings were documented. Security controls were justified. Integration assumptions reflected previous agreements. Yet the end-to-end path still did not hold under real conditions.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">Each team optimized for local correctness and contractual defensibility. No one was accountable for classifying the failure across the full chain. That meant every new fix proposal shifted burden onto another boundary. Meetings produced better explanations, not better jurisdiction.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">This was jurisdiction failure. The architecture lacked accountable ownership across runtime, identity, integration, and lifecycle boundaries. The defect was not reducible to a single vendor ticket because the cross-boundary contract itself was unsettled.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <ul>
+      <li>Which cross-boundary contract actually governs the path.</li>
+      <li>Where final decision authority sits when local ownership fragments.</li>
+      <li>Which team or vendor assumptions are valid but incomplete.</li>
+      <li>What decision must be made before more implementation continues.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">Many expensive SAP BTP failures survive because they are not legible as one team’s mistake. When everyone is locally correct and the architecture is still wrong, the missing element is not effort. It is a decision structure that can own the chain.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/work/">Services →</a></p>
+  </section>
+</BaseLayout>

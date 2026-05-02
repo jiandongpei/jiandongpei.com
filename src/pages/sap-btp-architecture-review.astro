@@ -1,0 +1,72 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+
+const title = 'SAP BTP Architecture Review';
+const description = 'Independent SAP BTP architecture review for post-go-live extension failures, identity/integration divergence, tenant rollout issues, and architectural decision impasse.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>SAP BTP Architecture Review</h1>
+    <p class="lede">For SAP BTP extensions where implementation keeps moving but architecture can no longer be approved end-to-end. This is an independent review for boundary validity, jurisdiction, and decision clarity — not implementation takeover.</p>
+  </section>
+
+  <section class="stack">
+    <h2>When this review is relevant</h2>
+    <ul>
+      <li>The extension runs, but no team can legitimately approve the next change.</li>
+      <li>Work continues, but the decision does not converge.</li>
+      <li>AppRouter, Work Zone, CAP, XSUAA, destinations, or S/4 each appear locally correct, but the end-to-end behavior remains unstable.</li>
+      <li>Rollout, onboarding, or security hardening exposes assumptions that should have been settled earlier.</li>
+      <li>Vendor or team narratives conflict and no single owner can classify the failure.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What gets reviewed</h2>
+    <div class="cards-grid">
+      <Card title="Runtime Boundary"><p>Where behavior actually executes, how governed entry paths differ from direct testing, and which assumptions are only surviving on protected paths.</p></Card>
+      <Card title="Identity Boundary"><p>How identity, scopes, role collections, trust, and principal propagation behave across the chain rather than in isolated screenshots.</p></Card>
+      <Card title="Tenant Boundary"><p>Whether onboarding, subdomain routing, isolation, and subscription assumptions remain valid after the first successful context.</p></Card>
+      <Card title="Data Boundary"><p>Where truth lives, whether copied data is still governable, and whether ownership survives change across systems.</p></Card>
+      <Card title="Integration Boundary"><p>How released APIs, destinations, propagation modes, and system contracts behave under real operational constraints.</p></Card>
+      <Card title="Lifecycle Boundary"><p>Whether the extension can survive rollout, hardening, migration, parity drift, and future change without manual repair becoming normal.</p></Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>What the review decides</h2>
+    <ul>
+      <li>Whether the issue is still local implementation or already structural.</li>
+      <li>Whether the current success path is representative or artificially protected.</li>
+      <li>Which boundary is being weakened to keep the system working.</li>
+      <li>What must change, what must remain, and who holds jurisdiction.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What this is not</h2>
+    <ul>
+      <li>Not delivery rescue.</li>
+      <li>Not SAP BTP implementation support.</li>
+      <li>Not ticket execution.</li>
+      <li>Not staff augmentation.</li>
+      <li>Not a blame exercise.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>What to send</h2>
+    <p class="measure">A one-page summary is enough to assess whether the situation fits a fixed-scope review. If helpful, use the <a href="/intake-template/">intake template</a> rather than improvising a deck.</p>
+    <p><a href="/boundary-model/">Boundary Model →</a> · <a href="/implementation-vs-verdict/">Implementation vs Verdict →</a> · <a href="/failure-patterns/">Failure Patterns →</a> · <a href="/representative-cases/">Representative Cases →</a></p>
+  </section>
+
+  <section class="stack cta">
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send a 1-page summary</Button>
+      <Button href="/work/" variant="ghost">See engagement formats</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    </div>
+  </section>
+</BaseLayout>

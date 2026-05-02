@@ -1,0 +1,51 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const title = 'The data copy worked. Shadow truth froze lifecycle.';
+const description = 'A representative SAP BTP case where replicated S/4 data looked useful until ownership truth and lifecycle reconstruction became impossible.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero tight">
+    <h1>The data copy worked. Shadow truth froze lifecycle.</h1>
+    <p class="lede">Replication success looked practical in the short term. Over time it created shadow truth that the architecture could no longer reconstruct, govern, or evolve cleanly.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Situation</h2>
+    <p class="measure">A SAP BTP extension copied or derived data from S/4HANA to support local processing, reporting, or workflow speed. Early implementation benefited from autonomy and apparent simplicity. The copied data became useful enough that more behaviors began to rely on it.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Surface symptom</h2>
+    <p class="measure">The extension still functioned, but change became dangerous. Teams could no longer answer cleanly which system held authoritative truth after corrections, backfills, schema changes, or reconciliation events. Lifecycle evolution slowed because every change risked invalidating locally accumulated meaning.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why internal handling did not converge</h2>
+    <p class="measure">The data copy had always worked technically, so teams treated later tension as process debt or data-quality cleanup. Some argued for more synchronization. Others proposed operational controls. The discussion did not converge because replication success had become the wrong measure. The core issue was ownership truth and reconstructibility, not copy mechanics.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What the issue actually was</h2>
+    <p class="measure">This was a data and lifecycle boundary failure. The extension had created shadow truth that could not be cleanly governed across future change. Replication had moved information, but not authority. As a result, lifecycle evolution froze around a data model that no longer had a trustworthy source of truth.</p>
+  </section>
+
+  <section class="stack">
+    <h2>What an independent verdict would need to clarify</h2>
+    <ul>
+      <li>Which system owns truth for each business object under change, not just under read access.</li>
+      <li>Whether the copied model remains reconstructible after corrections and version change.</li>
+      <li>Which data behaviors must move back toward released-system authority.</li>
+      <li>What must be decided before the extension accumulates more shadow obligations.</li>
+    </ul>
+  </section>
+
+  <section class="stack">
+    <h2>Why this case matters</h2>
+    <p class="measure">Some data boundary failures are invisible until the organization tries to evolve the extension. If the architecture cannot explain how truth survives change, the issue is no longer just replication design. It is whether the extension can remain compatible with clean-core and lifecycle reality.</p>
+  </section>
+
+  <section class="stack cta">
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/work/">Services →</a></p>
+  </section>
+</BaseLayout>

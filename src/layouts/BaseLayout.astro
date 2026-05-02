@@ -8,6 +8,56 @@ interface Props {
   description?: string;
 }
 const { title = 'Jiandong Pei', description = 'Independent SAP BTP Architect — Boundary Model and architectural verdicts' } = Astro.props as Props;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Jiandong Pei',
+    url: 'https://jiandongpei.com',
+    jobTitle: 'Independent SAP BTP Architect',
+    knowsAbout: [
+      'SAP BTP',
+      'SAP Business Technology Platform',
+      'SAP BTP architecture review',
+      'SAP BTP extension audit',
+      'SAP BTP post-go-live failure',
+      'SAP BTP multitenancy',
+      'SAP BTP identity propagation',
+      'SAP BTP AppRouter',
+      'SAP Build Work Zone',
+      'SAP CAP',
+      'SAP Clean Core',
+      'Boundary Model',
+      'Architecture verdict',
+    ],
+    sameAs: ['https://www.linkedin.com/in/peijiandong/'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'SAP BTP Architecture Verdict Services',
+    url: 'https://jiandongpei.com/work/',
+    areaServed: 'Global',
+    serviceType: [
+      'SAP BTP Architecture Review',
+      'SAP BTP Extension Audit',
+      'SAP BTP Post-Go-Live Failure Assessment',
+      'Boundary Verdict',
+    ],
+    provider: {
+      '@type': 'Person',
+      name: 'Jiandong Pei',
+      url: 'https://jiandongpei.com',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Jiandong Pei',
+    url: 'https://jiandongpei.com',
+    description,
+  },
+];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +77,7 @@ const { title = 'Jiandong Pei', description = 'Independent SAP BTP Architect —
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

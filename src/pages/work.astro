@@ -2,85 +2,80 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import Button from "@components/Button.astro";
-const title = 'Work With Me';
-const description = 'Bounded escalation formats for SAP BTP extension failures that have crossed from implementation into architectural decision failure.';
+const title = 'SAP BTP Architecture Verdict Services';
+const description = 'Fixed-scope SAP BTP architecture review, extension audit, and boundary verdict services. Independent architectural judgment, not implementation support or staff augmentation.';
 ---
 <BaseLayout {title} {description}>
-  <!-- 1) Context intro -->
   <section class="stack tight">
-    <h1>Independent architectural verdicts.</h1>
-    <p class="measure">What you buy: a bounded architectural decision that restores jurisdiction. You send a structured page; you receive a written verdict — what must change, what must remain, and who can legitimately approve it — so delivery can proceed.</p>
+    <h1>SAP BTP Architecture Verdict Services</h1>
+    <p class="measure">What you buy is not time, manpower, or implementation support. You buy a fixed-scope architectural judgment: whether the SAP BTP extension is structurally safe to evolve, which boundaries are invalid, and what decision must be made before delivery continues.</p>
   </section>
 
-  <!-- 2) Decision‑level verdict (placed first) -->
-  <section class="stack">
-    <Card eyebrow="Verdict" title="Executive Boundary Verdict" class="emphasis">
+  <section class="cards-grid">
+    <Card eyebrow="Rapid" title="Rapid Boundary Verdict" class="emphasis">
       <h3>When this is the right move</h3>
-      <p class="measure">Competing architectural truths cannot reconcile; no team can legitimately approve the next change. Decision impasse around trust, routing, identity, tenant, or lifecycle authority.</p>
-      <h3>What you send</h3>
-      <p class="measure">Landscape, divergence, timeline, ownership, and the decision that cannot converge.</p>
+      <p class="measure">Urgent decision impasse, high-signal incident, protected-path failure, AppRouter / Work Zone mismatch, or first signs of tenant rollout divergence.</p>
       <h3>What you receive</h3>
-      <p class="measure">A formal written verdict defining what must change, what must remain, and who holds jurisdiction — legible for internal escalation.</p>
-      <h3>What this is not</h3>
-      <p class="measure">Not a rescue project; not implementation takeover; not a blame exercise.</p>
+      <p class="measure">Short written verdict memo with P1 structural risks, boundary violations, and a Go / No-Go / Re-Architect direction.</p>
       <Button href="/contact/" variant="primary">Assess applicability</Button>
     </Card>
-  </section>
-
-  <!-- 3) Engagement spectrum (light → heavy) -->
-  <h2>Engagement spectrum</h2>
-  <section class="feature">
-    <Card eyebrow="Rapid" title="Rapid Boundary Triage">
+    <Card eyebrow="Audit" title="Full Boundary Audit">
       <h3>When this is the right move</h3>
-      <p class="measure">High‑signal incident with one or two competing narratives; Postman vs App Router/Work Zone mismatch; single‑tenant variance.</p>
-      <h3>What you send</h3>
-      <p class="measure">Minimal landscape plus failing path(s) with concrete divergence examples.</p>
+      <p class="measure">Recurring incidents, fragmented ownership, vendor disagreement, rollout instability, or a landscape that must survive tenant, identity, data, integration, and lifecycle evolution.</p>
       <h3>What you receive</h3>
-      <p class="measure">Six‑boundary map, top decision points, and a brief memo with a provisional verdict.</p>
-      <h3>What this is not</h3>
-      <p class="measure">Not operational support; not ticket execution.</p>
-      <Button href="/contact/" variant="ghost">Request triage review</Button>
+      <p class="measure">Boundary risk matrix, failure-mode analysis, ownership/jurisdiction map, and final architectural verdict with non-implementation remediation direction.</p>
+      <Button href="/contact/" variant="ghost">Request audit scope</Button>
     </Card>
-    <Card eyebrow="Audit" title="Boundary Audit">
+    <Card eyebrow="Authority" title="Architecture Verdict Authority">
       <h3>When this is the right move</h3>
-      <p class="measure">Fragmented ownership across teams/vendors; recurring incidents; rollout instability months after go‑live.</p>
-      <h3>What you send</h3>
-      <p class="measure">Landscape, divergence, stakeholder map, and representative incidents.</p>
+      <p class="measure">Programs where a single architectural misjudgment would create disproportionate long-term cost and recurring external arbitration is needed.</p>
       <h3>What you receive</h3>
-      <p class="measure">Jurisdiction‑based ownership mapping, structural remediation rules, and prepared decision points for an executive verdict if required.</p>
-      <h3>What this is not</h3>
-      <p class="measure">Not staff augmentation; not indefinite advisory.</p>
-      <Button href="/contact/" variant="ghost">Request scope discussion</Button>
+      <p class="measure">Periodic boundary health reviews, pre-validation of major architectural changes, and limited emergency architectural arbitration.</p>
+      <Button href="/contact/" variant="ghost">Send structured summary</Button>
     </Card>
   </section>
 
-  <!-- 4) Why the spectrum exists (transition) -->
-  <section class="stack compact">
-    <p class="measure">All formats produce architectural judgment. Only the Executive Boundary Verdict defines final jurisdiction.</p>
+  <section class="stack">
+    <h2>Why this is different from another round of implementation review</h2>
+    <p class="measure">Implementation reviews validate local correctness; verdict services establish whether the architecture is still legitimate across runtime, identity, tenant, data, integration, and lifecycle boundaries. The question is not whether a capable team can keep the extension moving. The question is whether the current structure deserves to continue as designed.</p>
+    <p class="measure">If helpful, use the <a href="/intake-template/">intake template</a> before sending the one-page summary.</p>
   </section>
 
-  <!-- 5) What I do not sell -->
-  <h2>Why this is different from another round of implementation review</h2>
-  <p class="measure">Implementation reviews validate local correctness; verdicts establish final jurisdiction. When behavior diverges by tenant or entry path, the defect sits in the contract — not the code. Decide the contract; then continue delivery.</p>
-  <p class="measure">Prefer concrete situations? See <a href="/representative-cases/">Representative Cases</a>.</p>
+  <section class="stack">
+    <h2>Not offered</h2>
+    <ul>
+      <li>No implementation or configuration work.</li>
+      <li>No production code modification.</li>
+      <li>No deployment, migration, or operational execution.</li>
+      <li>No project management or delivery team role.</li>
+      <li>No staff augmentation.</li>
+      <li>No generic advisory retainer.</li>
+    </ul>
+    <p class="measure">Need the short version? See <a href="/what-this-is-not/">What This Is Not</a>.</p>
+  </section>
 
-  <h2>What I do not sell</h2>
-  <ul>
-    <li>No implementation rescue or delivery services.</li>
-    <li>No staff augmentation or ticket execution.</li>
-    <li>No generic consulting or advisory funnel.</li>
-  </ul>
-  <p class="measure">Need the short version? See <a href="/what-this-is-not/">What This Is Not</a>.</p>
+  <section class="stack">
+    <h2>Related search entry points</h2>
+    <ul>
+      <li><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review</a></li>
+      <li><a href="/sap-btp-extension-audit/">SAP BTP Extension Audit</a></li>
+      <li><a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment</a></li>
+    </ul>
+  </section>
 
-  <!-- 6) Initiation protocol -->
-  <h2>Initiation protocol</h2>
-  <p class="measure">Send one structured page. That is enough to determine whether this should enter triage, audit, or verdict — fixed‑scope, time‑bounded, and outcome‑specific.</p>
-  <ul>
-    <li>Landscape — S/4, BTP runtimes, entry surfaces, identity</li>
-    <li>Divergence — by tenant, path, or surface</li>
-    <li>Timeline — go‑live, rollout, recent change</li>
-    <li>Ownership — who holds what today</li>
-    <li>Decision — the choice that cannot converge</li>
-  </ul>
-  <p><strong>Contact:</strong> <a href="mailto:pei_jiandong@hotmail.com">pei_jiandong@hotmail.com</a> or <a href="https://www.linkedin.com/in/peijiandong/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  <section class="stack">
+    <h2>Initiation protocol</h2>
+    <p class="measure">Send one structured page. That is enough to determine whether this should enter a rapid verdict, full audit, or verdict authority format — fixed-scope, time-bounded, and outcome-specific.</p>
+    <ul>
+      <li>Landscape — S/4, BTP runtimes, entry surfaces, identity</li>
+      <li>Divergence — by tenant, path, or surface</li>
+      <li>Timeline — go-live, rollout, recent change</li>
+      <li>Ownership — who holds what today</li>
+      <li>Decision — the choice that cannot converge</li>
+    </ul>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send structured summary</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    </div>
+  </section>
 </BaseLayout>

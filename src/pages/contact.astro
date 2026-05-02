@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
 const title = 'Contact';
-const description = 'Low‑friction first step for architectural verdicts — formal and minimal.';
+const description = 'Low-friction first step for independent SAP BTP architecture review and boundary verdict requests.';
 ---
 <BaseLayout {title} {description}>
   <h1>Contact</h1>
@@ -22,7 +23,14 @@ const description = 'Low‑friction first step for architectural verdicts — fo
     <li>LinkedIn: <a href="https://www.linkedin.com/in/peijiandong/" target="_blank" rel="noopener">/in/peijiandong</a></li>
   </ul>
 
+  <p class="measure">If helpful, use the <a href="/intake-template/">intake template</a> to prepare the one-page summary before sending it.</p>
+
+  <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Send structured summary</Button>
+    <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    <Button href="/work/" variant="ghost">See verdict services</Button>
+  </div>
+
   <h2>Expectations</h2>
   <p>I reply with whether the situation matches a boundary failure pattern and, if appropriate, a fixed‑scope next step. No marketing follow‑ups.</p>
 </BaseLayout>
-

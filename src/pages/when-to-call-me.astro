@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
-const title = 'When to Call Me';
-const description = 'Concrete decision triggers and a bounded next step for requesting an independent architectural verdict on SAP BTP.';
+const title = 'When to Request an Independent SAP BTP Architecture Review';
+const description = 'Decision triggers for requesting an independent SAP BTP architecture review, extension audit, or boundary verdict when internal teams can no longer converge.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack tight">
-    <h1>When to call me</h1>
+    <h1>When to request an independent SAP BTP architecture review</h1>
     <p class="measure">Use this page to decide whether the issue should stop being internally absorbed. If the decision no longer converges, move to a fixed‑scope review.</p>
   </section>
 
@@ -18,6 +18,9 @@ const description = 'Concrete decision triggers and a bounded next step for requ
     <li>Rollout or hardening exposes assumptions that should have been settled earlier.</li>
     <li>Works in Postman; fails behind App Router or Work Zone.</li>
     <li>Tenant variance appears during onboarding or expansion.</li>
+    <li>Vendor or internal teams disagree and no one owns the chain.</li>
+    <li>The second tenant exposes assumptions hidden by the first tenant.</li>
+    <li>A security hardening step breaks flows that previously looked stable.</li>
   </ul>
 
   <h2>Why continuing internally may feel safer — and still increase risk</h2>
@@ -40,12 +43,21 @@ const description = 'Concrete decision triggers and a bounded next step for requ
     <li>Decision — the choice that cannot converge</li>
   </ol>
   <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Send structured summary</Button>
+    <Button href="/contact/" variant="primary">Send structured summary</Button>
+    <Button href="/intake-template/" variant="ghost">Use intake template</Button>
     <Button href="/work/" variant="ghost">See engagement formats</Button>
   </div>
 
-  <h2>What happens next</h2>
-  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope triage, audit, or verdict — defined in writing, time‑bounded, and outcome‑specific. Where executive‑level convergence is required, the Executive Boundary Verdict defines final jurisdiction. No sales funnel.</p>
+  <h2>Which service path this usually maps to</h2>
+  <ul>
+    <li>One high-signal failure pattern → <a href="/work/">Rapid Boundary Verdict</a></li>
+    <li>Recurring incidents across teams or boundaries → <a href="/sap-btp-extension-audit/">Full Boundary Audit</a></li>
+    <li>Ongoing program-level architectural arbitration → <a href="/work/">Architecture Verdict Authority</a></li>
+  </ul>
 
+  <h2>What happens next</h2>
+  <p class="measure">I confirm whether the situation matches a boundary failure pattern. If appropriate, we proceed with a fixed‑scope review, audit, or verdict authority format — defined in writing, time‑bounded, and outcome‑specific. No sales funnel.</p>
+
+  <p>Related entry points: <a href="/sap-btp-architecture-review/">SAP BTP Architecture Review</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment</a></p>
   <p>For the model behind this assessment, see the <a href="/boundary-model/">Boundary Model</a>. For essays, see <a href="/insights/">Insights</a>.</p>
 </BaseLayout>
