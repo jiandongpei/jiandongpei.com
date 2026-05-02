@@ -20,11 +20,11 @@ const byBoundary = Object.fromEntries(boundaries.map(b => [b, visibleRecords.fil
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1))]));
 // Roles – curated paths
 const rolePaths = [
-  { role: 'CIO / CTO', path: 'Boundary Model · Rapid Triage · Verdict' },
-  { role: 'Lead Architect', path: 'Identity · Data · Tenant · Lifecycle' },
-  { role: 'Program Leadership', path: 'Boundary Audit · Ownership maps' },
-  { role: 'Security Architect', path: 'Identity propagation · Trust boundaries' },
-  { role: 'Integration Lead', path: 'Jurisdiction · Cross-system contracts' },
+  { role: 'CIO / CTO', path: 'Architecture Review · Rapid Boundary Verdict · Verdict Authority' },
+  { role: 'Lead Architect', path: 'Identity · Tenant · Data · Integration · Lifecycle' },
+  { role: 'Program Leadership', path: 'Full Boundary Audit · Ownership / jurisdiction map' },
+  { role: 'Security Architect', path: 'Identity propagation · Trust boundaries · Security hardening' },
+  { role: 'Integration Lead', path: 'Integration Boundary · Cross-system contracts' },
 ];
 ---
 <BaseLayout {title} {description}>
@@ -70,18 +70,18 @@ const rolePaths = [
   <section class="stack">
     <h2>Explore by real‑world symptom</h2>
     <ul>
-      <li>Works in Postman; fails behind App Router/Work Zone</li>
-      <li>One tenant works; the next exposes the wrong architecture</li>
-      <li>The demo passed; the rollout model never existed</li>
-      <li>Security hardening reveals an ungovernable architecture</li>
-      <li>Every team is locally correct; the system is globally wrong</li>
+      <li><a href="/cases/postman-worked-work-zone-failed/">Works in Postman; fails behind App Router/Work Zone</a></li>
+      <li><a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">One tenant works; the next exposes the wrong architecture</a></li>
+      <li><a href="/sap-btp-post-go-live-failure-assessment/">The demo passed; the rollout model never existed</a></li>
+      <li><a href="/cases/security-hardening-broke-extension/">Security hardening reveals an ungovernable architecture</a></li>
+      <li><a href="/cases/vendors-disagreed-no-one-owned-chain/">Every team is locally correct; the system is globally wrong</a></li>
     </ul>
   </section>
 
   <section class="stack">
     <h2>Not every failure pattern is a bug</h2>
     <p class="measure">Many recurring SAP BTP extension failures are boundary and jurisdiction failures. Use the patterns to recognize the situation, then move to a decision.</p>
-    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/implementation-vs-verdict/">Implementation vs verdict →</a></p>
+    <p><a href="/failure-patterns/">See failure patterns →</a> · <a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a></p>
   </section>
 
   <section class="stack">
