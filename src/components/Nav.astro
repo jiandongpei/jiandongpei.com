@@ -10,9 +10,7 @@ const links = [
   { href: '/about/', label: 'About' },
 ];
 ---
-<nav class="nav">
-  {links.map(({ href, label }) => (
-    <a href={href}>{label}</a>
-  ))}
-  <!-- restrained navigation -->
-</nav>
+{links.map(({ href, label }) => (
+  <a href={href}>{label}</a>
+))}
+<!-- restrained navigation -->

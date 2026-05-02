@@ -1,3 +1,6 @@
+// Manual sitemap generation is used instead of @astrojs/sitemap because
+// the current Astro/plugin combination does not build cleanly with the
+// integration enabled in this repository.
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
@@ -50,4 +53,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-
