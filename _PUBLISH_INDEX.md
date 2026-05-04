@@ -12,3 +12,4 @@
 | A019 | The Integration Boundary - Why Connectivity Is Not Integration | LinkedIn | https://www.linkedin.com/pulse/integration-boundary-why-connectivity-jiandong-pei-icbdc | 2026-02-03 | |
 | A006 | The Stability Window of BTP Extensions - Why Lifecycle Architecture Determines Long-Term Success | LinkedIn | https://www.linkedin.com/pulse/stability-window-btp-extensions-why-lifecycle-architecture-pei-x44vc | 2026-03-03 | |
 | A015 | Clean Core: The Architectural Reason SAP Never Fully Explained | LinkedIn | https://www.linkedin.com/pulse/clean-core-architectural-reason-sap-never-fully-explained-pei-d6h9c/ | 2026-03-24 | |
+| A021 | RISE Does Not Decide Your SAP BTP Extension Architecture | LinkedIn | https://www.linkedin.com/pulse/rise-does-decide-your-sap-btp-extension-architecture-jiandong-pei-vvddc/ | 2026-05-04 | |
