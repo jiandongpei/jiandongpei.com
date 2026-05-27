@@ -128,3 +128,22 @@ main .container > section.hero + section.compact { margin-top: calc(var(--space-
 
 /* Lightweight utilities for new pages */
 .cards-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+.model-lines {
+  max-width: var(--measure);
+  border-left: 3px solid var(--accent);
+  padding-left: var(--space-4);
+}
+
+.model-lines p { margin: 0; }
+
+.code-diagram {
+  max-width: var(--measure);
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  background: #f8fafc;
+  color: var(--ink);
+  line-height: 1.55;
+}

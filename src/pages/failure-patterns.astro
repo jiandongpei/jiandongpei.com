@@ -3,7 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import Button from "@components/Button.astro";
 const title = 'Typical SAP BTP Extension Failure Patterns';
-const description = 'Recurring structural failure patterns in post‑go‑live SAP BTP extensions — signals for when to seek an independent architectural verdict.';
+const description = 'Recurring structural failure patterns in post-go-live SAP BTP extensions and AI-era responsibility drift across agents, workflows, extensions, and core systems.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack hero tight">
@@ -64,6 +64,20 @@ const description = 'Recurring structural failure patterns in post‑go‑live S
   </section>
 
   <section class="stack">
+    <h2>AI-era failure patterns</h2>
+    <p class="measure">When agents, workflows, extensions, automations, and core systems are combined, the same boundary problem appears as responsibility drift.</p>
+    <ul>
+      <li>Responsibility drift</li>
+      <li>Truth drift</li>
+      <li>Execution drift</li>
+      <li>Identity drift</li>
+      <li>Lifecycle drift</li>
+      <li>Accountability drift</li>
+    </ul>
+    <p class="measure"><a href="/enterprise-ai-responsibility-architecture/">Read Enterprise AI Responsibility Architecture →</a></p>
+  </section>
+
+  <section class="stack">
     <h2>If this is already happening</h2>
     <p class="measure">If several of these patterns coexist, the question is usually no longer whether a capable team can make the system work. The question is whether the current architecture deserves to continue as designed.</p>
     <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
@@ -72,7 +86,7 @@ const description = 'Recurring structural failure patterns in post‑go‑live S
   <section class="stack cta">
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/implementation-vs-verdict/" variant="ghost">Implementation vs Verdict</Button>
-      <Button href="/work/" variant="primary">Verdict services</Button>
+      <Button href="/work/" variant="primary">Work With Me</Button>
     </div>
     <p class="measure">Prefer recognizable project situations? See <a href="/representative-cases/">Representative Cases</a>.</p>
   </section>

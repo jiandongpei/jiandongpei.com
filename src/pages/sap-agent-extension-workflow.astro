@@ -1,0 +1,91 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
+const title = 'SAP Agent, Extension, or Workflow? | Enterprise AI Decision Guide';
+const description = 'A practical responsibility guide for deciding when to use an SAP agent, extension, workflow, lightweight automation, or core system ownership.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero compact tight">
+    <div class="eyebrow">Decision Guide</div>
+    <h1>Should This Be an SAP Agent, an Extension, or a Workflow?</h1>
+    <p class="lede">A practical decision guide before enterprise AI creates responsibility drift.</p>
+  </section>
+
+  <section class="stack">
+    <p class="measure">Many SAP AI discussions start with the wrong question:</p>
+    <p class="measure"><strong>“Should we build an agent?”</strong></p>
+    <p class="measure">The better question is:</p>
+    <p class="measure"><strong>“What responsibility are we assigning?”</strong></p>
+    <p class="measure">Before choosing a product surface, force the artifact to answer what it owns: business truth, state, decisions, execution, stable capability, repeatable process, lifecycle versioning, and accountability.</p>
+  </section>
+
+  <section class="cards-grid">
+    <Card title="Use an extension when...">
+      <ul>
+        <li>the enterprise needs a stable reusable business capability</li>
+        <li>custom UI, backend, authorization, APIs, data model, or tenant lifecycle is required</li>
+        <li>extension-owned state must be versioned and migrated</li>
+        <li>the capability must be secured, tested, monitored, and evolved</li>
+        <li>business logic should not be hidden inside an agent prompt</li>
+      </ul>
+    </Card>
+    <Card title="Use a workflow when...">
+      <ul>
+        <li>the path is known or repeatable</li>
+        <li>approval, audit, SLA, escalation, or exception handling is required</li>
+        <li>the process must be replayed or explained</li>
+        <li>cross-system orchestration needs governance</li>
+        <li>agents may help but should not swallow process accountability</li>
+      </ul>
+    </Card>
+    <Card title="Use an agent when...">
+      <ul>
+        <li>input is ambiguous or unstructured</li>
+        <li>the system must interpret intent</li>
+        <li>the path is not fully predetermined</li>
+        <li>dynamic tool selection is required</li>
+        <li>contextual judgment, summarization, recommendation, or coordination is needed</li>
+        <li>the agent acts under policy through governed tools</li>
+        <li>the agent does not bypass extension APIs, workflow accountability, or core-system truth ownership</li>
+      </ul>
+    </Card>
+    <Card title="Use lightweight automation when...">
+      <ul>
+        <li>the task is low-risk</li>
+        <li>the process is internal or experimental</li>
+        <li>speed matters more than long-term governance</li>
+        <li>no core business truth or regulated execution is involved</li>
+      </ul>
+    </Card>
+    <Card title="Keep it in the core system when...">
+      <ul>
+        <li>canonical business truth is involved</li>
+        <li>financial, legal, HR, procurement, or compliance truth is at stake</li>
+        <li>S/4HANA or another system of record owns the business object</li>
+        <li>the enterprise cannot tolerate truth drift</li>
+      </ul>
+    </Card>
+  </section>
+
+  <section class="stack">
+    <h2>Decision summary</h2>
+    <div class="model-lines">
+      <p>Stable capability: extension.</p>
+      <p>Repeatable process: workflow.</p>
+      <p>Contextual decision and tool selection: agent.</p>
+      <p>Human interaction surface: assistant.</p>
+      <p>Canonical business truth: core system.</p>
+    </div>
+  </section>
+
+  <section class="stack cta">
+    <p class="measure">If the action writes to a core business system, it should go through governed workflow or extension APIs, not direct free-form agent execution.</p>
+    <p class="measure">The goal is not to build fewer agents. The goal is to avoid assigning the wrong responsibility to the wrong execution unit.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/agent-extension-boundary-model/" variant="primary">Read the boundary model</Button>
+      <Button href="/insights/a023-agents-do-not-replace-extensions/" variant="ghost">Read the full article</Button>
+      <Button href="/work/" variant="ghost">Review an initiative</Button>
+    </div>
+  </section>
+</BaseLayout>

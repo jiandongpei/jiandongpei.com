@@ -2,23 +2,67 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import Button from "@components/Button.astro";
-const title = 'SAP BTP Architecture Verdict Services';
-const description = 'Fixed-scope SAP BTP architecture review, extension audit, and boundary verdict services. Independent architectural judgment, not implementation support or staff augmentation.';
+const title = 'Work With Me | SAP BTP & Enterprise AI Architecture';
+const description = 'Architectural judgment for SAP BTP and enterprise AI responsibility boundaries across agents, extensions, workflows, S/4HANA, Clean Core, lifecycle, and post-go-live extension failures.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack tight">
-    <h1>SAP BTP Architecture Verdict Services</h1>
-    <p class="measure">What you buy is not time, manpower, or implementation support. You buy a fixed-scope architectural judgment: whether the SAP BTP extension is structurally safe to evolve, which boundaries are invalid, and what decision must be made before delivery continues.</p>
+    <h1>Work With Me</h1>
+    <p class="measure">Architectural judgment for SAP BTP and enterprise AI decisions where agents, extensions, workflows, integrations, and core systems are being combined.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Architectural Judgment for SAP BTP and Enterprise AI</h2>
+    <p class="measure">I help teams clarify responsibility boundaries before or during high-risk SAP architecture decisions, especially when agents, extensions, workflows, integrations, and core systems are being combined.</p>
+    <div class="cards-grid">
+      <Card title="Advisory areas">
+        <ul>
+          <li>Agent / Extension / Workflow responsibility review</li>
+          <li>SAP BTP boundary review</li>
+          <li>Enterprise AI architecture ambiguity assessment</li>
+          <li>Post-go-live SAP BTP extension failure verdict</li>
+          <li>Clean Core and S/4HANA extensibility boundary review</li>
+          <li>Lifecycle and reconstructibility review</li>
+        </ul>
+      </Card>
+      <Card title="What this is not">
+        <ul>
+          <li>Not implementation staffing.</li>
+          <li>Not generic AI advisory.</li>
+          <li>Not project management or delivery team replacement.</li>
+          <li>Not a claim that every issue is architectural.</li>
+        </ul>
+      </Card>
+    </div>
   </section>
 
   <section class="cards-grid">
-    <Card eyebrow="Rapid" title="Strategic Boundary Verdict" class="emphasis">
+    <Card eyebrow="Enterprise AI" title="Agent–Extension Responsibility Review" class="emphasis">
+      <h3>Purpose</h3>
+      <p class="measure">To determine whether an SAP enterprise AI initiative has clearly assigned responsibility across agents, extensions, workflows, and core systems.</p>
+      <h3>Typical questions</h3>
+      <ul>
+        <li>Should this be an agent, an extension, a workflow, or automation?</li>
+        <li>What business truth is involved?</li>
+        <li>What can the agent execute?</li>
+        <li>Which workflow contains accountability?</li>
+        <li>Which extension APIs or governed tools should be invoked?</li>
+        <li>Which system owns final state?</li>
+        <li>How will agent behavior, tools, prompts, workflows, and extension APIs evolve?</li>
+      </ul>
+      <h3>Deliverable</h3>
+      <p class="measure">Responsibility Boundary Memo, including a responsibility map, identified ambiguity areas, truth / execution / lifecycle / accountability risks, and recommended architecture direction.</p>
+      <Button href="/contact/" variant="primary">Assess responsibility boundaries</Button>
+    </Card>
+
+    <Card eyebrow="Rapid" title="Strategic Boundary Verdict">
       <h3>When this is the right move</h3>
       <p class="measure">Urgent decision impasse, high-signal incident, protected-path failure, AppRouter / Work Zone mismatch, or first signs of tenant rollout divergence.</p>
       <h3>What you receive</h3>
       <p class="measure">Short written verdict memo with P1 structural risks, boundary violations, and a Go / No-Go / Re-Architect direction.</p>
-      <Button href="/contact/" variant="primary">Assess applicability</Button>
+      <Button href="/contact/" variant="ghost">Assess applicability</Button>
     </Card>
+
     <Card eyebrow="Audit" title="Full Boundary Audit">
       <h3>When this is the right move</h3>
       <p class="measure">Recurring incidents, fragmented ownership, vendor disagreement, rollout instability, or a landscape that must survive tenant, identity, data, integration, and lifecycle evolution.</p>
@@ -26,6 +70,7 @@ const description = 'Fixed-scope SAP BTP architecture review, extension audit, a
       <p class="measure">Boundary risk matrix, failure-mode analysis, ownership/jurisdiction map, and final architectural verdict with non-implementation remediation direction.</p>
       <Button href="/contact/" variant="ghost">Request audit scope</Button>
     </Card>
+
     <Card eyebrow="Authority" title="Architecture Verdict Authority">
       <h3>When this is the right move</h3>
       <p class="measure">Programs where a single architectural misjudgment would create disproportionate long-term cost and recurring external arbitration is needed.</p>
@@ -37,26 +82,16 @@ const description = 'Fixed-scope SAP BTP architecture review, extension audit, a
 
   <section class="stack">
     <h2>Why this is different from another round of implementation review</h2>
-    <p class="measure">Implementation reviews validate local correctness; verdict services establish whether the architecture is still legitimate across runtime, identity, tenant, data, integration, and lifecycle boundaries. The question is not whether a capable team can keep the extension moving. The question is whether the current structure deserves to continue as designed.</p>
-    <p class="measure">If helpful, use the <a href="/intake-template/">intake template</a> before sending the one-page summary.</p>
-  </section>
-
-  <section class="stack">
-    <h2>Not offered</h2>
-    <ul>
-      <li>No implementation or configuration work.</li>
-      <li>No production code modification.</li>
-      <li>No deployment, migration, or operational execution.</li>
-      <li>No project management or delivery team role.</li>
-      <li>No staff augmentation.</li>
-      <li>No generic advisory retainer.</li>
-    </ul>
-    <p class="measure">Need the short version? See <a href="/what-this-is-not/">What This Is Not</a>.</p>
+    <p class="measure">Implementation reviews validate local correctness; boundary work establishes whether the architecture is still legitimate across responsibility, runtime, identity, tenant, data, integration, and lifecycle boundaries.</p>
+    <p class="measure">The question is not whether a capable team can keep the initiative moving. The question is whether the current structure deserves to continue as designed.</p>
+    <p class="measure">For the AI-era model, read the <a href="/agent-extension-boundary-model/">Agent–Extension Boundary Model</a>. If helpful, use the <a href="/intake-template/">intake template</a> before sending the one-page summary.</p>
   </section>
 
   <section class="stack">
     <h2>Related entry points</h2>
     <ul>
+      <li><a href="/agent-extension-boundary-model/">Agent–Extension Boundary Model</a></li>
+      <li><a href="/sap-agent-extension-workflow/">Should this be an SAP agent, extension, or workflow?</a></li>
       <li><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review</a></li>
       <li><a href="/sap-btp-extension-audit/">SAP BTP Extension Audit</a></li>
       <li><a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment</a></li>
@@ -65,12 +100,12 @@ const description = 'Fixed-scope SAP BTP architecture review, extension audit, a
 
   <section class="stack">
     <h2>Initiation protocol</h2>
-    <p class="measure">Send one structured page. That is enough to determine whether this should enter a strategic verdict, full audit, or verdict authority format — fixed-scope, time-bounded, and outcome-specific.</p>
+    <p class="measure">Send one structured page. That is enough to determine whether the work is an agent-extension responsibility review, strategic verdict, full audit, or verdict authority format.</p>
     <ul>
       <li>Landscape — S/4, BTP runtimes, entry surfaces, identity</li>
-      <li>Divergence — by tenant, path, or surface</li>
-      <li>Timeline — go-live, rollout, recent change</li>
-      <li>Ownership — who holds what today</li>
+      <li>Divergence — by tenant, path, surface, agent behavior, or workflow state</li>
+      <li>Timeline — go-live, rollout, recent change, AI pilot, model/tool change</li>
+      <li>Ownership — who holds truth, action, state, lifecycle, and accountability today</li>
       <li>Decision — the choice that cannot converge</li>
     </ul>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">

@@ -7,17 +7,21 @@ interface Props {
   title?: string;
   description?: string;
 }
-const { title = 'Jiandong Pei', description = 'Independent SAP BTP Architect — Boundary Model and architectural verdicts' } = Astro.props as Props;
+const { title = 'Jiandong Pei', description = 'SAP BTP & Enterprise AI Architecture — Boundary Model for agents, extensions, workflows, and core systems' } = Astro.props as Props;
 const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jiandong Pei',
     url: 'https://jiandongpei.com',
-    jobTitle: 'Independent SAP BTP Architect',
+    jobTitle: 'SAP BTP and Enterprise AI Architect',
     knowsAbout: [
       'SAP BTP',
       'SAP Business Technology Platform',
+      'SAP enterprise AI architecture',
+      'SAP agent architecture',
+      'Agent extension boundary model',
+      'Enterprise AI responsibility architecture',
       'SAP BTP architecture review',
       'SAP BTP extension audit',
       'SAP BTP post-go-live failure',
@@ -29,17 +33,20 @@ const structuredData = [
       'SAP Clean Core',
       'Boundary Model',
       'Architecture verdict',
+      'SAP workflow governance',
     ],
     sameAs: ['https://www.linkedin.com/in/peijiandong/'],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'SAP BTP Architecture Verdict Services',
+    name: 'SAP BTP and Enterprise AI Architecture Services',
     url: 'https://jiandongpei.com/work/',
-    description: 'Independent SAP BTP architecture review, extension audit, and boundary verdict services for post-go-live extension failures, tenant rollout divergence, identity/integration boundary failures, and lifecycle risk.',
+    description: 'SAP BTP and enterprise AI architecture review for responsibility boundaries across agents, extensions, workflows, S/4HANA, Clean Core, lifecycle, and post-go-live extension failures.',
     areaServed: 'Global',
     serviceType: [
+      'SAP Enterprise AI Architecture Review',
+      'Agent Extension Responsibility Review',
       'SAP BTP Architecture Review',
       'SAP BTP Extension Audit',
       'SAP BTP Post-Go-Live Failure Assessment',
@@ -97,7 +104,7 @@ const structuredData = [
             <h1 style="margin: 0; font-size: 1.25rem; font-weight: 700;">
               <a href="/">Jiandong Pei</a>
             </h1>
-            <p class="tagline">Independent SAP BTP Architect — Boundary Model</p>
+            <p class="tagline">SAP BTP & Enterprise AI Architecture — Boundary Model</p>
           </div>
           <nav class="nav" aria-label="Primary">
             <Nav />

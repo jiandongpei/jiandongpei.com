@@ -1,0 +1,61 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
+const title = 'Enterprise AI Responsibility Architecture | SAP Agents, Workflows, Extensions';
+const description = 'Why agent governance is not enough without truth, execution, lifecycle, context, and accountability boundaries in SAP enterprise AI systems.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero compact tight">
+    <div class="eyebrow">Responsibility Architecture</div>
+    <h1>Enterprise AI Responsibility Architecture</h1>
+    <p class="lede">Why agent governance is not enough without truth, execution, lifecycle, and accountability boundaries.</p>
+  </section>
+
+  <section class="stack">
+    <p class="measure">Enterprise AI governance cannot start only with model risk, prompt policy, or agent inventory.</p>
+    <p class="measure">Those controls matter, but they are not enough if the enterprise has not defined what each artifact is allowed to own.</p>
+  </section>
+
+  <section class="stack">
+    <h2>The new ambiguity</h2>
+    <p class="measure">Agents, workflows, extensions, integrations, and core systems now collaborate in the same business action. This creates responsibility ambiguity.</p>
+    <p class="measure">A single request may pass through an assistant, an agent, a tool, a workflow, an extension API, and S/4HANA. If the boundaries are unclear, every layer can appear correct while the enterprise loses control of the whole action.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Responsibility drift</h2>
+    <p class="measure"><strong>Responsibility drift</strong> occurs when agents, extensions, workflows, automations, and core systems all appear to work locally, but the enterprise can no longer determine who owns truth, action, state, lifecycle, or accountability.</p>
+    <div class="cards-grid">
+      <Card title="Truth Drift">
+        <p>S/4HANA, extensions, workflow logs, agent memory, and RAG indexes may all hold versions of a business fact. The enterprise must know which one is authoritative.</p>
+      </Card>
+      <Card title="Execution Drift">
+        <p>One team lets agents recommend, another lets them execute, another lets them trigger workflows, another lets them write directly. There must be an enterprise execution boundary.</p>
+      </Card>
+      <Card title="Identity Drift">
+        <p>A user initiates intent, an agent plans, a workflow runs, an extension validates, a service account writes. The identity chain must remain auditable.</p>
+      </Card>
+      <Card title="Lifecycle Drift">
+        <p>Agent behavior changes when prompt, model, tool, policy, context, workflow, or extension API changes. Agent lifecycle is behavior migration.</p>
+      </Card>
+      <Card title="Accountability Drift">
+        <p>Every layer can say “my part worked,” while nobody owns the final business action.</p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Why BTP experience matters</h2>
+    <p class="measure">This responsibility architecture is built on SAP BTP builder-side experience with identity, tenant, data, integration, runtime, and lifecycle boundaries.</p>
+    <p class="measure">SAP BTP extension failures show the pattern clearly: local implementation can be correct while the architecture loses reconstructibility across identity, tenant, data, integration, and lifecycle change. Enterprise AI adds agents, prompts, tools, memory, and workflows to the same boundary problem.</p>
+  </section>
+
+  <section class="stack cta">
+    <p class="measure">Agent governance is necessary. But governance must sit on top of a responsibility model. Otherwise an enterprise may govern many assets without knowing what each asset is allowed to own.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/agent-extension-boundary-model/" variant="primary">Read the Agent–Extension Boundary Model</Button>
+      <Button href="/work/" variant="ghost">Assess responsibility drift</Button>
+    </div>
+  </section>
+</BaseLayout>

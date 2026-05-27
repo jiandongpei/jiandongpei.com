@@ -2,141 +2,99 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
-const title = 'Independent SAP BTP Architect — Boundary Model';
-const description = 'Independent SAP BTP architecture review, extension audit, and boundary verdict services for post-go-live failures, tenant rollout issues, identity/integration divergence, and lifecycle risk.';
+const title = 'SAP BTP & Enterprise AI Architecture | Boundary Model';
+const description = 'SAP BTP and enterprise AI architecture by Jiandong Pei. Boundary Model for agents, extensions, workflows, S/4HANA extensibility, Clean Core, lifecycle, and responsibility governance.';
 ---
 <BaseLayout {title} {description}>
-  <!-- Hero -->
   <section class="stack hero">
-    <h1 style="margin-bottom:.25rem;">Independent SAP BTP Architect</h1>
-    <p class="lede">Builder‑side authority for post‑go‑live SAP BTP extensions. I provide independent SAP BTP architecture reviews, extension audits, and boundary verdicts when work continues but the decision no longer converges — what must change, what must remain, and who owns it.</p>
+    <h1 style="margin-bottom:.25rem;">SAP Enterprise AI Needs Clear Responsibility</h1>
+    <p class="lede">Agents, extensions, workflows, and core systems should not collapse into one blurred execution layer.</p>
+    <div class="stack tight measure">
+      <p>I help SAP teams reason about what belongs where:</p>
+      <ul>
+        <li>what should become an agent,</li>
+        <li>what should remain a governed extension,</li>
+        <li>what belongs in workflow,</li>
+        <li>what must stay anchored in S/4HANA,</li>
+        <li>and who owns truth, lifecycle, and accountability.</li>
+      </ul>
+      <p>The Boundary Model™ originated from SAP BTP builder-side experience with post-go-live extension failures. In the AI era, it extends to agent-extension responsibility architecture.</p>
+    </div>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem;">
-      <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
-      <Button href="/sap-btp-architecture-review/" variant="ghost">SAP BTP Architecture Review</Button>
-      <Button href="/work/" variant="primary">Verdict services</Button>
+      <Button href="/agent-extension-boundary-model/" variant="primary">Read the Agent–Extension Boundary Model</Button>
+      <Button href="/boundary-model/" variant="ghost">Explore the SAP BTP Boundary Model</Button>
     </div>
   </section>
 
   <div class="measure perspective" style="margin: var(--space-6) 0;">
     <div class="eyebrow">Perspective</div>
-    <p>Former platform engineer at SAP; worked across multitenancy, identity propagation, integration boundaries, and lifecycle orchestration on SAP BTP.</p>
-    <p>The Boundary Model emerged from repeated post–go-live failures observed from inside the platform layer.</p>
+    <p>Former SAP engineer with builder-side exposure to SAP BTP platform and extension architecture, including CAP, XSUAA, AppRouter, Work Zone, multitenancy, integration, lifecycle, and SAP Build Code / Joule-era platform work.</p>
   </div>
 
-  
-
-  <!-- Who this is for -->
   <section class="stack">
-    <h2>Who this is for</h2>
-    <p class="measure">For architects, technical leads, and decision‑makers facing post–go‑live instability in SAP BTP extensions.</p>
-    <p class="measure"><strong>Typical pattern:</strong><br />
-      Docs look aligned.<br />
-      Runtime behavior varies by path, tenant, or identity.<br />
-      Ownership fragments across teams.<br />
-      The system runs; the architecture can’t be governed.
-    </p>
+    <h2>The problem</h2>
+    <p class="measure">AI can help teams create agents, workflows, integrations, and extensions faster than before. But faster creation does not automatically create clear responsibility.</p>
+    <p class="measure">A demo may work while truth, execution, lifecycle, and accountability are already drifting.</p>
   </section>
 
   <section class="stack">
-    <h2>Different symptoms. Same architecture question.</h2>
-    <p class="measure">Teams rarely begin with a methodology. They begin with symptoms: architecture review, extension audit, post‑go‑live failure, identity propagation problems, AppRouter / Work Zone failures, tenant onboarding drift, or vendor disagreement.</p>
-    <p class="measure">These are often different words for the same underlying question: is the current SAP BTP extension architecture still structurally safe to evolve?</p>
-    <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
+    <h2>What I focus on</h2>
+    <div class="cards-grid">
+      <Card title="Agent–Extension Responsibility">
+        <p>Clarifying what belongs to agents, governed tools, extension APIs, workflows, assistants, and core systems before execution authority spreads informally.</p>
+      </Card>
+      <Card title="SAP BTP Boundary Model">
+        <p>Runtime, identity, tenant, data, integration, and lifecycle boundaries in SAP BTP extensions, especially after go-live.</p>
+      </Card>
+      <Card title="S/4HANA Extensibility and Clean Core">
+        <p>Deciding what must remain anchored in the system of record and what can safely move into side-by-side capabilities.</p>
+      </Card>
+      <Card title="Lifecycle and Reconstructibility">
+        <p>Testing whether agents, workflows, extensions, context, and policies can evolve without losing reconstructibility.</p>
+      </Card>
+      <Card title="Enterprise AI Governance">
+        <p>Putting agent governance on top of a responsibility model for truth, execution, context, lifecycle, and accountability.</p>
+      </Card>
+    </div>
   </section>
 
-  <!-- What I actually do / do not do -->
-  <section class="feature">
-    <Card eyebrow="Scope" title="What I actually do">
-      <ul>
-        <li>Diagnose <strong>boundary failures</strong> across runtime, identity, tenant, data, integration, and lifecycle.</li>
-        <li>Issue a <strong>written verdict</strong> — what must change, what must remain.</li>
-        <li>Re‑establish <strong>jurisdiction</strong> — who owns what, and where.</li>
-      </ul>
-    </Card>
-    <Card eyebrow="Not offered" title="What these engagements are not">
-      <ul>
-        <li>Not implementation takeover.</li>
-        <li>Not staff augmentation or ticket execution.</li>
-        <li>Not generic advisory or “best‑practice” consulting.</li>
-      </ul>
-    </Card>
-  </section>
-
-  
-
-  <!-- Decision signals -->
   <section class="stack">
-    <h2>You may need an independent verdict when…</h2>
-    <ul>
-      <li>The system runs, but no team can legitimately approve the next change.</li>
-      <li>Teams are locally correct; the decision still does not converge.</li>
-      <li>Rollout, onboarding, or hardening exposes an ungovernable architecture.</li>
-      <li>Works in Postman; fails behind App Router or Work Zone.</li>
-      <li>Local fixes increase motion; ambiguity does not decrease.</li>
-    </ul>
+    <h2>The responsibility model</h2>
+    <div class="model-lines">
+      <p>Core systems own business truth.</p>
+      <p>Extensions define governed capabilities.</p>
+      <p>Workflows govern repeatable execution.</p>
+      <p>Agents select and coordinate action under policy.</p>
+      <p>Assistants provide the interaction surface.</p>
+    </div>
+    <p class="measure"><a href="/sap-agent-extension-workflow/">Use the practical decision guide →</a></p>
   </section>
 
-  <!-- Distinction section -->
   <section class="stack">
-    <h2>When this is no longer an implementation problem</h2>
-    <p class="measure">Troubleshooting improves a step; it does not grant legitimacy. When teams are locally correct and the system remains globally unstable, the failure is jurisdiction — not effort.</p>
-    <p class="measure">Define the decision across boundaries — identity, tenant, data ownership, integration contracts, lifecycle gates — then continue implementation on stable ground.</p>
-    <p><a href="/implementation-vs-verdict/">Implementation vs verdict →</a> · <a href="/internal-alignment-failed/">When internal alignment has failed →</a></p>
+    <h2>Why this is different</h2>
+    <p class="measure">This is not implementation staffing. This is not generic AI advisory.</p>
+    <p class="measure">This is architectural judgment about where responsibility belongs before enterprise AI becomes ungovernable execution.</p>
   </section>
 
-  
-
-  <!-- Entry paths -->
   <section class="feature">
     <div>
-      <h2>Choose your path</h2>
-      <p class="measure">Four direct entry points to make the situation legible and bounded.</p>
+      <h2>Existing BTP failure assets still matter</h2>
+      <p class="measure">Post-go-live SAP BTP extension failure remains the proof layer. The same boundary discipline now applies when AI agents, workflows, extensions, automations, and S/4HANA are combined into one business action.</p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-        <Button href="/boundary-model/" variant="ghost">Understand the model</Button>
-        <Button href="/failure-patterns/" variant="ghost">Recognize the pattern</Button>
-        <Button href="/sap-btp-architecture-review/" variant="ghost">Need a review?</Button>
-        <Button href="/what-an-independent-verdict-does/" variant="primary">Understand the decision action</Button>
+        <Button href="/failure-patterns/" variant="ghost">Recognize failure patterns</Button>
+        <Button href="/sap-btp-architecture-review/" variant="ghost">SAP BTP Architecture Review</Button>
+        <Button href="/work/" variant="primary">Work With Me</Button>
       </div>
     </div>
     <div class="stack">
       <Card eyebrow="Foundation" title="Boundary Model">
-        <p class="measure">Canonical definition of six boundaries and why traditional reviews miss these failures.</p>
+        <p class="measure">Canonical definition of SAP BTP runtime-visible boundaries and why traditional reviews miss post-go-live failures.</p>
         <a href="/boundary-model/">Read the model →</a>
       </Card>
-      <Card eyebrow="Patterns" title="Failure Patterns">
-        <p class="measure">Recurring symptoms of boundary and jurisdiction failure in SAP BTP extensions.</p>
-        <a href="/failure-patterns/">See patterns →</a>
-      </Card>
-      <Card eyebrow="Decision" title="What an independent verdict does">
-        <p class="measure">Inputs, assessment, outputs, and boundaries — without implementation takeover.</p>
-        <a href="/what-an-independent-verdict-does/">Make it legible →</a>
-      </Card>
-      <Card eyebrow="Intake" title="Need a review?">
-        <p class="measure">Direct entry point for SAP BTP architecture review when internal teams can no longer approve the architecture end‑to‑end.</p>
-        <a href="/sap-btp-architecture-review/">Request a review path →</a>
+      <Card eyebrow="AI era" title="Enterprise AI Responsibility Architecture">
+        <p class="measure">Why agent governance is not enough without truth, execution, lifecycle, and accountability boundaries.</p>
+        <a href="/enterprise-ai-responsibility-architecture/">Read the architecture →</a>
       </Card>
     </div>
-  </section>
-
-  
-
-  <!-- Verdict services -->
-  <section class="stack cta">
-    <h2>Verdict services</h2>
-    <p class="measure">Fixed‑scope architectural judgment — clear inputs in, a written decision out. Not a funnel.</p>
-    <Button href="/work/" variant="primary">Verdict services</Button>
-  </section>
-
-  
-
-  <!-- Closing CTA -->
-  <section class="stack">
-    <h2>When to request a review</h2>
-    <p class="measure">If the decision no longer converges internally, move to a fixed‑scope review. The next move is small and tangible.</p>
-    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-      <Button href="/when-to-call-me/" variant="ghost">Review triggers</Button>
-      <Button href="/contact/" variant="primary">Send a 1‑page summary</Button>
-    </div>
-    <p class="measure" style="margin-top:.5rem;">Start with one structured page: landscape, divergence, ownership, decision. <a href="/what-this-is-not/">Short version → What This Is Not</a></p>
   </section>
 </BaseLayout>

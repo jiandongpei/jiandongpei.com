@@ -1,0 +1,122 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
+const title = 'Agent–Extension Boundary Model | SAP Enterprise AI Architecture';
+const description = 'A responsibility model for SAP agents, extensions, workflows, assistants, and core systems. Define who owns business truth, capability, process, execution, lifecycle, and accountability.';
+---
+<BaseLayout {title} {description}>
+  <section class="stack hero compact tight">
+    <div class="eyebrow">Enterprise AI Boundaries</div>
+    <h1>Agent–Extension Boundary Model</h1>
+    <p class="lede">A responsibility model for SAP agents, extensions, workflows, and core business systems.</p>
+  </section>
+
+  <section class="stack">
+    <p class="measure">SAP enterprise AI will not fail only because agents hallucinate.</p>
+    <p class="measure">It will fail when no one can clearly say what belongs to an agent, what belongs to an extension, what belongs to a workflow, what must remain in S/4HANA, and who owns the final business action.</p>
+    <p class="measure">The demo can look perfect: a user describes intent, an agent plans, a workflow starts, an extension API is called, S/4HANA is updated, and a confirmation appears. Architecturally, that seamless action may hide unresolved responsibility.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Why this model exists</h2>
+    <p class="measure">SAP enterprise AI increasingly combines agents, apps, workflows, extensions, integrations, and business data. Platform unification is necessary, but product unification is not responsibility clarity.</p>
+    <p class="measure">A platform can provide common tooling, runtime, governance controls, discovery, observability, and business context. It cannot automatically decide which responsibility belongs to an agent, an extension, a workflow, an assistant, or a core system.</p>
+    <p class="measure">The architecture question is not only whether an agent can produce a good answer. The question is whether the enterprise can prove who owns truth, action, state, lifecycle, identity, and accountability after the agent acts.</p>
+  </section>
+
+  <section class="stack">
+    <h2>The responsibility model</h2>
+    <div class="model-lines">
+      <p>Core systems own business truth.</p>
+      <p>Extensions define governed enterprise capabilities.</p>
+      <p>Workflows define repeatable and accountable execution paths.</p>
+      <p>Agents select and coordinate action under policy.</p>
+      <p>Assistants provide the interaction surface.</p>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="stack tight">
+      <h2>The dangerous model</h2>
+      <pre class="code-diagram"><code>Business intent
+  → Agent
+  → Everything</code></pre>
+      <p class="measure">This looks autonomous, but it collapses responsibility boundaries. Business truth, reusable logic, process evidence, execution authority, and accountability all disappear into the same layer.</p>
+    </div>
+    <div class="stack tight">
+      <h2>The governable model</h2>
+      <pre class="code-diagram"><code>Business intent
+  → Assistant
+  → Agent
+  → Governed tool or skill
+  → Workflow or extension API
+  → Core system</code></pre>
+      <p class="measure">This model preserves truth, lifecycle, authorization, and accountability. Agents coordinate action, but governed capabilities and core systems keep their authority.</p>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Collaboration rules</h2>
+    <p class="measure">The future SAP landscape will not be made of isolated artifacts. Extensions, agents, workflows, assistants, integrations, MCP servers, skills, and core systems will collaborate. Collaboration is not the problem. Unbounded collaboration is the problem.</p>
+    <div class="cards-grid">
+      <Card title="Extensions collaborate through contracts">
+        <p>Extensions may collaborate, but through APIs, events, released contracts, or governed tools. They should not depend on each other’s internal state or private implementation shortcuts.</p>
+      </Card>
+      <Card title="Agents invoke extensions; they do not bypass them">
+        <p>Agents should call governed capabilities. They should not receive broader authority than a properly governed application just because the interface is conversational.</p>
+      </Card>
+      <Card title="Workflows contain accountable execution">
+        <p>Agents may enrich, select, or prepare workflow input. They should not replace workflow when the enterprise needs process evidence, approvals, SLA handling, or auditability.</p>
+      </Card>
+      <Card title="Multi-agent work keeps singular accountability">
+        <p>Agent-agent collaboration is acceptable only when delegation is explicit, roles are bounded, and accountability remains singular. A chain of agents must not dissolve final responsibility.</p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>The seven boundaries</h2>
+    <div class="cards-grid">
+      <Card eyebrow="1" title="Truth Boundary">
+        <p><strong>Who owns canonical business truth?</strong></p>
+        <p>Core systems own core business truth. Extensions may own extension-specific truth. Workflows own process state. Agents do not own canonical truth by default. Agent memory is not business truth. RAG output and generated recommendations are not business truth until validated.</p>
+      </Card>
+      <Card eyebrow="2" title="Capability Boundary">
+        <p><strong>What should become a stable enterprise capability?</strong></p>
+        <p>Stable reusable business logic should be modeled as an extension, API, service, or governed tool. Agents should invoke capabilities, not hide stable business logic inside prompts. If a business rule must be tested, versioned, reused, audited, secured, and evolved, it belongs in a governed capability.</p>
+      </Card>
+      <Card eyebrow="3" title="Process Boundary">
+        <p><strong>What must be governed as repeatable workflow?</strong></p>
+        <p>Repeatable, auditable, approval-based, SLA-driven execution belongs in workflow. Agents may participate in workflow, enrich it, select it, or prepare input, but should not replace it when process evidence matters.</p>
+      </Card>
+      <Card eyebrow="4" title="Execution Boundary">
+        <p><strong>What is the agent allowed to do?</strong></p>
+        <p>Each agent needs an explicit action class: read-only, summarize, recommend, draft, prepare, trigger workflow, execute low-risk action, execute high-risk action with approval, or never execute certain actions.</p>
+      </Card>
+      <Card eyebrow="5" title="Context Boundary">
+        <p><strong>What can the agent see, retrieve, remember, or infer?</strong></p>
+        <p>Tenant-specific and role-specific context must remain scoped. Sensitive business context must be governed. Memory must be scoped. RAG sources must be versioned. MCP servers and semantic context must not become uncontrolled context bridges. Context must not silently become truth.</p>
+      </Card>
+      <Card eyebrow="6" title="Lifecycle Boundary">
+        <p><strong>How do agents, extensions, workflows, tools, policies, and context evolve together?</strong></p>
+        <p>Agent behavior changes when prompts, model versions, tools, policies, memory, RAG sources, workflows, or extension APIs change. Agent upgrade is behavior migration. The enterprise must be able to reconstruct what changed, which tool version ran, which policy applied, which context was retrieved, which model executed, and which evaluation was passed.</p>
+      </Card>
+      <Card eyebrow="7" title="Accountability Boundary">
+        <p><strong>Who is responsible for the final business action?</strong></p>
+        <p>Every agent action needs an accountable owner, every tool call needs traceability, every business write needs an actor and authorization chain, every autonomous path needs escalation, and multi-agent collaboration must not dissolve responsibility.</p>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack cta">
+    <h2>Use this before the build decision</h2>
+    <p class="measure">Use this model before deciding whether something should become an agent, an extension, a workflow, or a lightweight automation.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/sap-agent-extension-workflow/" variant="primary">Agent, extension, or workflow?</Button>
+      <Button href="/insights/a023-agents-do-not-replace-extensions/" variant="ghost">Read the full article</Button>
+      <Button href="/insights/a022-is-this-agent-safe-to-execute/" variant="ghost">Agent readiness standard</Button>
+      <Button href="/work/" variant="ghost">Review responsibility boundaries</Button>
+    </div>
+  </section>
+</BaseLayout>

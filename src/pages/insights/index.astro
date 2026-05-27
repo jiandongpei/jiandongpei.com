@@ -2,8 +2,8 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import { getCollection } from 'astro:content';
-const title = 'Insights';
-const description = 'Essays for post‑go‑live SAP BTP extension problems where architecture — not just implementation — is under question.';
+const title = 'Insights | SAP BTP & Enterprise AI Architecture';
+const description = 'Essays on SAP BTP, enterprise AI architecture, agent-extension boundaries, Clean Core, S/4HANA extensibility, and post-go-live failure patterns where implementation success is not the same as architectural validity.';
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
@@ -30,7 +30,38 @@ const rolePaths = [
 <BaseLayout {title} {description}>
   <section class="stack tight">
     <h1>Insights</h1>
-    <p class="measure">Essays for post‑go‑live SAP BTP extension problems where architecture — not just implementation — is under question. References favor structural clarity over news or tutorials.</p>
+    <p class="measure">Essays on SAP BTP, enterprise AI architecture, agent-extension boundaries, Clean Core, S/4HANA extensibility, and post-go-live failure patterns where implementation success is not the same as architectural validity.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Enterprise AI / Agent Architecture</h2>
+    <div class="stack">
+      <Card title="Agent–Extension Boundary Model">
+        <p class="measure">A responsibility model for SAP agents, extensions, workflows, assistants, and core business systems.</p>
+        <a href="/agent-extension-boundary-model/">Read →</a>
+      </Card>
+      <Card title="Should This Be an SAP Agent, an Extension, or a Workflow?">
+        <p class="measure">A responsibility model for SAP enterprise AI and the source article behind the Agent–Extension Boundary Model.</p>
+        <a href="/insights/a023-agents-do-not-replace-extensions/">Read →</a>
+      </Card>
+      <Card title="Is This Agent Safe to Execute?">
+        <p class="measure">The Boundary Model for SAP enterprise agents in the age of trusted execution.</p>
+        <a href="/insights/a022-is-this-agent-safe-to-execute/">Read →</a>
+      </Card>
+      <Card title="Enterprise AI Responsibility Architecture">
+        <p class="measure">Why agent governance is not enough without truth, execution, lifecycle, and accountability boundaries.</p>
+        <a href="/enterprise-ai-responsibility-architecture/">Read →</a>
+      </Card>
+      <Card title="Agent, Extension, or Workflow?">
+        <p class="measure">A practical decision guide before enterprise AI creates responsibility drift.</p>
+        <a href="/sap-agent-extension-workflow/">Read →</a>
+      </Card>
+      <Card title="AI-Generated Extensions on SAP BTP">
+        <p class="measure">AI accelerates code generation, but boundary correctness still determines whether extensions remain stable by tenant, identity path, and lifecycle over time.</p>
+        <a href="/insights/a004-ai-generated-extensions-on-btp/">Read →</a>
+      </Card>
+    </div>
+    <p class="measure muted">Future topics: Agent Memory Is Not Business Truth; Agent Lifecycle Is Behavior Migration.</p>
   </section>
 
   {featured.length > 0 && (
@@ -49,7 +80,7 @@ const rolePaths = [
 
   {boundaries.length > 0 && (
     <section class="stack">
-      <h2>Explore by boundary</h2>
+      <h2>Boundary Model / SAP BTP Failure</h2>
       {boundaries.map((b) => (
         <div class="card">
           <div class="eyebrow">Boundary</div>
@@ -66,6 +97,16 @@ const rolePaths = [
       ))}
     </section>
   )}
+
+  <section class="stack">
+    <h2>Clean Core / Governance / Long-Term Architecture</h2>
+    <ul>
+      <li><a href="/insights/a015-clean-core/"><strong>Clean Core: The Architectural Reason SAP Never Fully Explained</strong></a></li>
+      <li><a href="/insights/a021-rise-does-not-decide-your-sap-btp-extension-architecture/"><strong>RISE Does Not Decide Your SAP BTP Extension Architecture</strong></a></li>
+      <li><a href="/insights/a006-stability-window/"><strong>The Stability Window of BTP Extensions</strong></a></li>
+      <li><a href="/insights/a020-when-btp-extension-problem-stops-being-delivery-problem/"><strong>When a SAP BTP Extension Problem Stops Being a Delivery Problem</strong></a></li>
+    </ul>
+  </section>
 
   <section class="stack">
     <h2>Explore by real‑world symptom</h2>

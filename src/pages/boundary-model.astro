@@ -1,14 +1,20 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
-const title = 'Boundary Model';
-const description = 'Canonical definition of the Boundary Model: six runtime-visible boundaries and when they matter.';
+const title = 'SAP BTP Boundary Model';
+const description = 'Canonical definition of the SAP BTP Boundary Model: runtime, identity, tenant, data, integration, and lifecycle boundaries for extensions and AI-era responsibility architecture.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack hero compact tight">
     <div class="eyebrow">Foundation</div>
     <h1>Boundary Model</h1>
     <p class="lede">Canonical definition of six runtime‑visible boundaries in SAP BTP. This is a decision framework used to issue formal architectural verdicts when extensions fail after go‑live.</p>
+  </section>
+
+  <section class="stack compact">
+    <p class="measure">The Boundary Model™ originated in SAP BTP extension architecture, especially post-go-live failures where systems continue to run but lose reconstructibility under lifecycle change.</p>
+    <p class="measure">In the enterprise AI era, the same boundary discipline extends to agents, workflows, and governed capabilities. AI does not remove boundary problems. It makes responsibility boundaries more urgent.</p>
+    <p class="measure"><a href="/agent-extension-boundary-model/">Read the Agent–Extension Boundary Model →</a></p>
   </section>
 
   <section class="stack compact">
@@ -44,10 +50,11 @@ const description = 'Canonical definition of the Boundary Model: six runtime-vis
 
   <section class="stack compact cta">
     <h2>Next</h2>
-    <p class="measure">For service formats, see SAP BTP Architecture Verdict Services. For decision triggers, see when to request an independent SAP BTP architecture review.</p>
+    <p class="measure">For service formats, see SAP BTP and enterprise AI architecture work. For decision triggers, see when to request an independent SAP BTP architecture review.</p>
     <p class="measure">Related service entry points: <a href="/sap-btp-architecture-review/">SAP BTP Architecture Review</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit</a> · <a href="/sap-btp-post-go-live-failure-assessment/">Post-Go-Live Failure Assessment</a></p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-      <Button href="/work/" variant="primary">Verdict services</Button>
+      <Button href="/work/" variant="primary">Work With Me</Button>
+      <Button href="/agent-extension-boundary-model/" variant="ghost">Agent–Extension Model</Button>
       <Button href="/when-to-call-me/" variant="ghost">Review triggers</Button>
     </div>
   </section>
