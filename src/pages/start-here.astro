@@ -1,28 +1,44 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
 const title = 'Start Here';
-const description = 'Orientation for new visitors. Choose the right entry point by situation, boundary, or role.';
+const description = 'Orientation for SAP BTP and enterprise AI architecture readers. Choose the right entry point by responsibility boundary, failure pattern, or decision need.';
 ---
 <BaseLayout {title} {description}>
-  <!-- Primary entry -->
   <section class="stack hero compact tight">
     <h1>Start here</h1>
-    <p class="lede">Read the Boundary Model first. It defines the six runtime‑visible boundaries and how architectural verdicts are issued.</p>
-    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-      <Button href="/boundary-model/" variant="primary">Read the Boundary Model</Button>
-      <Button href="/insights/" variant="ghost">Browse insights</Button>
+    <p class="lede">Choose the entry point by the problem you are actually facing: enterprise AI responsibility ambiguity, SAP BTP post-go-live failure, or a concrete agent / extension / workflow decision.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Choose the right entry point</h2>
+    <div class="cards-grid">
+      <Card title="Enterprise AI responsibility boundaries">
+        <p>For teams combining agents, extensions, workflows, assistants, integrations, and core systems.</p>
+        <Button href="/agent-extension-boundary-model/" variant="primary">Read the Agent–Extension Boundary Model</Button>
+      </Card>
+      <Card title="SAP BTP boundary failures">
+        <p>For post-go-live extension failures involving runtime, identity, tenant, data, integration, or lifecycle boundaries.</p>
+        <Button href="/boundary-model/" variant="ghost">Read the SAP BTP Boundary Model</Button>
+      </Card>
+      <Card title="Agent, extension, or workflow decision">
+        <p>For teams deciding whether a responsibility belongs in an agent, an extension, a workflow, automation, or the core system.</p>
+        <Button href="/sap-agent-extension-workflow/" variant="ghost">Use the decision guide</Button>
+      </Card>
+      <Card title="Need a review">
+        <p>For initiatives where responsibility, ownership, truth, lifecycle, or accountability cannot converge.</p>
+        <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+          <Button href="/work/" variant="primary">Work With Me</Button>
+          <Button href="/contact/" variant="ghost">Contact</Button>
+        </div>
+      </Card>
     </div>
   </section>
 
-  <!-- Secondary guidance -->
   <section class="stack">
-    <h2>Explore next</h2>
-    <ul>
-      <li><strong>Need a decision:</strong> see <a href="/work/">SAP BTP and Enterprise AI architecture work</a> or <a href="/when-to-call-me/">Review Triggers</a>.</li>
-      <li><strong>Read by boundary:</strong> Runtime · Identity · Tenant · Data · Integration · Lifecycle.</li>
-      <li><strong>Core essays:</strong> A003 · A012 · A014 · A019 · A006.</li>
-    </ul>
+    <h2>Existing BTP review paths remain available</h2>
+    <p class="measure">If your situation is specifically about SAP BTP post-go-live extension failure, the original review entry points remain valid.</p>
     <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
   </section>
 </BaseLayout>
