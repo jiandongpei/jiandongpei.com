@@ -18,7 +18,7 @@ tags: [sap-btp, enterprise-ai, agents, joule, boundary-model]
 ## The Boundary Model for SAP Enterprise Agents in the Age of Trusted Execution
 
 **By Jiandong Pei**
-Independent SAP BTP Architect
+SAP BTP & Enterprise AI Architecture
 Former SAP Build Code / Joule Core Initiator
 Creator of the Boundary Model™
 
