@@ -1,53 +1,57 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
+import Card from "@components/Card.astro";
 const title = 'About Jiandong Pei | SAP BTP & Enterprise AI Architecture';
-const description = 'About Jiandong Pei: SAP BTP and enterprise AI architecture, Boundary Model creator, and builder-side experience across CAP, XSUAA, AppRouter, Work Zone, multitenancy, integration, and lifecycle.';
+const description = 'Jiandong Pei is a SAP BTP and enterprise AI architect with 13+ years inside SAP, builder-side SAP Build Code / Joule experience, and Boundary Model architecture judgment.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack">
     <h1>About Jiandong Pei</h1>
-    <p class="measure">My work focuses on SAP BTP and enterprise AI architecture, especially the boundaries between agents, extensions, workflows, and core business systems.</p>
-    <p class="measure">AI can help teams create agents, applications, workflows, integrations, and extensions faster than before. But faster creation does not automatically create clear responsibility.</p>
+    <p class="measure">I am a SAP BTP and Enterprise AI architect focused on boundary judgment: whether extensions, Clean Core architectures, workflows, and agents are structurally safe to evolve.</p>
+    <p class="measure">My credibility comes from builder-side SAP platform experience and years of seeing where locally correct systems fail after go-live, rollout, security hardening, or lifecycle change.</p>
   </section>
 
   <section class="stack">
-    <h2>The questions I focus on</h2>
-    <p class="measure">In SAP landscapes, the real architectural questions are often:</p>
+    <h2>SAP builder-side background</h2>
     <ul>
-      <li>What should become an agent?</li>
-      <li>What should remain a governed extension?</li>
-      <li>What belongs in workflow?</li>
-      <li>What must stay anchored in S/4HANA or another system of record?</li>
-      <li>Who owns business truth, execution authority, lifecycle, and accountability?</li>
+      <li>Former SAP engineer with 13+ years inside SAP.</li>
+      <li>Worked across SAP Build Code / Joule early integration and AI-assisted extension generation context.</li>
+      <li>Experience with CAP / LCAP, SaaS enablement, XSUAA, AppRouter, Work Zone, HDI, multitenancy, and S/4HANA extension architecture.</li>
+      <li>BTP security, identity chain debugging, service broker, HANA XSA, streaming analytics, and Cloud Foundry / XSA experience.</li>
+      <li>Cross-product architecture troubleshooting where local correctness did not produce global architectural validity.</li>
+      <li>SAP Labs China MD Award and public SAP ecosystem evidence available through LinkedIn Featured items.</li>
     </ul>
   </section>
 
   <section class="stack">
-    <h2>Builder-side SAP BTP background</h2>
-    <ul>
-      <li>Former SAP engineer with builder-side exposure to SAP BTP platform and extension architecture.</li>
-      <li>Worked across CAP, XSUAA, AppRouter, Work Zone, multitenancy, integration, and lifecycle-related failure modes.</li>
-      <li>Involved in SAP Build Code / Joule-era platform work and AI-assisted extension generation context.</li>
-      <li>Experience diagnosing cross-product failures where local correctness did not produce global architectural validity.</li>
-    </ul>
+    <h2>Why the Boundary Model exists</h2>
+    <p class="measure">SAP BTP projects often appear correct when tested locally. The real failure appears when the system has to operate through governed entry paths, multiple tenants, identity propagation, S/4HANA integration, data ownership, security hardening, and versioned lifecycle change.</p>
+    <p class="measure">The Boundary Model is my diagnostic framework for deciding whether those contracts still hold.</p>
   </section>
 
   <section class="stack">
-    <h2>The Boundary Model</h2>
-    <p class="measure">The Boundary Model™ began as a way to analyze SAP BTP extension failure across runtime, identity, tenant, data, integration, and lifecycle boundaries.</p>
-    <p class="measure">In the enterprise AI era, the same boundary discipline becomes necessary for agents, workflows, extensions, and core systems acting together.</p>
-    <p class="measure">The point is not to make every AI initiative heavier. The point is to know where business truth, governed capability, process evidence, execution authority, and accountability belong.</p>
-    <p><a href="/boundary-model/">Read the SAP BTP Boundary Model →</a> · <a href="/agent-extension-boundary-model/">Read the Agent–Extension Boundary Model →</a></p>
+    <h2>Areas of judgment</h2>
+    <div class="cards-grid">
+      <Card title="SAP BTP architecture">
+        <p>CAP / LCAP, XSUAA, AppRouter, Work Zone, HDI, multitenancy, SaaS enablement, S/4HANA extensions, Clean Core, identity, integration, and lifecycle boundaries.</p>
+      </Card>
+      <Card title="Enterprise AI architecture">
+        <p>SAP Build Code / Joule context, agent responsibility, workflow handoff, execution safety, authorization, context, RAG/tool boundaries, and contract-bound generation.</p>
+      </Card>
+      <Card title="Independent verdict work">
+        <p>Strategic Boundary Verdict, Full Boundary Audit, Agent-Extension Responsibility Review, and recurring Architecture Verdict Authority for high-risk decisions.</p>
+      </Card>
+    </div>
   </section>
 
   <section class="stack">
-    <h2>How I work</h2>
+    <h2>Current work</h2>
+    <p class="measure">I provide independent architecture judgment for SAP BTP extension landscapes and enterprise AI initiatives where teams need to decide what belongs where before execution, rollout, or lifecycle change becomes expensive.</p>
     <ul>
-      <li>I provide independent architecture judgment.</li>
       <li>I classify boundary, jurisdiction, and responsibility failures.</li>
       <li>I issue fixed-scope written reviews and verdicts.</li>
-      <li>I do not replace delivery teams.</li>
+      <li>I help teams identify whether the current architecture deserves to proceed, needs redesign, or needs a narrower implementation fix.</li>
       <li>I write and publish openly on SAP BTP, Clean Core, S/4HANA extensibility, AI agents, workflows, CAP, multitenancy, and long-term architecture boundaries.</li>
     </ul>
   </section>
@@ -66,7 +70,9 @@ const description = 'About Jiandong Pei: SAP BTP and enterprise AI architecture,
   <section class="stack">
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/work/" variant="primary">Work With Me</Button>
+      <Button href="/for-hiring-teams/" variant="ghost">For Hiring Teams</Button>
       <Button href="/contact/" variant="ghost">Send a 1-page summary</Button>
+      <Button href="https://www.linkedin.com/in/peijiandong/" variant="ghost">View LinkedIn</Button>
     </div>
   </section>
 </BaseLayout>

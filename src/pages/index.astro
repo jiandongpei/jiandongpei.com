@@ -2,100 +2,128 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 import Card from "@components/Card.astro";
-const title = 'Jiandong Pei | SAP BTP & Enterprise AI Architecture';
-const description = 'Jiandong Pei is an independent SAP BTP & Enterprise AI architect, former SAP engineer, and creator of the Boundary Model™. Architecture judgment for agents, extensions, workflows, S/4HANA, Clean Core, lifecycle, and responsibility boundaries.';
+const title = 'Jiandong Pei - SAP BTP & Enterprise AI Architect | Boundary Model';
+const description = 'Former SAP Build Code / Joule builder-side engineer focused on SAP BTP extensions, Clean Core, identity, multitenancy, integration, lifecycle, and enterprise AI agent architecture.';
 ---
 <BaseLayout {title} {description}>
   <section class="stack hero">
-    <h1 style="margin-bottom:.25rem;">SAP Enterprise AI Needs Clear Responsibility</h1>
-    <p class="lede">Agents, extensions, workflows, and core systems should not collapse into one blurred execution layer.</p>
-    <div class="stack tight measure">
-      <p>I help SAP teams reason about what belongs where:</p>
-      <ul>
-        <li>what should become an agent,</li>
-        <li>what should remain a governed extension,</li>
-        <li>what belongs in workflow,</li>
-        <li>what must stay anchored in S/4HANA,</li>
-        <li>and who owns truth, lifecycle, and accountability.</li>
-      </ul>
-      <p>The Boundary Model™ originated from SAP BTP builder-side experience with post-go-live extension failures. In the AI era, it extends to agent-extension responsibility architecture.</p>
-    </div>
+    <div class="eyebrow">Independent SAP BTP and Enterprise AI architecture judgment</div>
+    <h1 style="margin-bottom:.25rem;">Jiandong Pei</h1>
+    <p class="lede"><strong>SAP BTP & Enterprise AI Architect</strong></p>
+    <p class="measure">Former SAP Build Code / Joule builder-side engineer. I help teams judge whether SAP BTP extensions, Clean Core architectures, and enterprise AI agents are structurally safe to evolve.</p>
+    <p class="measure">My work focuses on identity, tenant, data, integration, runtime, lifecycle, and execution boundaries - the places where enterprise systems usually fail after they appear to work.</p>
     <div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem;">
-      <Button href="/agent-extension-boundary-model/" variant="primary">Read the Agent–Extension Boundary Model</Button>
-      <Button href="/boundary-model/" variant="ghost">Explore the SAP BTP Boundary Model</Button>
+      <Button href="/work/" variant="primary">Work With Me</Button>
+      <Button href="/for-hiring-teams/" variant="ghost">For Hiring Teams</Button>
+      <Button href="/boundary-model/" variant="ghost">Read the Boundary Model</Button>
+    </div>
+    <div class="proof-strip" aria-label="Builder-side evidence">
+      <span>Former SAP engineer, 13+ years</span>
+      <span>SAP Build Code / Joule integration</span>
+      <span>CAP, XSUAA, AppRouter, Work Zone</span>
+      <span>Multitenancy, S/4HANA extensions, BTP security</span>
     </div>
   </section>
 
-  <div class="measure perspective" style="margin: var(--space-6) 0;">
-    <div class="eyebrow">Perspective</div>
-    <p>Jiandong Pei is an independent SAP BTP & Enterprise AI architect, former SAP engineer, and creator of the Boundary Model™.</p>
-    <p>Former SAP engineer with builder-side exposure to SAP BTP platform and extension architecture, including CAP, XSUAA, AppRouter, Work Zone, multitenancy, integration, lifecycle, and SAP Build Code / Joule-era platform work.</p>
-  </div>
-
   <section class="stack">
-    <h2>The problem</h2>
-    <p class="measure">AI can help teams create agents, workflows, integrations, and extensions faster than before. But faster creation does not automatically create clear responsibility.</p>
-    <p class="measure">A demo may work while truth, execution, lifecycle, and accountability are already drifting.</p>
-  </section>
-
-  <section class="stack">
-    <h2>What I focus on</h2>
+    <h2>When Architecture Looks Correct - Until It Has to Evolve</h2>
     <div class="cards-grid">
-      <Card title="Agent–Extension Responsibility">
-        <p>Clarifying what belongs to agents, governed tools, extension APIs, workflows, assistants, and core systems before execution authority spreads informally.</p>
+      <Card title="Postman works, Work Zone fails">
+        <p>The direct call succeeds, but the governed entry path exposes identity, routing, or integration assumptions.</p>
       </Card>
-      <Card title="SAP BTP Boundary Model">
-        <p>Runtime, identity, tenant, data, integration, and lifecycle boundaries in SAP BTP extensions, especially after go-live.</p>
+      <Card title="One tenant works, the next tenant breaks">
+        <p>The first rollout hides a missing tenant model. The next tenant exposes the real architecture.</p>
       </Card>
-      <Card title="S/4HANA Extensibility and Clean Core">
-        <p>Deciding what must remain anchored in the system of record and what can safely move into side-by-side capabilities.</p>
+      <Card title="S/4 data becomes shadow truth">
+        <p>Data copied into HDI looks useful until ownership, write authority, and lifecycle drift from the system of record.</p>
       </Card>
-      <Card title="Lifecycle and Reconstructibility">
-        <p>Testing whether agents, workflows, extensions, context, and policies can evolve without losing reconstructibility.</p>
+      <Card title="Clean Core is approved, responsibility is not">
+        <p>RISE and Clean Core set direction, but extension responsibility, identity, and lifecycle remain unsettled.</p>
       </Card>
-      <Card title="Enterprise AI Governance">
-        <p>Putting agent governance on top of a responsibility model for truth, execution, context, lifecycle, and accountability.</p>
+      <Card title="An agent can execute, but safety is unproven">
+        <p>A successful AI demo does not prove truth, context, authorization, execution, and accountability boundaries.</p>
+      </Card>
+      <Card title="The system runs, but cannot move from N to N+1">
+        <p>Operations survive through expert intervention, not through a reconstructible lifecycle model.</p>
       </Card>
     </div>
   </section>
 
   <section class="stack">
-    <h2>The responsibility model</h2>
-    <div class="model-lines">
-      <p>Core systems own business truth.</p>
-      <p>Extensions define governed capabilities.</p>
-      <p>Workflows govern repeatable execution.</p>
-      <p>Agents select and coordinate action under policy.</p>
-      <p>Assistants provide the interaction surface.</p>
+    <h2>Boundary Model</h2>
+    <p class="measure">The Boundary Model is a diagnostic framework for judging whether an SAP BTP extension or enterprise AI agent is structurally safe to evolve.</p>
+    <div class="cards-grid">
+      {['Identity Boundary', 'Tenant Boundary', 'Data Boundary', 'Integration Boundary', 'Runtime Boundary', 'Lifecycle Boundary', 'Execution Boundary'].map((boundary) => (
+        <Card title={boundary}>
+          <p>Judge the contract that must hold after local success, production rollout, tenant variation, security hardening, and future change.</p>
+        </Card>
+      ))}
     </div>
-    <p class="measure"><a href="/sap-agent-extension-workflow/">Use the practical decision guide →</a></p>
+    <p class="measure"><a href="/boundary-model/">Read the canonical model -></a></p>
   </section>
 
   <section class="stack">
-    <h2>Why this is different</h2>
-    <p class="measure">This is not implementation staffing. This is not generic AI advisory.</p>
-    <p class="measure">This is architectural judgment about where responsibility belongs before enterprise AI becomes ungovernable execution.</p>
+    <h2>Services</h2>
+    <div class="cards-grid">
+      <Card eyebrow="Go / No-Go / Re-Architect" title="Strategic Boundary Verdict">
+        <p>For decisions where implementation keeps moving but architecture cannot converge. Produces a focused verdict on P1 structural risk and direction.</p>
+        <a href="/work/">See service -></a>
+      </Card>
+      <Card eyebrow="Full diagnostic" title="Full Boundary Audit">
+        <p>For complex SAP BTP landscapes that must survive tenant, identity, data, integration, runtime, and lifecycle evolution.</p>
+        <a href="/work/">See service -></a>
+      </Card>
+      <Card eyebrow="Enterprise AI" title="Agent-Extension Responsibility Review">
+        <p>For SAP Joule, enterprise agents, workflows, and extension responsibility ambiguity before AI execution becomes ungovernable.</p>
+        <a href="/work/">See service -></a>
+      </Card>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Built from SAP Builder-Side Experience</h2>
+    <p class="measure">The Boundary Model comes from real platform engineering exposure, not generic advisory language.</p>
+    <div class="cards-grid">
+      <Card title="SAP platform and extension work">
+        <p>Former SAP engineer with 13+ years inside SAP, including SAP Build Code / Joule-era platform work, CAP / LCAP, SaaS enablement, XSUAA, AppRouter, Work Zone, multitenancy, and S/4HANA extension architecture.</p>
+      </Card>
+      <Card title="Security, lifecycle, and service broker depth">
+        <p>Experience across BTP security, HANA XSA service broker, streaming analytics, lifecycle issues, integration boundaries, and cross-product architecture troubleshooting.</p>
+      </Card>
+      <Card title="Independent verdict, not staffing">
+        <p>Delivery teams implement. This work judges whether the architecture deserves to proceed, what boundary is failing, and what decision must be made.</p>
+      </Card>
+    </div>
   </section>
 
   <section class="feature">
     <div>
-      <h2>Existing BTP failure assets still matter</h2>
-      <p class="measure">Post-go-live SAP BTP extension failure remains the proof layer. The same boundary discipline now applies when AI agents, workflows, extensions, automations, and S/4HANA are combined into one business action.</p>
+      <h2>Read by Case, Boundary, or Situation</h2>
+      <p class="measure">The article library is organized around the situations where local success stops proving architectural validity.</p>
       <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+        <Button href="/insights/" variant="primary">Read insights</Button>
         <Button href="/failure-patterns/" variant="ghost">Recognize failure patterns</Button>
-        <Button href="/sap-btp-architecture-review/" variant="ghost">SAP BTP Architecture Review</Button>
-        <Button href="/work/" variant="primary">Work With Me</Button>
+        <Button href="/representative-cases/" variant="ghost">Representative cases</Button>
       </div>
     </div>
     <div class="stack">
-      <Card eyebrow="Foundation" title="Boundary Model">
-        <p class="measure">Canonical definition of SAP BTP runtime-visible boundaries and why traditional reviews miss post-go-live failures.</p>
-        <a href="/boundary-model/">Read the model →</a>
+      <Card eyebrow="Core essay" title="Why BTP Projects Fail">
+        <p>The Boundary Model every architect must master.</p>
+        <a href="/insights/a003-why-btp-projects-fail/">Read -></a>
       </Card>
-      <Card eyebrow="AI era" title="Enterprise AI Responsibility Architecture">
-        <p class="measure">Why agent governance is not enough without truth, execution, lifecycle, and accountability boundaries.</p>
-        <a href="/enterprise-ai-responsibility-architecture/">Read the architecture →</a>
+      <Card eyebrow="AI era" title="Is This Agent Safe to Execute?">
+        <p>A readiness model for trusted SAP enterprise agent execution.</p>
+        <a href="/insights/a022-is-this-agent-safe-to-execute/">Read -></a>
       </Card>
+    </div>
+  </section>
+
+  <section class="stack cta">
+    <h2>Send a one-page architecture summary</h2>
+    <p class="measure">The first useful step is not a meeting. It is a clear description of the decision that cannot converge.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send structured summary</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
     </div>
   </section>
 </BaseLayout>

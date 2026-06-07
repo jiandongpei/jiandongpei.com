@@ -2,8 +2,8 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Card from "@components/Card.astro";
 import { getCollection } from 'astro:content';
-const title = 'Insights | SAP BTP & Enterprise AI Architecture';
-const description = 'Essays on SAP BTP, enterprise AI architecture, agent-extension boundaries, Clean Core, S/4HANA extensibility, and post-go-live failure patterns where implementation success is not the same as architectural validity.';
+const title = 'SAP BTP Architecture Insights - Boundary Model, Clean Core, Agents';
+const description = 'SAP BTP architecture insights on Boundary Model, Clean Core, identity propagation, multitenancy, Work Zone AppRouter, integration, lifecycle, Joule, and enterprise AI agents.';
 const items = await getCollection('insights');
 const records = items.map(i => ({ slug: i.slug, ...i.data }));
 const featured = records.filter(r => r.featured);
@@ -12,7 +12,7 @@ const archive = visibleRecords
   .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1));
 // Fixed boundary ordering aligned with the model
-const boundaryOrder = ['Runtime','Identity','Tenant','Data','Integration','Lifecycle'];
+const boundaryOrder = ['Runtime','Identity','Tenant','Data','Integration','Lifecycle','Execution','Responsibility','Authorization'];
 const boundariesSet = new Set(visibleRecords.map(r => r.boundary).filter(b => b && b !== 'Boundary Model'));
 const boundaries = boundaryOrder.filter(b => boundariesSet.has(b));
 const byBoundary = Object.fromEntries(boundaries.map(b => [b, visibleRecords.filter(r => r.boundary === b)
@@ -26,11 +26,83 @@ const rolePaths = [
   { role: 'Security Architect', path: 'Identity propagation · Trust boundaries · Security hardening' },
   { role: 'Integration Lead', path: 'Integration Boundary · Cross-system contracts' },
 ];
+const situationPaths = [
+  {
+    title: 'If Postman works but Work Zone fails',
+    body: 'Start with identity propagation, AppRouter, Work Zone, runtime surface, and integration boundary analysis.',
+    links: [
+      { href: '/insights/a012-why-identity-breaks/', label: 'Why SAP BTP Identity Breaks' },
+      { href: '/insights/a019-integration-boundary/', label: 'The Integration Boundary' },
+      { href: '/cases/postman-worked-work-zone-failed/', label: 'Representative case' },
+    ],
+  },
+  {
+    title: 'If one tenant works but the next breaks',
+    body: 'Treat the first successful tenant as insufficient proof. Look at tenant isolation, onboarding, routing, and lifecycle contracts.',
+    links: [
+      { href: '/insights/a001-inside-sap-btp/', label: 'Inside SAP BTP' },
+      { href: '/insights/a002-why-single-customer-must-use-multitenancy/', label: 'Why even single-customer extensions must use multitenancy' },
+      { href: '/cases/one-tenant-worked-next-exposed-wrong-architecture/', label: 'Representative case' },
+    ],
+  },
+  {
+    title: 'If S/4 data is copied into HDI',
+    body: 'The question is not whether the copy works. It is whether business truth, write authority, and lifecycle remain governed.',
+    links: [
+      { href: '/insights/a014-why-data-boundaries-break/', label: 'Why SAP BTP Data Boundaries Break' },
+      { href: '/cases/data-copy-worked-shadow-truth-froze-lifecycle/', label: 'Representative case' },
+    ],
+  },
+  {
+    title: 'If RISE is approved but extension architecture remains unclear',
+    body: 'RISE and Clean Core set direction. They do not prove the SAP BTP extension architecture is structurally safe to evolve.',
+    links: [
+      { href: '/insights/a021-rise-does-not-decide-your-sap-btp-extension-architecture/', label: 'RISE Does Not Decide Your SAP BTP Extension Architecture' },
+      { href: '/insights/a015-clean-core/', label: 'Clean Core: The Architectural Reason' },
+      { href: '/sap-btp-architecture-review/', label: 'SAP BTP Architecture Review' },
+    ],
+  },
+  {
+    title: 'If AI agents, workflows, and extensions blur responsibility',
+    body: 'Classify truth, capability, process, execution, context, lifecycle, and accountability before the agent acts.',
+    links: [
+      { href: '/insights/a022-is-this-agent-safe-to-execute/', label: 'Is This Agent Safe to Execute?' },
+      { href: '/insights/a023-agents-do-not-replace-extensions/', label: 'Agent, Extension, or Workflow?' },
+      { href: '/insights/a024-your-sap-agent-has-a-token/', label: 'SAP AI Agent Security Is Not Just Identity' },
+    ],
+  },
+  {
+    title: 'If the system runs but cannot evolve',
+    body: 'Look at lifecycle, reconstructibility, ownership, and whether the architecture depends on manual repair to survive change.',
+    links: [
+      { href: '/insights/a006-stability-window/', label: 'The Stability Window of BTP Extensions' },
+      { href: '/insights/a020-when-btp-extension-problem-stops-being-delivery-problem/', label: 'When a BTP Extension Problem Stops Being a Delivery Problem' },
+      { href: '/failure-patterns/', label: 'Failure Patterns' },
+    ],
+  },
+];
 ---
 <BaseLayout {title} {description}>
   <section class="stack tight">
     <h1>Insights</h1>
     <p class="measure">Essays on SAP BTP, enterprise AI architecture, agent-extension boundaries, Clean Core, S/4HANA extensibility, and post-go-live failure patterns where implementation success is not the same as architectural validity.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Read by Situation</h2>
+    <p class="measure">Start from the symptom your team recognizes. The article path should lead to a boundary decision, not just more content.</p>
+    <div class="cards-grid">
+      {situationPaths.map((s) => (
+        <Card title={s.title}>
+          <p>{s.body}</p>
+          <ul>
+            {s.links.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </Card>
+      ))}
+    </div>
   </section>
 
   <section class="stack">
@@ -84,7 +156,7 @@ const rolePaths = [
 
   {boundaries.length > 0 && (
     <section class="stack">
-      <h2>Boundary Model / SAP BTP Failure</h2>
+      <h2>Read by Boundary</h2>
       {boundaries.map((b) => (
         <div class="card">
           <div class="eyebrow">Boundary</div>
@@ -109,17 +181,6 @@ const rolePaths = [
       <li><a href="/insights/a021-rise-does-not-decide-your-sap-btp-extension-architecture/"><strong>RISE Does Not Decide Your SAP BTP Extension Architecture</strong></a></li>
       <li><a href="/insights/a006-stability-window/"><strong>The Stability Window of BTP Extensions</strong></a></li>
       <li><a href="/insights/a020-when-btp-extension-problem-stops-being-delivery-problem/"><strong>When a SAP BTP Extension Problem Stops Being a Delivery Problem</strong></a></li>
-    </ul>
-  </section>
-
-  <section class="stack">
-    <h2>Explore by real‑world symptom</h2>
-    <ul>
-      <li><a href="/cases/postman-worked-work-zone-failed/">Works in Postman; fails behind App Router/Work Zone</a></li>
-      <li><a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">One tenant works; the next exposes the wrong architecture</a></li>
-      <li><a href="/sap-btp-post-go-live-failure-assessment/">The demo passed; the rollout model never existed</a></li>
-      <li><a href="/cases/security-hardening-broke-extension/">Security hardening reveals an ungovernable architecture</a></li>
-      <li><a href="/cases/vendors-disagreed-no-one-owned-chain/">Every team is locally correct; the system is globally wrong</a></li>
     </ul>
   </section>
 

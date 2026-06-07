@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -42,6 +43,15 @@ const related = all.filter(e => e.slug !== entry.slug && (
     </section>
   </article>
 
+  <section class="stack cta article-cta">
+    <h2>If this resembles a decision your team cannot resolve</h2>
+    <p class="measure">Send a one-page architecture summary. The useful first step is to make the decision, symptom, systems, boundaries, and ownership legible enough to classify.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="/contact/" variant="primary">Send a one-page summary</Button>
+      <Button href="/intake-template/" variant="ghost">Use intake template</Button>
+    </div>
+  </section>
+
   {(() => {
     const sourceHref = data.sourceUrl ?? data.canonicalUrl ?? data.canonical;
     const inferredLabel = sourceHref && sourceHref.includes('linkedin.com') ? 'LinkedIn' : undefined;
@@ -80,7 +90,7 @@ const related = all.filter(e => e.slug !== entry.slug && (
     <ul>
       <li><a href="/failure-patterns/">Recognize failure patterns</a></li>
       <li><a href="/sap-btp-architecture-review/">Request an SAP BTP architecture review</a></li>
-      <li><a href="/contact/">Send a 1‑page summary</a></li>
+      <li><a href="/contact/">Send a one-page summary</a></li>
     </ul>
   </section>
 </BaseLayout>

@@ -4,57 +4,146 @@ import Card from "@components/Card.astro";
 import Button from "@components/Button.astro";
 const title = 'Typical SAP BTP Extension Failure Patterns';
 const description = 'Recurring structural failure patterns in post-go-live SAP BTP extensions and AI-era responsibility drift across agents, workflows, extensions, and core systems.';
+const patterns = [
+  {
+    title: 'Postman works, Work Zone fails',
+    boundary: 'Identity / Integration / Runtime',
+    symptom: 'Direct requests succeed, but the governed path through AppRouter, Work Zone, destinations, or principal propagation fails.',
+    why: 'Postman proves connectivity. It does not prove the production entry path, identity chain, or runtime contract.',
+    decision: 'Decide whether the architecture is valid across the real entry surface or only on a protected test path.',
+    links: [
+      { href: '/cases/postman-worked-work-zone-failed/', label: 'Related case' },
+      { href: '/insights/a012-why-identity-breaks/', label: 'Identity essay' },
+    ],
+  },
+  {
+    title: 'One tenant works, next tenant fails',
+    boundary: 'Tenant / Lifecycle',
+    symptom: 'The first tenant succeeds, but onboarding, routing, subscription, data isolation, or role mapping breaks in the next tenant.',
+    why: 'A single tenant can hide assumptions that are not valid as tenant-scoped architecture.',
+    decision: 'Decide whether the tenant model is structurally correct or only patched for the first context.',
+    links: [
+      { href: '/cases/one-tenant-worked-next-exposed-wrong-architecture/', label: 'Related case' },
+      { href: '/insights/a002-why-single-customer-must-use-multitenancy/', label: 'Multitenancy essay' },
+    ],
+  },
+  {
+    title: 'Dev works, prod fails',
+    boundary: 'Runtime / Identity / Lifecycle',
+    symptom: 'The same logic works in development but fails after production trust, role collections, destinations, hardening, or rollout constraints apply.',
+    why: 'Development proves a local behavior. Production proves whether the boundary contract holds under real governance.',
+    decision: 'Decide whether the failure is environment configuration or an architecture that was never production-representative.',
+    links: [
+      { href: '/sap-btp-post-go-live-failure-assessment/', label: 'Post-go-live assessment' },
+      { href: '/insights/a006-stability-window/', label: 'Lifecycle essay' },
+    ],
+  },
+  {
+    title: 'Technical user flow works, real user propagation fails',
+    boundary: 'Identity',
+    symptom: 'A technical user or service credential path works, but named-user propagation returns wrong authorization, org context, or 403 behavior.',
+    why: 'Service-level success can bypass the user-context boundary that the business process actually depends on.',
+    decision: 'Decide which actor owns the action and whether the identity chain is legitimate end to end.',
+    links: [
+      { href: '/insights/a012-why-identity-breaks/', label: 'Identity essay' },
+      { href: '/sap-btp-architecture-review/', label: 'Review path' },
+    ],
+  },
+  {
+    title: 'S/4 data copied into HDI becomes shadow truth',
+    boundary: 'Data',
+    symptom: 'Copied data works for reporting or UX, then gradually becomes a competing source of truth for decisions or writes.',
+    why: 'A successful copy does not transfer business authority, lifecycle ownership, or write jurisdiction.',
+    decision: 'Decide what must remain anchored in S/4HANA and what the extension is allowed to own.',
+    links: [
+      { href: '/cases/data-copy-worked-shadow-truth-froze-lifecycle/', label: 'Related case' },
+      { href: '/insights/a014-why-data-boundaries-break/', label: 'Data boundary essay' },
+    ],
+  },
+  {
+    title: 'Clean Core adopted, extension ownership unclear',
+    boundary: 'Data / Integration / Lifecycle',
+    symptom: 'The program agrees to keep the core clean, but no one can say who owns extension truth, lifecycle, or cross-system responsibility.',
+    why: 'Clean Core constrains the core. It does not automatically decide the BTP extension architecture.',
+    decision: 'Decide where responsibility belongs before side-by-side architecture becomes shadow core.',
+    links: [
+      { href: '/insights/a021-rise-does-not-decide-your-sap-btp-extension-architecture/', label: 'RISE essay' },
+      { href: '/insights/a015-clean-core/', label: 'Clean Core essay' },
+    ],
+  },
+  {
+    title: 'Agent demo works, execution safety unclear',
+    boundary: 'Execution / Context / Accountability',
+    symptom: 'The agent can answer, recommend, or execute, but the team cannot prove what it may see, infer, trigger, or write.',
+    why: 'A successful answer can still violate truth, context, authorization, workflow, or accountability boundaries.',
+    decision: 'Decide the permitted action class and who owns the final business action.',
+    links: [
+      { href: '/insights/a022-is-this-agent-safe-to-execute/', label: 'Agent execution essay' },
+      { href: '/agent-extension-boundary-model/', label: 'Agent-Extension model' },
+    ],
+  },
+  {
+    title: 'Migration or rollback requires manual repair',
+    boundary: 'Lifecycle',
+    symptom: 'Changes can be made only with manual fixes, expert intervention, or undocumented sequencing.',
+    why: 'Manual repair can keep production alive while proving the architecture is not reconstructible.',
+    decision: 'Decide whether the lifecycle boundary supports deterministic change from version N to N+1.',
+    links: [
+      { href: '/insights/a006-stability-window/', label: 'Stability Window essay' },
+      { href: '/sap-btp-extension-audit/', label: 'Audit path' },
+    ],
+  },
+  {
+    title: 'Integration works, but no one owns the contract',
+    boundary: 'Integration / Jurisdiction',
+    symptom: 'Endpoints connect and payloads return, but teams disagree about meaning, ownership, failure handling, and change authority.',
+    why: 'Connectivity is not integration. Integration is governance of meaning across system boundaries.',
+    decision: 'Decide who owns the cross-system contract and which behavior is legitimate.',
+    links: [
+      { href: '/insights/a019-integration-boundary/', label: 'Integration essay' },
+      { href: '/cases/vendors-disagreed-no-one-owned-chain/', label: 'Related case' },
+    ],
+  },
+  {
+    title: 'The system runs, but cannot move from N to N+1',
+    boundary: 'Lifecycle / Runtime / Ownership',
+    symptom: 'Operations continue, but the next version, tenant, policy, tool, prompt, workflow, or integration change cannot be applied cleanly.',
+    why: 'Running today is not proof of structural safety. Evolution is the stronger test.',
+    decision: 'Decide whether the system is stable by architecture or by continued expert intervention.',
+    links: [
+      { href: '/insights/a020-when-btp-extension-problem-stops-being-delivery-problem/', label: 'Delivery vs architecture essay' },
+      { href: '/work/', label: 'Service path' },
+    ],
+  },
+];
 ---
 <BaseLayout {title} {description}>
   <section class="stack hero tight">
-    <h1>Typical SAP BTP extension failure patterns</h1>
-    <p class="lede">These are recurring structural patterns — boundary and jurisdiction failures — not random bugs. If these sound familiar, the issue is likely no longer an implementation problem.</p>
+    <h1>Failure Patterns</h1>
+    <p class="lede">Use these symptoms to recognize when a SAP BTP extension or enterprise AI initiative has moved beyond local implementation correctness into architecture judgment.</p>
   </section>
 
   <section class="stack">
     <h2>What these patterns have in common</h2>
     <p class="measure">Local correctness survives; global validity does not. Each pattern reflects a boundary or jurisdiction failure where individual teams can be right, yet the system remains wrong.</p>
-    <p class="measure">Implementation symptoms — intermittent failures, tenant variance, security blocks, rollout friction — are downstream of an unsettled contract across identity, tenant, data, integration, or lifecycle.</p>
+    <p class="measure">Implementation symptoms - intermittent failures, tenant variance, security blocks, rollout friction, or agent responsibility drift - are downstream of an unsettled contract across identity, tenant, data, integration, lifecycle, or execution.</p>
     <p class="measure">Recognize these as decision points. Treat them as triggers for an independent architectural verdict.</p>
   </section>
 
   <section class="stack">
     <div class="cards-grid">
-      <Card title="Works in Postman, fails in the real entry path">
-        <p>Requests succeed in direct testing but fail behind App Router, Work Zone, or other governed paths. Runtime, identity propagation, or routing assumptions do not match the architecture.</p>
-        <a href="/cases/postman-worked-work-zone-failed/">Related case →</a>
-      </Card>
-      <Card title="One tenant works, the next exposes the wrong architecture">
-        <p>Rollout reveals the tenant model or ownership truth was never stable. Per‑tenant variation exposes a missing contract at the boundary.</p>
-        <a href="/cases/one-tenant-worked-next-exposed-wrong-architecture/">Related case →</a>
-      </Card>
-      <Card title="The demo passed, but the rollout model never existed">
-        <p>A proof‑of‑concept behaved correctly, but trust and lifecycle gates for rollout were never designed as a system. Implementation succeeded; governance did not.</p>
-        <a href="/sap-btp-post-go-live-failure-assessment/">Related assessment →</a>
-      </Card>
-      <Card title="Data was copied successfully, but ownership truth was not">
-        <p>Migrations move data but not the authority to change it. Conflicting writes or approvals indicate an unresolved data boundary.</p>
-        <a href="/cases/data-copy-worked-shadow-truth-froze-lifecycle/">Related case →</a>
-      </Card>
-      <Card title="The system is live, but no team can govern change anymore">
-        <p>Production runs and incidents are handled, but architectural changes cannot be legitimately approved. Local correctness exists; global authority does not.</p>
-        <a href="/cases/system-live-no-team-could-approve/">Related case →</a>
-      </Card>
-      <Card title="Security hardening reveals the architecture was never governable">
-        <p>Maturing security posture exposes trust or isolation violations. Hardening uncovers invalid boundaries rather than code defects.</p>
-        <a href="/cases/security-hardening-broke-extension/">Related case →</a>
-      </Card>
-      <Card title="Every team is locally correct, but the architecture is globally wrong">
-        <p>Platform, application, security, and vendor narratives each make sense. The cross‑boundary contract is the defect.</p>
-        <a href="/cases/vendors-disagreed-no-one-owned-chain/">Related case →</a>
-      </Card>
-      <Card title="Implementation succeeded, lifecycle model did not">
-        <p>Day‑2 change, onboarding, or deprovisioning breaks. The lifecycle boundary was never defined with jurisdiction and exposure in mind.</p>
-        <a href="/sap-btp-extension-audit/">Related audit path →</a>
-      </Card>
-      <Card title="The architecture keeps pulling your strongest people back">
-        <p>Outages are not required. Changes repeatedly reactivate hidden dependencies and pull the same strongest people back into the old path. Fixes succeed locally, but confidence and capacity do not accumulate; stability is being preserved by expert intervention rather than governable architecture — this is structural, not staffing.</p>
-      </Card>
+      {patterns.map((pattern) => (
+        <Card eyebrow={pattern.boundary} title={pattern.title}>
+          <p><strong>Symptom:</strong> {pattern.symptom}</p>
+          <p><strong>Why local success is misleading:</strong> {pattern.why}</p>
+          <p><strong>Decision that needs judgment:</strong> {pattern.decision}</p>
+          <ul>
+            {pattern.links.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </Card>
+      ))}
     </div>
   </section>
 
@@ -74,19 +163,20 @@ const description = 'Recurring structural failure patterns in post-go-live SAP B
       <li>Lifecycle drift</li>
       <li>Accountability drift</li>
     </ul>
-    <p class="measure"><a href="/enterprise-ai-responsibility-architecture/">Read Enterprise AI Responsibility Architecture →</a></p>
+    <p class="measure"><a href="/enterprise-ai-responsibility-architecture/">Read Enterprise AI Responsibility Architecture -></a></p>
   </section>
 
   <section class="stack">
     <h2>If this is already happening</h2>
     <p class="measure">If several of these patterns coexist, the question is usually no longer whether a capable team can make the system work. The question is whether the current architecture deserves to continue as designed.</p>
-    <p><a href="/sap-btp-architecture-review/">SAP BTP Architecture Review →</a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit →</a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment →</a></p>
+    <p><a href="/work/">Work With Me -></a> · <a href="/sap-btp-architecture-review/">SAP BTP Architecture Review -></a> · <a href="/sap-btp-extension-audit/">SAP BTP Extension Audit -></a> · <a href="/sap-btp-post-go-live-failure-assessment/">SAP BTP Post-Go-Live Failure Assessment -></a></p>
   </section>
 
   <section class="stack cta">
     <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
       <Button href="/implementation-vs-verdict/" variant="ghost">Implementation vs Verdict</Button>
       <Button href="/work/" variant="primary">Work With Me</Button>
+      <Button href="/contact/" variant="ghost">Send one-page summary</Button>
     </div>
     <p class="measure">Prefer recognizable project situations? See <a href="/representative-cases/">Representative Cases</a>.</p>
   </section>

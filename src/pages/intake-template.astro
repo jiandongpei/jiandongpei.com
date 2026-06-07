@@ -3,41 +3,23 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
 
 const title = 'SAP BTP Architecture Review Intake Template';
-const description = 'One-page intake template for requesting an independent SAP BTP architecture review, extension audit, or boundary verdict.';
-const template = `Landscape:
-- S/4 system(s):
-- BTP runtime(s):
-- Entry surfaces:
-- Identity chain:
-- Tenant model:
+const description = 'One-page intake template for requesting an independent SAP BTP architecture review, enterprise AI responsibility review, extension audit, or boundary verdict.';
+const template = `Subject: SAP BTP Boundary Review Request - [Company / Situation]
 
-Observed divergence:
-- What works:
-- What fails:
-- Where it fails:
-- Which tenant/path/user group:
-
-Timeline:
-- Go-live date:
-- Recent changes:
-- When the divergence appeared:
-
-Ownership:
-- Application owner:
-- Platform/BTP owner:
-- Security/identity owner:
-- Integration owner:
-- Vendor/SI owner:
-
-Decision that cannot converge:
-- The decision:
-- Competing interpretations:
-- Business consequence if delayed:`;
+1. Landscape:
+2. Business action or extension scenario:
+3. Current symptom:
+4. Systems involved:
+5. Identity / tenant / data / integration / lifecycle surfaces involved:
+6. Timeline:
+7. Teams or stakeholders involved:
+8. Decision that cannot converge:
+9. Desired next step:`;
 ---
 <BaseLayout {title} {description}>
   <section class="stack hero tight">
-    <h1>SAP BTP Architecture Review Intake Template</h1>
-    <p class="lede">Use this page to prepare the one-page summary for an independent SAP BTP architecture review, extension audit, or boundary verdict.</p>
+    <h1>Architecture Intake Template</h1>
+    <p class="lede">Use this page to prepare the one-page summary for an independent SAP BTP architecture review, enterprise AI responsibility review, extension audit, or boundary verdict.</p>
   </section>
 
   <section class="stack">
@@ -51,18 +33,18 @@ Decision that cannot converge:
   </section>
 
   <section class="stack">
-    <h2>Observed divergence</h2>
-    <p class="measure">State what works, what fails, where it fails, and which tenant, path, or user group exposes the difference.</p>
+    <h2>Business action or extension scenario</h2>
+    <p class="measure">Describe what the user, assistant, agent, workflow, extension, or core system is expected to do.</p>
+  </section>
+
+  <section class="stack">
+    <h2>Current symptom</h2>
+    <p class="measure">State what works, what fails, where it fails, and which tenant, path, user group, workflow state, or agent behavior exposes the difference.</p>
   </section>
 
   <section class="stack">
     <h2>Timeline</h2>
     <p class="measure">Include go-live date, relevant rollout or hardening milestones, and the moment the divergence became visible.</p>
-  </section>
-
-  <section class="stack">
-    <h2>Ownership map</h2>
-    <p class="measure">Name the current owners for application, BTP/platform, security or identity, integration, and any vendor or SI layer.</p>
   </section>
 
   <section class="stack">
@@ -82,7 +64,7 @@ Decision that cannot converge:
 
   <section class="stack">
     <h2>Copyable template</h2>
-    <pre>{template}</pre>
+    <pre class="code-diagram"><code>{template}</code></pre>
   </section>
 
   <section class="stack cta">

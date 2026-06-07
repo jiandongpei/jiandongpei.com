@@ -1,38 +1,61 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/Button.astro";
-const title = 'Contact';
+const title = 'Contact Jiandong Pei | SAP BTP & Enterprise AI Architecture';
 const description = 'Contact Jiandong Pei for SAP BTP and enterprise AI architecture review across agent, workflow, extension, core-system, lifecycle, and responsibility boundaries.';
 ---
 <BaseLayout {title} {description}>
-  <h1>Contact</h1>
-  <p class="measure">Send a one-page summary for SAP BTP and enterprise AI architecture questions where responsibility boundaries are unclear. No forms. No funnels.</p>
+  <section class="stack tight">
+    <h1>Contact</h1>
+    <p class="measure">Send a one-page architecture summary for SAP BTP and enterprise AI decisions where responsibility boundaries are unclear. No forms. No funnels.</p>
+  </section>
 
-  <h2>What to include (1 page)</h2>
-  <ol>
-    <li>Landscape: S/4HANA or other core systems, SAP BTP runtime(s), agents, workflows, extensions, integrations, and identity surfaces.</li>
-    <li>Business action: what the user, assistant, agent, workflow, extension, or core system is expected to do.</li>
-    <li>Responsibility ambiguity: who owns truth, state, execution authority, lifecycle, and accountability today.</li>
-    <li>Symptoms by surface, tenant, identity path, workflow state, agent behavior, or extension API.</li>
-    <li>Timeline: go-live, rollout, AI pilot, model/tool/prompt/workflow/API change, or recent architecture change.</li>
-    <li>Stakeholders: platform, architecture, security, integration, functional, vendor, and business owners involved.</li>
-    <li>The decision that cannot converge.</li>
-  </ol>
+  <section class="stack">
+    <h2>What to include</h2>
+    <ol>
+      <li>Landscape: S/4HANA or other core systems, SAP BTP runtime(s), agents, workflows, extensions, integrations, and identity surfaces.</li>
+      <li>Business action or extension scenario: what the user, assistant, agent, workflow, extension, or core system is expected to do.</li>
+      <li>Current symptom: what works locally, what fails in the real path, and what cannot be explained.</li>
+      <li>Systems involved: S/4HANA, BTP services, CAP, AppRouter, Work Zone, XSUAA/IAS, destinations, HDI, agents, workflows, RAG, tools, or external systems.</li>
+      <li>Identity / tenant / data / integration / lifecycle surfaces involved.</li>
+      <li>Timeline: go-live, rollout, AI pilot, model/tool/prompt/workflow/API change, or recent architecture change.</li>
+      <li>Teams or stakeholders involved.</li>
+      <li>The decision that cannot converge.</li>
+      <li>Desired next step.</li>
+    </ol>
+  </section>
 
-  <h2>Send to</h2>
-  <ul>
-    <li>Email: <a href="mailto:pei_jiandong@hotmail.com">pei_jiandong@hotmail.com</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/peijiandong/" target="_blank" rel="noopener">/in/peijiandong</a></li>
-  </ul>
+  <section class="stack">
+    <h2>Copyable intake template</h2>
+    <pre class="code-diagram"><code>Subject: SAP BTP Boundary Review Request - [Company / Situation]
 
-  <p class="measure">If helpful, use the <a href="/intake-template/">intake template</a> to prepare the one-page summary before sending it. For complex SAP BTP or enterprise AI situations, the template reduces ambiguity and keeps the first exchange bounded.</p>
+1. Landscape:
+2. Business action or extension scenario:
+3. Current symptom:
+4. Systems involved:
+5. Identity / tenant / data / integration / lifecycle surfaces involved:
+6. Timeline:
+7. Teams or stakeholders involved:
+8. Decision that cannot converge:
+9. Desired next step:</code></pre>
+  </section>
 
-  <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
-    <Button href="mailto:pei_jiandong@hotmail.com" variant="primary">Send structured summary</Button>
-    <Button href="/intake-template/" variant="ghost">Use intake template</Button>
-    <Button href="/work/" variant="ghost">Work With Me</Button>
-  </div>
+  <section class="stack">
+    <h2>Send to</h2>
+    <ul>
+      <li>Email: <a href="mailto:pei_jiandong@hotmail.com">pei_jiandong@hotmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/peijiandong/" target="_blank" rel="noopener">/in/peijiandong</a></li>
+    </ul>
 
-  <h2>Expectations</h2>
-  <p>I reply with whether the situation matches a SAP BTP boundary failure pattern, enterprise AI responsibility-boundary problem, or a narrower implementation issue. If appropriate, I suggest a fixed-scope next step. No marketing follow-ups.</p>
+    <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+      <Button href="mailto:pei_jiandong@hotmail.com?subject=SAP%20BTP%20Boundary%20Review%20Request" variant="primary">Send structured summary</Button>
+      <Button href="/intake-template/" variant="ghost">Use full intake page</Button>
+      <Button href="/work/" variant="ghost">Work With Me</Button>
+    </div>
+  </section>
+
+  <section class="stack">
+    <h2>Expectations</h2>
+    <p class="measure">I reply with whether the situation matches a SAP BTP boundary failure pattern, enterprise AI responsibility-boundary problem, or a narrower implementation issue. If appropriate, I suggest a fixed-scope next step. No marketing follow-ups.</p>
+  </section>
 </BaseLayout>
