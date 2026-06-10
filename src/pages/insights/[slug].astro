@@ -26,7 +26,7 @@ const related = all.filter(e => e.slug !== entry.slug && (
 )).slice(0, 5);
 ---
 <BaseLayout {title} {description}>
-  <article class="article">
+  <article class:list={["article", { "has-subtitle": Boolean(data.subtitle) }]}>
     <header>
       <h1>{data.title}</h1>
       {data.subtitle && (<p class="lede">{data.subtitle}</p>)}
@@ -98,5 +98,6 @@ const related = all.filter(e => e.slug !== entry.slug && (
 <style>
   /* Hide the first H1 inside article content to avoid duplicate titles
      (the page already renders the title in the header above). */
-  .article .content > h1:first-of-type { display: none; }
+  :global(.article .content > h1:first-of-type) { display: none; }
+  :global(.article.has-subtitle .content > h1:first-of-type + h2) { display: none; }
 </style>
