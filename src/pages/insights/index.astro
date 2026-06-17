@@ -76,6 +76,7 @@ const situationPaths = [
     title: 'If the system runs but cannot evolve',
     body: 'Look at lifecycle, reconstructibility, ownership, and whether the architecture depends on manual repair to survive change.',
     links: [
+      { href: '/insights/a026-model-upgrade-boundary/', label: 'The Model Upgrade Boundary' },
       { href: '/insights/a006-stability-window/', label: 'The Stability Window of BTP Extensions' },
       { href: '/insights/a020-when-btp-extension-problem-stops-being-delivery-problem/', label: 'When a BTP Extension Problem Stops Being a Delivery Problem' },
       { href: '/failure-patterns/', label: 'Failure Patterns' },
@@ -136,6 +137,10 @@ const situationPaths = [
       <Card title="SAP AI Agent Security Is Not Just Identity">
         <p class="measure">Why valid tokens are not enough when RAG, tools, workflows, and model context introduce new authorization boundaries.</p>
         <a href="/insights/a024-your-sap-agent-has-a-token/">Read →</a>
+      </Card>
+      <Card title="Why Autonomous Enterprise Cannot Be Model-Driven">
+        <p class="measure">The model can change, but enterprise behavior cannot drift without explicit lifecycle governance.</p>
+        <a href="/insights/a026-model-upgrade-boundary/">Read →</a>
       </Card>
       <Card title="Full essay: Agents Do Not Replace Extensions">
         <p class="measure">The full A023 essay behind the Agent–Extension Boundary Model and responsibility taxonomy for SAP enterprise AI.</p>

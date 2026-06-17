@@ -17,3 +17,4 @@
 | A022 | Is This Agent Safe to Execute? The Boundary Model for SAP Joule Agents and Enterprise AI | LinkedIn | https://www.linkedin.com/pulse/agent-safe-execute-boundary-model-sap-joule-agents-enterprise-pei-9xuac/ | 2026-05-14 | |
 | A023 | Should This Be an SAP Agent, an Extension, or a Workflow? A Responsibility Model for SAP Enterprise AI | LinkedIn | https://www.linkedin.com/pulse/should-sap-agent-extension-workflowa-responsibility-model-pei-rksjc/ | 2026-05-27 | |
 | A024 | SAP AI Agent Security Is Not Just Identity - Why Tokens, RAG, Tools, and Workflows Need New Authorization Boundaries | LinkedIn | https://www.linkedin.com/pulse/sap-ai-agent-security-just-identity-why-tokens-rag-tools-pei-gydac/ | 2026-06-04 | |
+| A026 | Why Autonomous Enterprise Cannot Be Model-Driven: The Model Upgrade Boundary | LinkedIn | https://www.linkedin.com/pulse/why-autonomous-enterprise-cannot-model-driven-model-upgrade-pei-3kgcc/ | 2026-06-17 | |
