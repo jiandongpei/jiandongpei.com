@@ -12,7 +12,7 @@ const archive = visibleRecords
   .map(r => ({...r, sortDate: r.published ?? r.date ?? ''}))
   .toSorted((a, b) => (a.sortDate > b.sortDate ? -1 : 1));
 // Fixed boundary ordering aligned with the model
-const boundaryOrder = ['Runtime','Identity','Tenant','Data','Integration','Lifecycle','Execution','Responsibility','Authorization'];
+const boundaryOrder = ['Runtime','Identity','Tenant','Data','Truth','Integration','Lifecycle','Execution','Responsibility','Authorization'];
 const boundariesSet = new Set(visibleRecords.map(r => r.boundary).filter(b => b && b !== 'Boundary Model'));
 const boundaries = boundaryOrder.filter(b => boundariesSet.has(b));
 const byBoundary = Object.fromEntries(boundaries.map(b => [b, visibleRecords.filter(r => r.boundary === b)
@@ -67,6 +67,7 @@ const situationPaths = [
     title: 'If AI agents, workflows, and extensions blur responsibility',
     body: 'Classify truth, capability, process, execution, context, lifecycle, and accountability before the agent acts.',
     links: [
+      { href: '/insights/a027-enterprise-ai-must-start-with-truth/', label: 'Enterprise AI Must Start With Truth' },
       { href: '/insights/a022-is-this-agent-safe-to-execute/', label: 'Is This Agent Safe to Execute?' },
       { href: '/insights/a023-agents-do-not-replace-extensions/', label: 'Agent, Extension, or Workflow?' },
       { href: '/insights/a024-your-sap-agent-has-a-token/', label: 'SAP AI Agent Security Is Not Just Identity' },
@@ -141,6 +142,10 @@ const situationPaths = [
       <Card title="Why Autonomous Enterprise Cannot Be Model-Driven">
         <p class="measure">The model can change, but enterprise behavior cannot drift without explicit lifecycle governance.</p>
         <a href="/insights/a026-model-upgrade-boundary/">Read →</a>
+      </Card>
+      <Card title="Enterprise AI Must Start With Truth">
+        <p class="measure">Why data governance is no longer enough when AI scales interpretations of business reality.</p>
+        <a href="/insights/a027-enterprise-ai-must-start-with-truth/">Read →</a>
       </Card>
       <Card title="Full essay: Agents Do Not Replace Extensions">
         <p class="measure">The full A023 essay behind the Agent–Extension Boundary Model and responsibility taxonomy for SAP enterprise AI.</p>
