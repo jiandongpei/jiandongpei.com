@@ -19,3 +19,4 @@
 | A024 | SAP AI Agent Security Is Not Just Identity - Why Tokens, RAG, Tools, and Workflows Need New Authorization Boundaries | LinkedIn | https://www.linkedin.com/pulse/sap-ai-agent-security-just-identity-why-tokens-rag-tools-pei-gydac/ | 2026-06-04 | |
 | A026 | Why Autonomous Enterprise Cannot Be Model-Driven: The Model Upgrade Boundary | LinkedIn | https://www.linkedin.com/pulse/why-autonomous-enterprise-cannot-model-driven-model-upgrade-pei-3kgcc/ | 2026-06-17 | |
 | A027 | Enterprise AI Must Start With Truth - Why Data Governance Is No Longer Enough | LinkedIn | https://www.linkedin.com/pulse/enterprise-ai-must-start-truth-why-data-governance-longer-pei-qfsac/ | 2026-06-29 | |
+| A028 | Your AI Agent Had a Valid Token. Did It Have the Right to Act? | LinkedIn | https://www.linkedin.com/pulse/your-ai-agent-had-valid-token-did-have-right-act-jiandong-pei-0w5fc/ | 2026-07-24 | |
