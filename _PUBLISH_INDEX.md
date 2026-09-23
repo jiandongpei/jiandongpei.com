@@ -20,3 +20,4 @@
 | A026 | Why Autonomous Enterprise Cannot Be Model-Driven: The Model Upgrade Boundary | LinkedIn | https://www.linkedin.com/pulse/why-autonomous-enterprise-cannot-model-driven-model-upgrade-pei-3kgcc/ | 2026-06-17 | |
 | A027 | Enterprise AI Must Start With Truth - Why Data Governance Is No Longer Enough | LinkedIn | https://www.linkedin.com/pulse/enterprise-ai-must-start-truth-why-data-governance-longer-pei-qfsac/ | 2026-06-29 | |
 | A028 | Your AI Agent Had a Valid Token. Did It Have the Right to Act? | LinkedIn | https://www.linkedin.com/pulse/your-ai-agent-had-valid-token-did-have-right-act-jiandong-pei-0w5fc/ | 2026-07-24 | |
+| A029 | “Agent” Is Not an Architecture - What DeepSeek Harness, Codex, Claude Code, and SAP Reveal About the Emerging Enterprise Agent Stack | LinkedIn | https://www.linkedin.com/pulse/agent-architecture-what-deepseek-harness-codex-claude-jiandong-pei-3mvyc/ | 2026-09-01 | |
